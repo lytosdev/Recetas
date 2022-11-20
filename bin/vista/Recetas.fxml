@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecetasController">
+   <children>
+      <TextField promptText="Buscar una receta" styleClass="caja-buscar">
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin></TextField>
+      <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="panelscroll-categorias">
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+         <content>
+            <HBox fx:id="pnlCategorias" alignment="TOP_CENTER" spacing="20.0" />
+         </content>
+      </ScrollPane>
+      <HBox>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+         <children>
+            <Text fx:id="txtResultados" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo-1" />
+         </children>
+      </HBox>
+      <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+         <content>
+            <FlowPane fx:id="pnlResultados" hgap="40.0" vgap="40.0" />
+         </content>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </ScrollPane>
+   </children>
+   <stylesheets>
+      <URL value="@css/general.css" />
+      <URL value="@css/recetas.css" />
+   </stylesheets>
+</VBox>

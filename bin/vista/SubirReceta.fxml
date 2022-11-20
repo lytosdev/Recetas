@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SubirRecetaController">
+   <children>
+      <HBox spacing="20.0" styleClass="sr-top">
+         <children>
+            <VBox>
+               <children>
+                  <Pane style="-fx-background-color: yellow;" styleClass="sr-imagen" VBox.vgrow="ALWAYS" />
+                  <AnchorPane>
+                     <children>
+                        <Button layoutX="165.0" mnemonicParsing="false" text="Añadir" AnchorPane.rightAnchor="75.0" />
+                        <Button layoutX="236.0" mnemonicParsing="false" text="Borrar" AnchorPane.rightAnchor="0.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <TextField promptText="Introduzca el título de la receta" styleClass="sr-titulo" />
+                  <TextArea promptText="Introduzca una breve descripción de la receta" styleClass="sr-descripcion" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+         <content>
+            <StackPane alignment="TOP_CENTER">
+               <children>
+                  <VBox spacing="10.0" styleClass="sr-ingredientes-pasos">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo-1" text="Ingredientes" />
+                        <VBox fx:id="pnlIngredientes" spacing="10.0" />
+                        <Button mnemonicParsing="false" onAction="#nuevoIngrediente" text="Añadir" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo-1" text="Pasos">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Text>
+                        <VBox fx:id="pnlPasos" spacing="10.0" />
+                        <Button mnemonicParsing="false" onAction="#nuevoPaso" text="Añadir" />
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </content>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </ScrollPane>
+      <TextFlow styleClass="sr-texto-email">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Debe introducir su correo electrónico porque es en donde le notificaremos si su receta ha sido aceptada, en caso contrario le daremos las posibles correcciones para que pueda volverla a subir si procede." />
+         </children>
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+      </TextFlow>
+      <AnchorPane styleClass="sr-caja-email">
+         <children>
+            <TextField prefHeight="31.0" prefWidth="731.0" promptText="Dirección de correo electrónico" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="70.0" />
+            <Button mnemonicParsing="false" text="Enviar" AnchorPane.rightAnchor="0.0" />
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@css/general.css" />
+      <URL value="@css/subirReceta.css" />
+   </stylesheets>
+</VBox>

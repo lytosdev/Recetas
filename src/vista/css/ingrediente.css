@@ -1,0 +1,7 @@
+.ingrediente {
+  -fx-min-height: 50;
+  -fx-min-width: 300;
+  -fx-pref-height: 50;
+  -fx-background-color: -fx-color-gris;
+  -fx-background-radius: 6;
+}

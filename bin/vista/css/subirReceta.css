@@ -1,0 +1,32 @@
+.sr-top {
+  -fx-pref-height: 200;
+  -fx-min-height: -fx-pref-height;
+}
+
+.sr-imagen {
+  -fx-pref-width: 300;
+}
+
+.sr-titulo {
+  -fx-pref-width: 500;
+}
+
+.sr-descripcion {
+  -fx-pref-width: 500;
+  -fx-wrap-text: true;
+}
+
+.sr-ingredientes-pasos {
+  -fx-pref-width: 800;
+  -fx-max-width: -fx-pref-width;
+}
+
+.sr-texto-email {
+  -fx-pref-width: 800;
+  -fx-max-width: -fx-pref-width;
+}
+
+.sr-caja-email {
+  -fx-pref-width: 800;
+  -fx-max-width: -fx-pref-width;
+}

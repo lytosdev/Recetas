@@ -11,9 +11,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("Principal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/vista/Principal.fxml"));
         Scene scene = new Scene(root);
-        primaryStage.setTitle("Recetas");
+        primaryStage.setTitle("App de Recetas");
         primaryStage.setScene(scene);
         primaryStage.show();
 

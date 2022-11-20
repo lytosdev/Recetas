@@ -16,5 +16,6 @@
         "exclude": [
             "c:\\lytos\\bin\\javafx-sdk-19\\lib\\javafx.swing.jar"
         ]
-    }
+    },
+    "editor.wordWrap": "on"
 }
