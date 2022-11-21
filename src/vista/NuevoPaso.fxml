@@ -6,10 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane styleClass="paso" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PasoController">
+<AnchorPane styleClass="paso" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoPasoController">
    <children>
-      <Button layoutX="233.0" layoutY="10.0" mnemonicParsing="false" onAction="#borrar" text="Borrar" AnchorPane.rightAnchor="10.0" />
+      <Button layoutX="233.0" layoutY="10.0" mnemonicParsing="false" onAction="#borrar" styleClass="boton-borrar" text="X" AnchorPane.rightAnchor="10.0" />
       <Text fx:id="txtNumPaso" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="10.0" />
       <TextField layoutX="58.0" layoutY="8.0" prefHeight="31.0" prefWidth="133.0" />
    </children>

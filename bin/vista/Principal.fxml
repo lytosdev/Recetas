@@ -22,7 +22,7 @@
             </HBox>
          </right>
          <left>
-            <Text fx:id="txtTitulo" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoría/Búsqueda" textAlignment="CENTER" wrappingWidth="290.75269508361816" BorderPane.alignment="CENTER" />
+            <Text fx:id="txtTitulo" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="menu-titulo" text="Categoría/Búsqueda" textAlignment="CENTER" wrappingWidth="290.75269508361816" BorderPane.alignment="CENTER" />
          </left>
       </BorderPane>
       <AnchorPane fx:id="pnlVistas" styleClass="vistas" VBox.vgrow="ALWAYS" />

@@ -1,32 +1,65 @@
-.sr-top {
+.sr-panel-top {
   -fx-pref-height: 200;
   -fx-min-height: -fx-pref-height;
 }
 
 .sr-imagen {
   -fx-pref-width: 300;
+  -fx-background-color: -fx-color-gris;
+  -fx-shape: "M 0 0 L 10 0 C 11 0 11 0 11 1 L 11 4 C 11 5 11 5 10 5 L 0 5 C -1 5 -1 5 -1 4 L -1 1 C -1 0 -1 0 0 0";
 }
 
-.sr-titulo {
+.sr-boton-aceptar {
+  -fx-background-color: -fx-color-4;
+  -fx-text-fill: -fx-color-3;
+  -fx-border-color: derive(-fx-color-3, 80%);
+  -fx-border-radius: 4;
+}
+
+.sr-boton-aceptar:hover {
+  -fx-background-color: derive(-fx-color-4, -20%);
+  -fx-cursor: hand;
+}
+
+.sr-boton-cancelar {
+  -fx-background-color: -fx-color-1;
+  -fx-text-fill: -fx-color-3;
+  -fx-border-color: derive(-fx-color-3, 80%);
+  -fx-border-radius: 4;
+}
+
+.sr-boton-cancelar:hover {
+  -fx-background-color: derive(-fx-color-1, -20%);
+  -fx-cursor: hand;
+}
+
+.sr-boton-dificultad {
+  -fx-background-color: -fx-color-gris;
+  -fx-text-fill: -fx-color-negro;
+  -fx-border-width: 2;
+  -fx-border-radius: 4;
+}
+
+.sr-caja-titulo {
   -fx-pref-width: 500;
 }
 
-.sr-descripcion {
+.sr-caja-descripcion {
   -fx-pref-width: 500;
   -fx-wrap-text: true;
 }
 
-.sr-ingredientes-pasos {
+.sr-panel-creciente {
   -fx-pref-width: 800;
   -fx-max-width: -fx-pref-width;
 }
 
-.sr-texto-email {
+.sr-panelflow-email {
   -fx-pref-width: 800;
   -fx-max-width: -fx-pref-width;
 }
 
-.sr-caja-email {
+.sr-panel-email {
   -fx-pref-width: 800;
   -fx-max-width: -fx-pref-width;
 }

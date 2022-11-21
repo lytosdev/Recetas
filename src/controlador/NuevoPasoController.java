@@ -6,14 +6,17 @@ import java.util.function.Consumer;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.text.Text;
 
-public class IngredienteController implements Initializable {
+public class NuevoPasoController implements Initializable {
 
-    private Consumer<IngredienteController> accion;
+    @FXML
+    public Text txtNumPaso;
+    
+    private Consumer<NuevoPasoController> accion;
 
-    public IngredienteController(Consumer<IngredienteController> accion) {
+    public NuevoPasoController(Consumer<NuevoPasoController> accion) {
         this.accion = accion;
-
     }
 
     @Override

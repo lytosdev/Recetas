@@ -50,7 +50,7 @@ public class PrincipalController implements Initializable {
     @FXML
     private void abrirSubirReceta() {
         System.out.println("Abrir subir receta");
-        gestorVistas.abrirVista("/vista/SubirReceta.fxml", "Recetas");
+        gestorVistas.abrirVista("/vista/SubirReceta.fxml", "Subir receta");
     }
 
     @FXML

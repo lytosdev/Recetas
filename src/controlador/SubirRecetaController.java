@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -18,6 +19,12 @@ public class SubirRecetaController implements Initializable {
     private VBox pnlIngredientes;
     @FXML
     private VBox pnlPasos;
+    @FXML
+    private Button btnDificultadBaja;
+    @FXML
+    private Button btnDificultadMedia;
+    @FXML
+    private Button btnDificultadAlta;
 
     public SubirRecetaController() {
 
@@ -26,6 +33,10 @@ public class SubirRecetaController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
+        btnDificultadBaja.setStyle("-fx-border-color: red;");
+        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
+        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
+        
     }
 
     @FXML
@@ -41,8 +52,8 @@ public class SubirRecetaController implements Initializable {
 
     private AnchorPane getPaso(String texto) {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/Paso.fxml"));
-        fxmlLoader.setControllerFactory((Class<?> clazz) -> new PasoController(this::borrarPaso));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/NuevoPaso.fxml"));
+        fxmlLoader.setControllerFactory((Class<?> clazz) -> new NuevoPasoController(this::borrarPaso));
 
         AnchorPane vista = null;
 
@@ -52,14 +63,14 @@ public class SubirRecetaController implements Initializable {
             e.printStackTrace();
         }
 
-        PasoController paso = fxmlLoader.getController();
+        NuevoPasoController paso = fxmlLoader.getController();
         vista.setUserData(paso);
         paso.txtNumPaso.setText(texto);
 
         return vista;
     }
 
-    private void borrarPaso(PasoController obj) {
+    private void borrarPaso(NuevoPasoController obj) {
 
         ObservableList<Node> pasos = pnlPasos.getChildren();
         Node pasoSelec = null;
@@ -68,7 +79,7 @@ public class SubirRecetaController implements Initializable {
             // Actualizamos el número de paso a partir del borrado
             if (pasoSelec != null) {
                 int numPaso = pasos.indexOf(paso);
-                PasoController pasoController = (PasoController) paso.getUserData();
+                NuevoPasoController pasoController = (NuevoPasoController) paso.getUserData();
                 pasoController.txtNumPaso.setText("Paso " + numPaso);
             }
             // Guardamos el paso que queremos borrar
@@ -83,8 +94,8 @@ public class SubirRecetaController implements Initializable {
 
     private AnchorPane getIngrediente() {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/Ingrediente.fxml"));
-        fxmlLoader.setControllerFactory((Class<?> clazz) -> new IngredienteController(this::borrarIngrediente));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/NuevoIngrediente.fxml"));
+        fxmlLoader.setControllerFactory((Class<?> clazz) -> new NuevoIngredienteController(this::borrarIngrediente));
 
         AnchorPane vista = null;
 
@@ -94,13 +105,13 @@ public class SubirRecetaController implements Initializable {
             e.printStackTrace();
         }
 
-        IngredienteController ingrediente = fxmlLoader.getController();
+        NuevoIngredienteController ingrediente = fxmlLoader.getController();
         vista.setUserData(ingrediente);
 
         return vista;
     }
 
-    private void borrarIngrediente(IngredienteController obj) {
+    private void borrarIngrediente(NuevoIngredienteController obj) {
 
         ObservableList<Node> ingredientes = pnlIngredientes.getChildren();
         Node ingredienteSelec = null;
@@ -115,6 +126,27 @@ public class SubirRecetaController implements Initializable {
 
         pnlIngredientes.getChildren().remove(ingredienteSelec);
 
+    }
+
+    @FXML
+    private void dificultadBaja() {
+        btnDificultadBaja.setStyle("-fx-border-color: red;");
+        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
+        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
+    }
+
+    @FXML
+    private void dificultadMedia() {
+        btnDificultadBaja.setStyle("-fx-border-color: transparent;");
+        btnDificultadMedia.setStyle("-fx-border-color: green;");
+        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
+    }
+
+    @FXML
+    private void dificultadAlta() {
+        btnDificultadBaja.setStyle("-fx-border-color: transparent;");
+        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
+        btnDificultadAlta.setStyle("-fx-border-color: blue;");
     }
 
 }

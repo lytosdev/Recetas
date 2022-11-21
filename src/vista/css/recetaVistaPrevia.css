@@ -12,11 +12,19 @@
   -fx-background-image: url("../img/comida.jpg");
   -fx-background-size: cover;
   -fx-pref-height: 180;
-  -fx-shape:"M 0 1 L 0 1 L 0 1 L 0 3 L 4 3 L 4 1 C 4 0 4 0 3 0 L 1 0 C 0 0 0 0 0 1";
+  -fx-shape: "M 0 1 L 0 1 L 0 1 L 0 3 L 4 3 L 4 1 C 4 0 4 0 3 0 L 1 0 C 0 0 0 0 0 1";
 }
 
 .rvp-descripcion {
   -fx-font-size: 13px;
+}
+
+.rvp-texto-descripcion {
+  -fx-fill: -fx-color-negro;
+}
+
+.rvp-texto-titulo {
+  -fx-fill: -fx-color-negro;
 }
 
 .rvp-boton {
