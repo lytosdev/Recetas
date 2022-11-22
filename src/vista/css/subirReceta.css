@@ -40,6 +40,10 @@
   -fx-border-radius: 4;
 }
 
+.sr-boton-dificultad:hover {
+  -fx-cursor: hand;
+}
+
 .sr-caja-titulo {
   -fx-pref-width: 500;
 }
@@ -47,6 +51,16 @@
 .sr-caja-descripcion {
   -fx-pref-width: 500;
   -fx-wrap-text: true;
+}
+
+.sr-panel-titulo {
+  -fx-pref-height: 30;
+  -fx-min-height: -fx-pref-height;
+  -fx-background-color: -fx-color-2;
+}
+
+.sr-titulo {
+  -fx-fill: -fx-color-blanco;
 }
 
 .sr-panel-creciente {

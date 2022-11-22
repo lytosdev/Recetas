@@ -1,7 +1,11 @@
 .nuevo-paso {
-  -fx-min-height: 50;
-  -fx-min-width: 300;
-  -fx-pref-height: 50;
+  -fx-pref-height: 100;
+  -fx-min-height: -fx-pref-height;
+  -fx-min-width: 350;
   -fx-background-color: -fx-color-gris;
   -fx-background-radius: 6;
+}
+
+.caja {
+  -fx-wrap-text: true;
 }

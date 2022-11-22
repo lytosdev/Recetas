@@ -18,6 +18,8 @@ public class SubirRecetaController implements Initializable {
     @FXML
     private VBox pnlIngredientes;
     @FXML
+    private VBox pnlUtensilios;
+    @FXML
     private VBox pnlPasos;
     @FXML
     private Button btnDificultadBaja;
@@ -36,7 +38,7 @@ public class SubirRecetaController implements Initializable {
         btnDificultadBaja.setStyle("-fx-border-color: red;");
         btnDificultadMedia.setStyle("-fx-border-color: transparent;");
         btnDificultadAlta.setStyle("-fx-border-color: transparent;");
-        
+
     }
 
     @FXML
@@ -48,6 +50,11 @@ public class SubirRecetaController implements Initializable {
     @FXML
     private void nuevoIngrediente() {
         pnlIngredientes.getChildren().add(getIngrediente());
+    }
+
+    @FXML
+    private void nuevoUtensilio() {
+        pnlUtensilios.getChildren().add(getUtensilio());
     }
 
     private AnchorPane getPaso(String texto) {
@@ -125,6 +132,42 @@ public class SubirRecetaController implements Initializable {
         }
 
         pnlIngredientes.getChildren().remove(ingredienteSelec);
+
+    }
+
+    private AnchorPane getUtensilio() {
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/NuevoUtensilio.fxml"));
+        fxmlLoader.setControllerFactory((Class<?> clazz) -> new NuevoUtensilioController(this::borrarUtensilio));
+
+        AnchorPane vista = null;
+
+        try {
+            vista = fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        NuevoUtensilioController utensilio = fxmlLoader.getController();
+        vista.setUserData(utensilio);
+
+        return vista;
+    }
+
+    private void borrarUtensilio(NuevoUtensilioController obj) {
+
+        ObservableList<Node> utensilios = pnlUtensilios.getChildren();
+        Node utensilioSelec = null;
+
+        for (Node utensilio : utensilios) {
+            // Guardamos el ingrediente que queremos borrar
+            if (utensilio.getUserData().equals(obj)) {
+                utensilioSelec = utensilio;
+                break;
+            }
+        }
+
+        pnlUtensilios.getChildren().remove(utensilioSelec);
 
     }
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -7,14 +8,17 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SubirRecetaController">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SubirRecetaController">
    <children>
       <HBox spacing="30.0" styleClass="sr-panel-top">
          <children>
@@ -72,33 +76,70 @@
          <content>
             <StackPane alignment="TOP_CENTER">
                <children>
-                  <VBox spacing="10.0" styleClass="sr-panel-creciente">
+                  <VBox styleClass="sr-panel-creciente">
                      <children>
-                        <HBox>
+                        <GridPane hgap="30.0">
+                           <columnConstraints>
+                              <ColumnConstraints maxWidth="-Infinity" minWidth="-Infinity" prefWidth="385.0" />
+                              <ColumnConstraints maxWidth="-Infinity" minWidth="-Infinity" prefWidth="385.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints vgrow="ALWAYS" />
+                           </rowConstraints>
                            <children>
-                              <VBox>
+                              <VBox spacing="10.0">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo-1" text="Ingredientes" />
-                                    <VBox fx:id="pnlIngredientes" spacing="10.0" style="-fx-background-color: red;" />
+                                    <StackPane alignment="CENTER_LEFT" styleClass="sr-panel-titulo">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredientes">
+                                             <styleClass>
+                                                <String fx:value="titulo-1" />
+                                                <String fx:value="sr-titulo" />
+                                             </styleClass>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <VBox fx:id="pnlIngredientes" spacing="10.0" />
                                     <Button mnemonicParsing="false" onAction="#nuevoIngrediente" styleClass="sr-boton-aceptar" text="Añadir" />
                                  </children>
                               </VBox>
-                              <VBox>
+                              <VBox spacing="10.0" GridPane.columnIndex="1">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo-1" text="Utensilios" />
-                                    <VBox fx:id="pnlIngredientes1" spacing="10.0" style="-fx-background-color: green;" />
+                                    <StackPane alignment="CENTER_LEFT" styleClass="sr-panel-titulo">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Utensilios">
+                                             <styleClass>
+                                                <String fx:value="titulo-1" />
+                                                <String fx:value="sr-titulo" />
+                                             </styleClass>
+                                          </Text>
+                                       </children>
+                                    </StackPane>
+                                    <VBox fx:id="pnlUtensilios" spacing="10.0" />
                                     <Button mnemonicParsing="false" onAction="#nuevoUtensilio" styleClass="sr-boton-aceptar" text="Añadir" />
                                  </children>
                               </VBox>
                            </children>
-                        </HBox>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo-1" text="Pasos">
+                        </GridPane>
+                        <VBox spacing="10.0">
+                           <children>
+                              <StackPane alignment="CENTER_LEFT" styleClass="sr-panel-titulo">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pasos">
+                                       <styleClass>
+                                          <String fx:value="titulo-1" />
+                                          <String fx:value="sr-titulo" />
+                                       </styleClass>
+                                    </Text>
+                                 </children>
+                              </StackPane>
+                              <VBox fx:id="pnlPasos" spacing="10.0" />
+                              <Button mnemonicParsing="false" onAction="#nuevoPaso" styleClass="sr-boton-aceptar" text="Añadir" />
+                           </children>
                            <VBox.margin>
-                              <Insets top="50.0" />
+                              <Insets top="30.0" />
                            </VBox.margin>
-                        </Text>
-                        <VBox fx:id="pnlPasos" spacing="10.0" />
-                        <Button mnemonicParsing="false" onAction="#nuevoPaso" styleClass="sr-boton-aceptar" text="Añadir" />
+                        </VBox>
                      </children>
                   </VBox>
                </children>
@@ -125,6 +166,7 @@
             <Insets top="10.0" />
          </VBox.margin>
       </AnchorPane>
+      <StackPane />
    </children>
    <stylesheets>
       <URL value="@css/general.css" />

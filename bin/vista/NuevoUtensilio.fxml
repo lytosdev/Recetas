@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane styleClass="nuevo-ingrediente" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoIngredienteController">
+<AnchorPane styleClass="nuevo-utensilio" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoUtensilioController">
    <children>
       <TextField layoutX="32.0" layoutY="11.0" prefHeight="28.0" prefWidth="114.0" />
       <TextField layoutX="152.0" layoutY="11.0" prefHeight="28.0" prefWidth="135.0" />
@@ -13,6 +13,6 @@
    </children>
    <stylesheets>
       <URL value="@css/general.css" />
-      <URL value="@css/nuevoIngrediente.css" />
+      <URL value="@css/nuevoUtensilio.css" />
    </stylesheets>
 </AnchorPane>

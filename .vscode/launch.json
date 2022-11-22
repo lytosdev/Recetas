@@ -9,7 +9,7 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "Recetas_70f61274",
+            "projectName": "Recetas_3064ffb4",
             "vmArgs": "--module-path \"${workspaceFolder}/javafx-sdk-19/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]

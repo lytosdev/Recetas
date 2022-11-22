@@ -5,14 +5,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="ingrediente" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoIngredienteController">
+<AnchorPane styleClass="nuevo-ingrediente" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoIngredienteController">
    <children>
-      <TextField layoutX="14.0" layoutY="9.0" />
-      <TextField layoutX="210.0" layoutY="9.0" />
-      <Button layoutX="554.0" layoutY="9.0" mnemonicParsing="false" onAction="#borrar" styleClass="boton-borrar" text="X" AnchorPane.rightAnchor="10.0" />
+      <TextField layoutX="32.0" layoutY="11.0" prefHeight="28.0" prefWidth="114.0" />
+      <TextField layoutX="152.0" layoutY="11.0" prefHeight="28.0" prefWidth="135.0" />
+      <Button layoutX="305.0" layoutY="10.0" mnemonicParsing="false" onAction="#borrar" styleClass="boton-borrar" text="X" AnchorPane.rightAnchor="12.0" />
    </children>
-      <stylesheets>
+   <stylesheets>
       <URL value="@css/general.css" />
-      <URL value="@css/ingrediente.css" />
+      <URL value="@css/nuevoIngrediente.css" />
    </stylesheets>
 </AnchorPane>
