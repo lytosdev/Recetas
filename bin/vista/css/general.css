@@ -12,36 +12,52 @@
   -fx-background-color: derive(-fx-color-blanco, -6%);
 }
 
-.text-field {
-  -fx-background-radius: 6;
+/* Para todos los Text */
+Text {
+  -fx-fill: red;
 }
 
-.text-field:focused {
+/* Para todos los TextField */
+TextField {
+  -fx-background-radius: 6;
+  -fx-text-fill: red;
+}
+
+TextField:focused {
   -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
 }
 
-.text-area {
-  -fx-background-color: -fx-control-inner-background;
+/* Para todos los TextArea */
+TextArea {
+  -fx-background-radius: 6;
+  -fx-text-fill: red;
 }
 
-.text-area .content {
-  -fx-border-color: -fx-color-gris;
-  -fx-border-width: 2;
-  -fx-border-radius: 10;
-  -fx-background-color: -fx-control-inner-background;
+TextArea:focused {
+  -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
 }
 
-.scroll-pane {
+.text-area .scroll-bar:vertical:disabled {
+  -fx-opacity: 0;
+}
+
+/* Para todos los Button */
+Button {
+  -fx-background-radius: 6;
+  -fx-text-fill: red;
+}
+
+/* Para todos los ScrollPane */
+ScrollPane {
   -fx-background-color: transparent;
 }
 
-.scroll-pane .viewport {
+ScrollPane .viewport {
   -fx-background-color: transparent;
 }
 
 .titulo-1 {
   -fx-font-size: 18px;
-  -fx-fill: -fx-color-negro;
 }
 
 .boton-borrar {

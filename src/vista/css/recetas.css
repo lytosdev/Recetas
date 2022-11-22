@@ -1,4 +1,4 @@
-.caja-buscar {
+.rs-caja-buscar {
   -fx-pref-width: 400;
   -fx-max-width: -fx-pref-width;
   -fx-background-image: url("../img/find.png");
@@ -6,10 +6,10 @@
   -fx-background-repeat: no-repeat;
   -fx-background-position: 10;
   -fx-padding: 8 40;
-  -fx-effect: dropshadow(three-pass-box, derive(#D7DBDD, 30%), 10, 0, 3, 3);
+  -fx-effect: dropshadow(three-pass-box, derive(#D7DBDD, 0%), 10, 0, 3, 3);
 }
 
-.panelscroll-categorias {
+.rs-panelscroll-categorias {
   -fx-pref-height: 60;
   -fx-min-height: -fx-pref-height;
   -fx-max-width: 800;

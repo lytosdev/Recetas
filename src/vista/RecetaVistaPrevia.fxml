@@ -12,7 +12,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" styleClass="receta-vista-previa" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecetaVistaPreviaController">
    <children>
       <Pane layoutX="74.0" layoutY="57.0" styleClass="rvp-imagen" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <TextFlow layoutX="36.0" layoutY="190.0" styleClass="rvp-descripcion" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="200.0">
+      <TextFlow layoutX="36.0" layoutY="190.0" styleClass="rvp-panelflow-descripcion" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="200.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Los ñoquis, enteramente italianos, son unas pequeñas bolitas comestibles a las que allí denominan gnocchi. Son deliciosas y forman parte de la amplísima lista de pasta italiana" />
          </children>

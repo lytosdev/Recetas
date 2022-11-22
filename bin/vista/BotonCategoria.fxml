@@ -10,6 +10,6 @@
       <URL value="@css/botonCategoria.css" />
    </stylesheets>
    <graphic>
-      <Text fx:id="texto" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Nombre de la categoría" />
+      <Text fx:id="texto" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="bc-text" text="Nombre de la categoría" />
    </graphic>
 </Button>

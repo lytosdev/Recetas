@@ -56,6 +56,7 @@ public class PrincipalController implements Initializable {
     @FXML
     private void abrirPanelAdmin() {
         System.out.println("Abrir panel admin");
+        gestorVistas.abrirVista("/vista/RecetaDetalle.fxml", "Detalle de la receta");
     }
 
 }
