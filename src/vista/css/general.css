@@ -12,6 +12,11 @@
   -fx-background-color: derive(-fx-color-blanco, -1%);
 }
 
+/* Para todos los Label */
+Label {
+  -fx-text-fill: -fx-color-negro;
+}
+
 /* Para todos los Text */
 Text {
   -fx-fill: -fx-color-negro;

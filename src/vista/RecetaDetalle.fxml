@@ -5,7 +5,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -18,36 +17,35 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecetaDetalleController">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecetaDetalleController">
    <children>
       <HBox spacing="30.0" styleClass="sr-panel-top">
          <children>
             <VBox>
                <children>
                   <Pane styleClass="sr-imagen" VBox.vgrow="ALWAYS" />
-                  <AnchorPane>
-                     <children>
-                        <Button layoutX="165.0" mnemonicParsing="false" styleClass="sr-boton-aceptar" text="Añadir" AnchorPane.rightAnchor="75.0" />
-                        <Button layoutX="236.0" mnemonicParsing="false" styleClass="sr-boton-cancelar" text="Borrar" AnchorPane.rightAnchor="0.0" />
-                     </children>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </AnchorPane>
                </children>
             </VBox>
             <VBox>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Título" />
-                  <TextField promptText="Introduzca el título de la receta" styleClass="sr-caja-titulo">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Título">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                      <VBox.margin>
                         <Insets bottom="15.0" top="5.0" />
-                     </VBox.margin></TextField>
+                     </VBox.margin>
+                  </Text>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
-                  <TextArea promptText="Introduzca una breve descripción de la receta" styleClass="sr-caja-descripcion">
+                  <TextFlow VBox.vgrow="ALWAYS">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                     </children>
                      <VBox.margin>
                         <Insets top="5.0" />
-                     </VBox.margin></TextArea>
+                     </VBox.margin>
+                  </TextFlow>
                </children>
             </VBox>
             <VBox>
@@ -55,24 +53,37 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dificultad" />
                   <HBox spacing="8.0">
                      <children>
-                        <Button fx:id="btnDificultadBaja" mnemonicParsing="false" onAction="#dificultadBaja" styleClass="sr-boton-dificultad" text="Baja" />
-                        <Button fx:id="btnDificultadMedia" mnemonicParsing="false" onAction="#dificultadMedia" styleClass="sr-boton-dificultad" text="Media" />
-                        <Button fx:id="btnDificultadAlta" mnemonicParsing="false" onAction="#dificultadAlta" styleClass="sr-boton-dificultad" text="Alta" />
+                        <TextFlow>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                           </children>
+                        </TextFlow>
+                        <TextFlow>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                           </children>
+                        </TextFlow>
+                        <TextFlow>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                           </children>
+                        </TextFlow>
                      </children>
                      <VBox.margin>
                         <Insets bottom="15.0" top="5.0" />
                      </VBox.margin>
                   </HBox>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duración" />
-                  <TextField promptText="Duración en minutos">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Personas">
                      <VBox.margin>
-                        <Insets top="5.0" />
-                     </VBox.margin></TextField>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Text>
                </children>
             </VBox>
          </children>
       </HBox>
-      <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+      <ScrollPane fitToHeight="true" fitToWidth="true">
          <content>
             <StackPane alignment="TOP_CENTER">
                <children>
@@ -96,11 +107,13 @@
                                                 <String fx:value="titulo-1" />
                                                 <String fx:value="sr-titulo" />
                                              </styleClass>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" />
+                                             </StackPane.margin>
                                           </Text>
                                        </children>
                                     </StackPane>
                                     <VBox fx:id="pnlIngredientes" spacing="10.0" />
-                                    <Button mnemonicParsing="false" onAction="#nuevoIngrediente" styleClass="sr-boton-aceptar" text="Añadir" />
                                  </children>
                               </VBox>
                               <VBox spacing="10.0" GridPane.columnIndex="1">
@@ -112,11 +125,13 @@
                                                 <String fx:value="titulo-1" />
                                                 <String fx:value="sr-titulo" />
                                              </styleClass>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" />
+                                             </StackPane.margin>
                                           </Text>
                                        </children>
                                     </StackPane>
                                     <VBox fx:id="pnlUtensilios" spacing="10.0" />
-                                    <Button mnemonicParsing="false" onAction="#nuevoUtensilio" styleClass="sr-boton-aceptar" text="Añadir" />
                                  </children>
                               </VBox>
                            </children>
@@ -130,11 +145,13 @@
                                           <String fx:value="titulo-1" />
                                           <String fx:value="sr-titulo" />
                                        </styleClass>
+                                       <StackPane.margin>
+                                          <Insets left="10.0" />
+                                       </StackPane.margin>
                                     </Text>
                                  </children>
                               </StackPane>
                               <VBox fx:id="pnlPasos" spacing="10.0" />
-                              <Button mnemonicParsing="false" onAction="#nuevoPaso" styleClass="sr-boton-aceptar" text="Añadir" />
                            </children>
                            <VBox.margin>
                               <Insets top="30.0" />
