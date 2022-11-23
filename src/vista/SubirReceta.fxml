@@ -27,8 +27,7 @@
                   <Pane styleClass="sr-imagen" VBox.vgrow="ALWAYS" />
                   <AnchorPane>
                      <children>
-                        <Button layoutX="165.0" mnemonicParsing="false" styleClass="sr-boton-aceptar" text="Añadir" AnchorPane.rightAnchor="75.0" />
-                        <Button layoutX="236.0" mnemonicParsing="false" styleClass="sr-boton-cancelar" text="Borrar" AnchorPane.rightAnchor="0.0" />
+                        <Button layoutX="165.0" mnemonicParsing="false" styleClass="boton-1" text="Subir foto" AnchorPane.leftAnchor="20.0" />
                      </children>
                      <VBox.margin>
                         <Insets top="10.0" />
@@ -55,9 +54,21 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dificultad" />
                   <HBox spacing="8.0">
                      <children>
-                        <Button fx:id="btnDificultadBaja" mnemonicParsing="false" onAction="#dificultadBaja" styleClass="sr-boton-dificultad" text="Baja" />
-                        <Button fx:id="btnDificultadMedia" mnemonicParsing="false" onAction="#dificultadMedia" styleClass="sr-boton-dificultad" text="Media" />
-                        <Button fx:id="btnDificultadAlta" mnemonicParsing="false" onAction="#dificultadAlta" styleClass="sr-boton-dificultad" text="Alta" />
+                        <Button fx:id="btnDificultadBaja" mnemonicParsing="false" onAction="#dificultadBaja" text="Baja">
+                           <styleClass>
+                              <String fx:value="sr-boton-dificultad" />
+                              <String fx:value="sr-boton-baja" />
+                           </styleClass></Button>
+                        <Button fx:id="btnDificultadMedia" mnemonicParsing="false" onAction="#dificultadMedia" text="Media">
+                           <styleClass>
+                              <String fx:value="sr-boton-dificultad" />
+                              <String fx:value="sr-boton-media" />
+                           </styleClass></Button>
+                        <Button fx:id="btnDificultadAlta" mnemonicParsing="false" onAction="#dificultadAlta" text="Alta">
+                           <styleClass>
+                              <String fx:value="sr-boton-dificultad" />
+                              <String fx:value="sr-boton-alta" />
+                           </styleClass></Button>
                      </children>
                      <VBox.margin>
                         <Insets bottom="15.0" top="5.0" />
@@ -72,7 +83,7 @@
             </VBox>
          </children>
       </HBox>
-      <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+      <ScrollPane fitToHeight="true" fitToWidth="true">
          <content>
             <StackPane alignment="TOP_CENTER">
                <children>
@@ -96,11 +107,14 @@
                                                 <String fx:value="titulo-1" />
                                                 <String fx:value="sr-titulo" />
                                              </styleClass>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" />
+                                             </StackPane.margin>
                                           </Text>
                                        </children>
                                     </StackPane>
                                     <VBox fx:id="pnlIngredientes" spacing="10.0" />
-                                    <Button mnemonicParsing="false" onAction="#nuevoIngrediente" styleClass="sr-boton-aceptar" text="Añadir" />
+                                    <Button mnemonicParsing="false" onAction="#nuevoIngrediente" styleClass="boton-1" text="Añadir" />
                                  </children>
                               </VBox>
                               <VBox spacing="10.0" GridPane.columnIndex="1">
@@ -112,11 +126,14 @@
                                                 <String fx:value="titulo-1" />
                                                 <String fx:value="sr-titulo" />
                                              </styleClass>
+                                             <StackPane.margin>
+                                                <Insets left="10.0" />
+                                             </StackPane.margin>
                                           </Text>
                                        </children>
                                     </StackPane>
                                     <VBox fx:id="pnlUtensilios" spacing="10.0" />
-                                    <Button mnemonicParsing="false" onAction="#nuevoUtensilio" styleClass="sr-boton-aceptar" text="Añadir" />
+                                    <Button mnemonicParsing="false" onAction="#nuevoUtensilio" styleClass="boton-1" text="Añadir" />
                                  </children>
                               </VBox>
                            </children>
@@ -130,11 +147,14 @@
                                           <String fx:value="titulo-1" />
                                           <String fx:value="sr-titulo" />
                                        </styleClass>
+                                       <StackPane.margin>
+                                          <Insets left="10.0" />
+                                       </StackPane.margin>
                                     </Text>
                                  </children>
                               </StackPane>
                               <VBox fx:id="pnlPasos" spacing="10.0" />
-                              <Button mnemonicParsing="false" onAction="#nuevoPaso" styleClass="sr-boton-aceptar" text="Añadir" />
+                              <Button mnemonicParsing="false" onAction="#nuevoPaso" styleClass="boton-1" text="Añadir" />
                            </children>
                            <VBox.margin>
                               <Insets top="30.0" />
@@ -160,7 +180,7 @@
       <AnchorPane styleClass="sr-panel-email">
          <children>
             <TextField prefHeight="31.0" prefWidth="731.0" promptText="Dirección de correo electrónico" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="70.0" />
-            <Button mnemonicParsing="false" styleClass="sr-boton-aceptar" text="Enviar" AnchorPane.rightAnchor="0.0" />
+            <Button mnemonicParsing="false" styleClass="boton-1" text="Enviar" AnchorPane.rightAnchor="0.0" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />
