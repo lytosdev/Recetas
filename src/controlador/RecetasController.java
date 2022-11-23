@@ -28,7 +28,16 @@ public class RecetasController implements Initializable {
             "Italiana", "Española", "Turca" };
     private int[] resultCat = { getRnd(), getRnd(), getRnd(), getRnd(), getRnd(), getRnd(), getRnd(), getRnd(), getRnd(), getRnd() };
 
-    public RecetasController() {
+    public RecetasController() throws IOException {
+
+        // List<String> prueba = Files.readAllLines(Paths.get("./prueba.json"), StandardCharsets.UTF_8);
+        // String jsonString = prueba.stream().reduce((a, b) -> a + b).get();
+        // JSONArray arr = new JSONArray(jsonString);
+        // System.out.println(arr.length());
+        // for (int i = 0; i < arr.length(); i++) {
+        //     String nom = arr.getJSONObject(i).getString("nombre");
+        //     System.out.println(nom);
+        // }
 
     }
 

@@ -1,0 +1,12 @@
+[
+  {
+    "nombre": "Carlos",
+    "Apellidos": "Sánchez",
+    "Colores": ["rojo", "amarillo"]
+  },
+  {
+    "nombre": "Paco",
+    "Apellidos": "A",
+    "Colores": ["verde", "azul"]
+  }
+]
