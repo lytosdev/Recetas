@@ -17,7 +17,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecetaDetalleController">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VerRecetaController">
    <children>
       <HBox spacing="30.0" styleClass="sr-panel-top">
          <children>
@@ -187,6 +187,6 @@
    </children>
    <stylesheets>
       <URL value="@css/general.css" />
-      <URL value="@css/subirReceta.css" />
+      <URL value="@css/verReceta.css" />
    </stylesheets>
 </VBox>

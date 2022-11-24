@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.BienvenidaController">
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.InicioController">
    <top>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="ba-titulo" text="Bienvenido a la app de Recetas" BorderPane.alignment="CENTER">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="io-rotulo" text="Bienvenido a la app de Recetas" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="50.0" />
          </BorderPane.margin></Text>
@@ -18,7 +18,7 @@
    <center>
       <VBox>
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo-1" text="Últimas recetas añadidas" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cabecera-1" text="Últimas recetas añadidas" />
             <ScrollPane fitToWidth="true">
                <content>
                   <FlowPane fx:id="pnlUltimasRecetas" hgap="40.0" vgap="40.0" />
@@ -35,6 +35,6 @@
    </center>
     <stylesheets>
       <URL value="@css/general.css" />
-      <URL value="@css/bienvenida.css" />
+      <URL value="@css/inicio.css" />
    </stylesheets>
 </BorderPane>

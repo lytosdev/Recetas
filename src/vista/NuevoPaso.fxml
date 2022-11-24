@@ -7,19 +7,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane styleClass="nuevo-paso" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoPasoController">
+<AnchorPane styleClass="nuevo-paso" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoPasoController">
    <children>
-      <Button layoutX="305.0" layoutY="9.0" mnemonicParsing="false" onAction="#borrar" text="X" AnchorPane.rightAnchor="15.0">
+      <Text fx:id="txtNumPaso" strokeType="OUTSIDE" strokeWidth="0.0" text="Paso" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextArea styleClass="np-caja" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0" />
+      <Button mnemonicParsing="false" onAction="#borrar" text="X" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <styleClass>
             <String fx:value="boton-2" />
-            <String fx:value="sr-boton-borrar" />
+            <String fx:value="np-btn-borrar" />
          </styleClass></Button>
-      <Text fx:id="txtNumPaso" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0" />
-      <TextArea layoutX="91.0" layoutY="8.0" prefHeight="84.0" prefWidth="208.0" styleClass="np-caja" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0" />
    </children>
    <stylesheets>
       <URL value="@css/general.css" />
-      <URL value="@css/subirReceta.css" />
       <URL value="@css/nuevoPaso.css" />
    </stylesheets>
 </AnchorPane>

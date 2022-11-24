@@ -7,43 +7,36 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SubirRecetaController">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SubirRecetaController">
    <children>
-      <HBox spacing="30.0" styleClass="sr-panel-top">
+      <HBox spacing="30.0" styleClass="sr-pnl-top">
          <children>
             <VBox>
                <children>
-                  <Pane styleClass="sr-imagen" VBox.vgrow="ALWAYS" />
-                  <AnchorPane>
-                     <children>
-                        <Button layoutX="165.0" mnemonicParsing="false" styleClass="boton-1" text="Subir foto" AnchorPane.leftAnchor="20.0" />
-                     </children>
-                     <VBox.margin>
-                        <Insets top="10.0" />
-                     </VBox.margin>
-                  </AnchorPane>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button mnemonicParsing="false" styleClass="boton-1" text="Subir foto" />
                </children>
             </VBox>
             <VBox>
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Título" />
-                  <TextField promptText="Introduzca el título de la receta" styleClass="sr-caja-titulo">
+                  <TextField promptText="Introduzca el título de la receta" styleClass="sr-inp-titulo">
                      <VBox.margin>
                         <Insets bottom="15.0" top="5.0" />
                      </VBox.margin></TextField>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción" />
-                  <TextArea promptText="Introduzca una breve descripción de la receta" styleClass="sr-caja-descripcion">
+                  <TextArea promptText="Introduzca una breve descripción de la receta" styleClass="sr-inp-descripcion">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin></TextArea>
@@ -56,18 +49,18 @@
                      <children>
                         <Button fx:id="btnDificultadBaja" mnemonicParsing="false" onAction="#dificultadBaja" text="Baja">
                            <styleClass>
-                              <String fx:value="sr-boton-dificultad" />
-                              <String fx:value="sr-boton-baja" />
+                              <String fx:value="sr-btn-dificultad" />
+                              <String fx:value="sr-btn-baja" />
                            </styleClass></Button>
                         <Button fx:id="btnDificultadMedia" mnemonicParsing="false" onAction="#dificultadMedia" text="Media">
                            <styleClass>
-                              <String fx:value="sr-boton-dificultad" />
-                              <String fx:value="sr-boton-media" />
+                              <String fx:value="sr-btn-dificultad" />
+                              <String fx:value="sr-btn-media" />
                            </styleClass></Button>
                         <Button fx:id="btnDificultadAlta" mnemonicParsing="false" onAction="#dificultadAlta" text="Alta">
                            <styleClass>
-                              <String fx:value="sr-boton-dificultad" />
-                              <String fx:value="sr-boton-alta" />
+                              <String fx:value="sr-btn-dificultad" />
+                              <String fx:value="sr-btn-alta" />
                            </styleClass></Button>
                      </children>
                      <VBox.margin>
@@ -89,7 +82,7 @@
          <content>
             <StackPane alignment="TOP_CENTER">
                <children>
-                  <VBox styleClass="sr-panel-creciente">
+                  <VBox styleClass="sr-pnl-creciente">
                      <children>
                         <GridPane hgap="30.0">
                            <columnConstraints>
@@ -102,12 +95,12 @@
                            <children>
                               <VBox spacing="10.0">
                                  <children>
-                                    <StackPane alignment="CENTER_LEFT" styleClass="sr-panel-titulo">
+                                    <StackPane alignment="CENTER_LEFT" styleClass="sr-pnl-cabecera">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredientes">
                                              <styleClass>
                                                 <String fx:value="titulo-1" />
-                                                <String fx:value="sr-titulo" />
+                                                <String fx:value="sr-txt-cabecera" />
                                              </styleClass>
                                              <StackPane.margin>
                                                 <Insets left="10.0" />
@@ -121,12 +114,12 @@
                               </VBox>
                               <VBox spacing="10.0" GridPane.columnIndex="1">
                                  <children>
-                                    <StackPane alignment="CENTER_LEFT" styleClass="sr-panel-titulo">
+                                    <StackPane alignment="CENTER_LEFT" styleClass="sr-pnl-cabecera">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Utensilios">
                                              <styleClass>
                                                 <String fx:value="titulo-1" />
-                                                <String fx:value="sr-titulo" />
+                                                <String fx:value="sr-txt-cabecera" />
                                              </styleClass>
                                              <StackPane.margin>
                                                 <Insets left="10.0" />
@@ -142,12 +135,12 @@
                         </GridPane>
                         <VBox spacing="10.0">
                            <children>
-                              <StackPane alignment="CENTER_LEFT" styleClass="sr-panel-titulo">
+                              <StackPane alignment="CENTER_LEFT" styleClass="sr-pnl-cabecera">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pasos">
                                        <styleClass>
                                           <String fx:value="titulo-1" />
-                                          <String fx:value="sr-titulo" />
+                                          <String fx:value="sr-txt-cabecera" />
                                        </styleClass>
                                        <StackPane.margin>
                                           <Insets left="10.0" />
@@ -171,7 +164,7 @@
             <Insets top="40.0" />
          </VBox.margin>
       </ScrollPane>
-      <TextFlow styleClass="sr-panelflow-email">
+      <TextFlow styleClass="sr-pnl-email">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Debe introducir su correo electrónico porque es en donde le notificaremos si su receta ha sido aceptada, en caso contrario le daremos las posibles correcciones para que pueda volverla a subir si procede." />
          </children>
@@ -179,16 +172,15 @@
             <Insets top="40.0" />
          </VBox.margin>
       </TextFlow>
-      <AnchorPane styleClass="sr-panel-email">
+      <AnchorPane styleClass="sr-pnl-email">
          <children>
-            <TextField prefHeight="31.0" prefWidth="731.0" promptText="Dirección de correo electrónico" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="70.0" />
-            <Button mnemonicParsing="false" styleClass="boton-1" text="Enviar" AnchorPane.rightAnchor="0.0" />
+            <TextField promptText="Dirección de correo electrónico" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="0.0" />
+            <Button mnemonicParsing="false" styleClass="boton-1" text="Enviar" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
          <VBox.margin>
             <Insets top="10.0" />
          </VBox.margin>
       </AnchorPane>
-      <StackPane />
    </children>
    <stylesheets>
       <URL value="@css/general.css" />

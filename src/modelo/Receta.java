@@ -2,7 +2,7 @@ package modelo;
 
 import javafx.scene.image.Image;
 
-public class RecetaDetalle {
+public class Receta {
 
   private Image imagen;
   private String titulo;
@@ -15,7 +15,7 @@ public class RecetaDetalle {
   private String[] utensilios;
   private String[] pasos;
 
-  public RecetaDetalle(Image imagen, String titulo, String descripcion, String categoria, String dificultad,
+  public Receta(Image imagen, String titulo, String descripcion, String categoria, String dificultad,
       int duracion, int personas, Ingrediente[] ingredientes, String[] utensilios, String[] pasos) {
     this.imagen = imagen;
     this.titulo = titulo;

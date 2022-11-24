@@ -12,7 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
-public class RecetaDetalleController implements Initializable {
+public class VerRecetaController implements Initializable {
 
     @FXML
     private VBox pnlIngredientes;
@@ -21,7 +21,7 @@ public class RecetaDetalleController implements Initializable {
     @FXML
     private VBox pnlPasos;
 
-    public RecetaDetalleController() {
+    public VerRecetaController() {
 
     }
 

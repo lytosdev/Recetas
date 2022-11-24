@@ -6,6 +6,10 @@
   -fx-background-radius: 6;
 }
 
-.np-caja {
+.np-inp-descripcion {
   -fx-wrap-text: true;
+}
+
+.np-btn-borrar {
+  -fx-font-weight: bold;
 }

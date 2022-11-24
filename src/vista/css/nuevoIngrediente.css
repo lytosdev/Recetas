@@ -5,3 +5,7 @@
   -fx-background-color: -fx-color-gris;
   -fx-background-radius: 6;
 }
+
+.ni-btn-borrar {
+  -fx-font-weight: bold;
+}

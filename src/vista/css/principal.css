@@ -10,19 +10,19 @@
   -fx-effect: dropshadow(three-pass-box, derive(#D7DBDD, -3%), 15, 0, 4, 4);
 }
 
-.menu-titulo {
+.txt-cabecera {
   -fx-font-size: 22;
   -fx-fill: white;
 }
 
-.menu-boton {
+.btn-menu {
   -fx-pref-height: 40;
   -fx-pref-width: 120;
   -fx-background-color: #81D8D0;
   -fx-text-fill: -fx-color-blanco;
 }
 
-.menu-boton:hover {
+.btn-menu:hover {
   -fx-background-color: derive(-fx-color-2, -20%);
   -fx-cursor: hand;
 }

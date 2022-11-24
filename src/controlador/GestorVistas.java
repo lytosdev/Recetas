@@ -9,6 +9,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.util.Callback;
 import tools.Reflexion;
 
 class GestorVistas {
@@ -91,17 +92,17 @@ class GestorVistas {
 
   }
 
-  public Text getComponenteTitulo() {
-    return componenteTitulo;
-  }
+  // public Text getComponenteTitulo() {
+  // return componenteTitulo;
+  // }
 
-  public PropsVista getVista(String uri) {
+  // public PropsVista getVista(String uri) {
 
-    Node vista = buscarVista(uri);
-    PropsVista propsVista = (PropsVista) vista.getUserData();
+  // Node vista = buscarVista(uri);
+  // PropsVista propsVista = (PropsVista) vista.getUserData();
 
-    return propsVista;
-  }
+  // return propsVista;
+  // }
 
   private Node buscarVista(String uri) {
 
@@ -160,6 +161,35 @@ class GestorVistas {
       throw new RuntimeException(e);
     }
 
+  }
+
+  public static Object[] cargarVista(String uri) {
+
+    FXMLLoader fxmlLoader = new FXMLLoader(GestorVistas.class.getResource(uri));
+    Node vista = null;
+
+    try {
+      vista = fxmlLoader.load();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return new Object[] { vista, fxmlLoader.getController() };
+  }
+
+  public static Object[] cargarVista(String uri, Callback<Class<?>, Object> controllerFactory) {
+
+    FXMLLoader fxmlLoader = new FXMLLoader(GestorVistas.class.getResource(uri));
+    fxmlLoader.setControllerFactory(controllerFactory);
+    Node vista = null;
+
+    try {
+      vista = fxmlLoader.load();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    return new Object[] { vista, fxmlLoader.getController() };
   }
 
 }

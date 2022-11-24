@@ -1,4 +1,4 @@
-.rs-caja-buscar {
+.rs-inp-buscar {
   -fx-pref-width: 400;
   -fx-max-width: -fx-pref-width;
   -fx-background-image: url("../img/find.png");
@@ -9,7 +9,7 @@
   -fx-effect: dropshadow(three-pass-box, derive(#D7DBDD, 0%), 10, 0, 3, 3);
 }
 
-.rs-panelscroll-categorias {
+.rs-pnl-categorias {
   -fx-pref-height: 60;
   -fx-min-height: -fx-pref-height;
   -fx-max-width: 800;

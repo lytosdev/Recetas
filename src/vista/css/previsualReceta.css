@@ -1,4 +1,4 @@
-.receta-vista-previa {
+.previsual-receta {
   -fx-pref-height: 400;
   -fx-min-height: -fx-pref-height;
   -fx-pref-width: 250;
@@ -8,25 +8,23 @@
   -fx-effect: dropshadow(three-pass-box, derive(#D7DBDD, -3%), 15, 0, 4, 4);
 }
 
-.rvp-imagen {
-  -fx-background-image: url("../img/comida.jpg");
-  -fx-background-size: cover;
-  -fx-pref-height: 180;
-  -fx-shape: "M 0 1 L 0 1 L 0 1 L 0 3 L 4 3 L 4 1 C 4 0 4 0 3 0 L 1 0 C 0 0 0 0 0 1";
+.pr-lbl-titulo {
+  -fx-wrap-text: true;
+  -fx-font-weight: bold;
 }
 
-.rvp-panelflow-descripcion {
-  -fx-font-size: 13px;
+.pr-lbl-descripcion {
+  -fx-wrap-text: true;
 }
 
-.rvp-boton {
+.pr-btn-ver {
   -fx-pref-height: 20;
   -fx-pref-width: 60;
   -fx-background-color: #81D8D0;
   -fx-background-radius: 30;
 }
 
-.rvp-boton:hover {
+.pr-btn-ver:hover {
   -fx-background-color: derive(-fx-color-3, 40%);
   -fx-cursor: hand;
 }

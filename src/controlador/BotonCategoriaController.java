@@ -11,12 +11,13 @@ import javafx.scene.text.Text;
 public class BotonCategoriaController implements Initializable {
 
     @FXML
-    public Text texto;
+    public Text txtTexto;
 
     private Consumer<String> accion;
 
     public BotonCategoriaController(Consumer<String> accion) {
         this.accion = accion;
+
     }
 
     @Override
@@ -26,8 +27,7 @@ public class BotonCategoriaController implements Initializable {
 
     @FXML
     private void abrir() {
-        System.out.println("Cargar categoría");
-        accion.accept(texto.getText());
+        accion.accept(txtTexto.getText());
     }
 
 }

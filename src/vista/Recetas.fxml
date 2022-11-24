@@ -11,16 +11,16 @@
 
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecetasController">
    <children>
-      <TextField promptText="Buscar una receta" styleClass="rs-caja-buscar">
+      <TextField promptText="Buscar una receta" styleClass="rs-inp-buscar">
          <VBox.margin>
             <Insets top="50.0" />
          </VBox.margin></TextField>
-      <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="rs-panelscroll-categorias">
+      <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="rs-pnl-categorias">
          <VBox.margin>
             <Insets top="50.0" />
          </VBox.margin>
          <content>
-            <HBox fx:id="pnlCategorias" alignment="TOP_CENTER" spacing="20.0" />
+            <HBox fx:id="pnlCategorias" spacing="20.0" />
          </content>
       </ScrollPane>
       <HBox>
@@ -28,7 +28,7 @@
             <Insets top="50.0" />
          </VBox.margin>
          <children>
-            <Text fx:id="txtResultados" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titulo-1" />
+            <Text fx:id="txtResultados" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cabecera-1" text="Resultados" />
          </children>
       </HBox>
       <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
