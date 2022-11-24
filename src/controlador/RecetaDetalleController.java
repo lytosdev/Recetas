@@ -9,7 +9,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -21,12 +20,6 @@ public class RecetaDetalleController implements Initializable {
     private VBox pnlUtensilios;
     @FXML
     private VBox pnlPasos;
-    @FXML
-    private Button btnDificultadBaja;
-    @FXML
-    private Button btnDificultadMedia;
-    @FXML
-    private Button btnDificultadAlta;
 
     public RecetaDetalleController() {
 
@@ -35,26 +28,6 @@ public class RecetaDetalleController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        btnDificultadBaja.setStyle("-fx-border-color: red;");
-        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
-        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
-
-    }
-
-    @FXML
-    private void nuevoPaso() {
-        int totPasos = pnlPasos.getChildren().size();
-        pnlPasos.getChildren().add(getPaso("Paso " + (totPasos + 1)));
-    }
-
-    @FXML
-    private void nuevoIngrediente() {
-        pnlIngredientes.getChildren().add(getIngrediente());
-    }
-
-    @FXML
-    private void nuevoUtensilio() {
-        pnlUtensilios.getChildren().add(getUtensilio());
     }
 
     private AnchorPane getPaso(String texto) {
@@ -169,27 +142,6 @@ public class RecetaDetalleController implements Initializable {
 
         pnlUtensilios.getChildren().remove(utensilioSelec);
 
-    }
-
-    @FXML
-    private void dificultadBaja() {
-        btnDificultadBaja.setStyle("-fx-border-color: red;");
-        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
-        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
-    }
-
-    @FXML
-    private void dificultadMedia() {
-        btnDificultadBaja.setStyle("-fx-border-color: transparent;");
-        btnDificultadMedia.setStyle("-fx-border-color: green;");
-        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
-    }
-
-    @FXML
-    private void dificultadAlta() {
-        btnDificultadBaja.setStyle("-fx-border-color: transparent;");
-        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
-        btnDificultadAlta.setStyle("-fx-border-color: blue;");
     }
 
 }

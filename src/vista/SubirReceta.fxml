@@ -77,8 +77,10 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duración" />
                   <TextField promptText="Duración en minutos">
                      <VBox.margin>
-                        <Insets top="5.0" />
+                        <Insets bottom="15.0" top="5.0" />
                      </VBox.margin></TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Personas" />
+                  <TextField promptText="Número máximo de personas" />
                </children>
             </VBox>
          </children>

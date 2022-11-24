@@ -24,7 +24,7 @@ public class PrincipalController implements Initializable {
     @FXML
     private Button btnPanelAdmin;
 
-    private GestorVistas gestorVistas;
+    public static GestorVistas gestorVistas;
 
     public PrincipalController() {
 

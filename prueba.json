@@ -1,12 +1,245 @@
 [
   {
-    "nombre": "Carlos",
-    "Apellidos": "Sánchez",
-    "Colores": ["rojo", "amarillo"]
+    "id": "1",
+    "imagen": "https://www.cocinatis.com/media/photologue/photos/cache/CTIS0043-Macarrones-con-chorizo-y-queso-gratinado-xlf_desktop_horizontal_full_width.jpg",
+    "titulo": "Macarrones con chorizo y queso gratinado",
+    "descripcion": "Recetas de macarrones con chorizo y sofrito de tomate. Todo ello gratinado al horno con queso rallado.",
+    "categoria": "Pasta",
+    "dificultad": "Media",
+    "duracion": 35,
+    "personas": 3,
+    "ingredientes": [
+      {
+        "cantidad": 400,
+        "udMedida": "g",
+        "nombre": "Macarrones"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "ud",
+        "nombre": "Chorizos frescos"
+      },
+      {
+        "cantidad": 400,
+        "udMedida": "g",
+        "nombre": "Salsa de tomate"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "ud",
+        "nombre": "Tomates deshidratados"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "ud",
+        "nombre": "Cebolla"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "ud",
+        "nombre": "Pimiento verde"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "ud",
+        "nombre": "Puerro"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "ud",
+        "nombre": "Guindilla"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "ud",
+        "nombre": "Ajo"
+      },
+      {
+        "cantidad": 100,
+        "udMedida": "ml",
+        "nombre": "Vino blanco"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "hoja",
+        "nombre": "Laurel"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "chorreoncito",
+        "nombre": "Aceite de oliva"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "cucharadita",
+        "nombre": "Sal"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "al gusto",
+        "nombre": "Pimienta negra"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "cucharadita",
+        "nombre": "Azúcar"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "pizca",
+        "nombre": "Orégano"
+      },
+      {
+        "cantidad": 150,
+        "udMedida": "g",
+        "nombre": "Queso parmesano rallado"
+      }
+    ],
+    "utensilios": [
+      "Horno",
+      "Sartenes",
+      "Cacerola"
+    ],
+    "pasos": [
+      "Pon al fuego una cazuela con agua y cuando rompa a hervir, añade sal y los macarrones. Cuece el tiempo indicado en el envase.",
+      "Quita las pepitas a la guindilla y pícala con un cuchillo. Quita la piel del chorizo, déjalo entero sin trocear porque luego se va a desmenuzar.",
+      "Pon una sartén al fuego con un poco de aceite. Añade la cebolla y el ajo picado, remueve y deja pochar unos minutos. Añade sal, la pimienta molida, el pimiento verde, el puerro picado y remueve. Añade el tomate y la guindilla troceada, el orégano y el chorizo. Mezcla todo y deja que se cocine durante 10 minutos.",
+      "Pon una hoja de laurel, añade el vino blanco y cocina a fuego medio unos minutos más. Agrega la salsa de tomate y el azúcar. Remueve",
+      "Añade los macarrones a la sartén con el sofrito y remueve. Deja que se cocine un par de minutos.",
+      "Pasa todo a una fuente apta para el horno. Espolvorea el queso rallado por encima e introduce la bandeja al horno precalentado al grill a 280ºC y gratina hasta que esté dorado.",
+      "Sirve los macarrones con chorizo y queso gratinado."
+    ]
   },
   {
-    "nombre": "Paco",
-    "Apellidos": "A",
-    "Colores": ["verde", "azul"]
+    "id": "2",
+    "imagen": "https://i.blogs.es/dbd52a/serranito-20bocadillo-20del-20sur/1366_521.jpg",
+    "titulo": "Serranito original mix",
+    "descripcion": "El serranito es un concepto metafísico,no es un bocata, es un serranito",
+    "categoria": "bocadillos",
+    "dificultad": "fácil",
+    "duracion": 10,
+    "personas": 1,
+    "ingredientes": [
+      {
+        "cantidad": 1,
+        "udMedida": "ud",
+        "nombre": "Pan de chapata"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "ud",
+        "nombre": "Filetes de pollo"
+      },
+      {
+        "cantidad": 15,
+        "udMedida": "g",
+        "nombre": "Jamón"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "ud",
+        "nombre": "Pimiento"
+      },
+      {
+        "cantidad": 0,
+        "udMedida": "nd",
+        "nombre": "Aceite"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "g",
+        "nombre": "Sal"
+      }
+    ],
+    "utensilios": [
+      "Sartén"
+    ],
+    "pasos": [
+      "Empezamos por freír el pimiento bien limpio de cabo y semillas. Puedes hacerlo en una sartén con solo un fondo de aceite, y en esa misma grasa, incluso al mismo tiempo, freír los filetes",
+      "Abrimos el pan y lo pasamos por el lado de la miga por esos jugos y aceite de la sartén para que esté más jugoso. Ponemos sobre el pan los filetes, la loncha de jamón y el pimiento (puedes eliminar la piel si lo prefieres) y cerramos el bocadillo.",
+      "Hay que tomarlo bien caliente, y tradicionalmente se acompaña de unas patatas frita"
+    ]
+  },
+  {
+    "id": "3",
+    "imagen": "https://www.cocinatis.com/media/photologue/photos/cache/CTIS0234-receta-arepas-venezolanas-rellenas-de-pollo_desktop_horizontal_full_width.jpg",
+    "titulo": "Arepas venezolanas rellenas de pollo",
+    "descripcion": "Arepas caseras desde la masa al relleno",
+    "categoria": "Venezolana",
+    "dificultad": "Media",
+    "duracion": 30,
+    "personas": 3,
+    "ingredientes": [
+      {
+        "cantidad": 150,
+        "udMedida": "g",
+        "nombre": "Harina de maíz precocida"
+      },
+      {
+        "cantidad": 250,
+        "udMedida": "g",
+        "nombre": "Agua"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "cucharadita",
+        "nombre": "Sal"
+      },
+      {
+        "cantidad": 400,
+        "udMedida": "g",
+        "nombre": "Pechuga de pollo"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "dientes",
+        "nombre": "Ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "ud",
+        "nombre": "Cebolla"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "ud",
+        "nombre": "Aguacate"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "cucharadas",
+        "nombre": "Mayonesa"
+      },
+      {
+        "cantidad": 25,
+        "udMedida": "ml",
+        "nombre": "Aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "cucharadita",
+        "nombre": "Sal"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "cucharadita",
+        "nombre": "Pimienta negra"
+      }
+    ],
+    "utensilios": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "pasos": [
+      "Pon la harina y la sal en un bol. Vierte el agua templada y mezcla hasta que no queden grumos. ",
+      "Pon un chorrito de aceite en una sartén. Coge porciones de masa, dales forma de bola y aplástalas.",
+      "Fríe las arepas por los dos lados a fuego medio hasta que empiecen a dorarse. Retira y reserva.",
+      "Cocina en una sartén un par de minutos el ajo picado, la cebolla, sal y pimienta. Añade el pollo troceado, salpimienta y saltea. ",
+      "Pela y corta el aguacate en trozos pequeños y añádelo a un bol. Agrega también la mahonesa y el salteado de pollo. Mezcla. ",
+      "Corta las arepas por la mitad e introduce el relleno caliente. ",
+      "Sirve las arepas."
+    ]
   }
 ]
