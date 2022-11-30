@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane styleClass="nuevo-paso" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoPasoController">
+   <children>
+      <Text fx:id="txtNumPaso" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="10.0" />
+      <TextFlow layoutX="62.0" layoutY="14.0" prefHeight="73.0" prefWidth="278.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+   </children>
+   <stylesheets>
+      <URL value="@css/general.css" />
+      <URL value="@css/subirReceta.css" />
+      <URL value="@css/nuevoPaso.css" />
+   </stylesheets>
+</AnchorPane>

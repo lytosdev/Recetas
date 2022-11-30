@@ -1,0 +1,30 @@
+.previsual-receta {
+  -fx-pref-height: 400;
+  -fx-min-height: -fx-pref-height;
+  -fx-pref-width: 250;
+  -fx-min-width: -fx-pref-width;
+  -fx-background-radius: 30;
+  -fx-background-color: derive(gray, 90%);
+  -fx-effect: dropshadow(three-pass-box, derive(#D7DBDD, -3%), 15, 0, 4, 4);
+}
+
+.pr-lbl-titulo {
+  -fx-wrap-text: true;
+  -fx-font-weight: bold;
+}
+
+.pr-lbl-descripcion {
+  -fx-wrap-text: true;
+}
+
+.pr-btn-ver {
+  -fx-pref-height: 20;
+  -fx-pref-width: 60;
+  -fx-background-color: #81D8D0;
+  -fx-background-radius: 30;
+}
+
+.pr-btn-ver:hover {
+  -fx-background-color: derive(-fx-color-3, 40%);
+  -fx-cursor: hand;
+}

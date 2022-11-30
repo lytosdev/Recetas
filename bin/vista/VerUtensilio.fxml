@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane styleClass="nuevo-utensilio" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoUtensilioController">
+   <stylesheets>
+      <URL value="@css/general.css" />
+      <URL value="@css/subirReceta.css" />
+      <URL value="@css/nuevoUtensilio.css" />
+   </stylesheets>
+   <children>
+      <Text layoutX="14.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="10.0" />
+   </children>
+</AnchorPane>

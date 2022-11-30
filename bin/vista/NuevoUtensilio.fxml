@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane styleClass="nuevo-utensilio" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoUtensilioController">
+   <children>
+      <TextField layoutX="32.0" layoutY="11.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="11.0" />
+      <Button mnemonicParsing="false" onAction="#borrar" text="X" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <styleClass>
+            <String fx:value="boton-2" />
+            <String fx:value="sr-boton-borrar" />
+         </styleClass></Button>
+   </children>
+   <stylesheets>
+      <URL value="@css/general.css" />
+      <URL value="@css/nuevoUtensilio.css" />
+   </stylesheets>
+</AnchorPane>

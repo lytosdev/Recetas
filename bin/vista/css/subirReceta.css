@@ -1,0 +1,55 @@
+.sr-pnl-top {
+  -fx-pref-height: 200;
+  -fx-min-height: -fx-pref-height;
+}
+
+.sr-inp-titulo {
+  -fx-pref-width: 500;
+}
+
+.sr-inp-descripcion {
+  -fx-pref-width: 500;
+  -fx-wrap-text: true;
+}
+
+.sr-btn-dificultad {
+  -fx-border-width: 2;
+  -fx-background-radius: 30;
+  -fx-border-radius: 30;
+}
+
+.sr-btn-dificultad:hover {
+  -fx-cursor: hand;
+}
+
+.sr-btn-baja {
+  -fx-background-color: derive(red, 5%);
+}
+
+.sr-btn-media {
+  -fx-background-color: derive(red, 5%);
+}
+
+.sr-btn-alta {
+  -fx-background-color: derive(red, 5%);
+}
+
+.sr-pnl-creciente {
+  -fx-pref-width: 800;
+  -fx-max-width: -fx-pref-width;
+}
+
+.sr-pnl-cabecera {
+  -fx-pref-height: 30;
+  -fx-min-height: -fx-pref-height;
+  -fx-background-color: -fx-color-2;
+}
+
+.sr-txt-cabecera {
+  -fx-fill: -fx-color-blanco;
+}
+
+.sr-pnl-email {
+  -fx-pref-width: 800;
+  -fx-max-width: -fx-pref-width;
+}

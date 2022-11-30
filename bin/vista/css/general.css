@@ -1,0 +1,85 @@
+.root {
+  -fx-color-1: #F18F01;
+  -fx-color-2: #048BA8;
+  -fx-color-3: #2E4057;
+  -fx-color-4: #99C24D;
+  -fx-color-negro: #363636;
+  -fx-color-gris: #003152;
+  -fx-color-blanco: white;
+
+  -fx-font-family: 'Calibri';
+  -fx-font-size: 15px;
+  -fx-background-color: derive(-fx-color-blanco, -1%);
+}
+
+/* Para todos los Label */
+Label {
+  -fx-text-fill: -fx-color-negro;
+}
+
+/* Para todos los Text */
+Text {
+  -fx-fill: -fx-color-negro;
+}
+
+/* Para todos los TextField */
+TextField {
+  -fx-background-radius: 6;
+  -fx-text-fill: -fx-color-negro;
+}
+
+TextField:focused {
+  -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+}
+
+/* Para todos los TextArea */
+TextArea {
+  -fx-background-radius: 6;
+  -fx-text-fill: -fx-color-negro;
+}
+
+TextArea:focused {
+  -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+}
+
+/* Para todos los Button */
+Button {
+  -fx-background-radius: 4;
+  -fx-border-radius: 4;
+  -fx-text-fill: -fx-color-negro;
+}
+
+/* Para todos los ScrollPane */
+ScrollPane {
+  -fx-background-color: transparent;
+}
+
+ScrollPane .viewport {
+  -fx-background-color: transparent;
+}
+
+.cabecera-1 {
+  -fx-font-size: 18px;
+}
+
+.boton-1 {
+  -fx-background-color: -fx-color-4;
+  -fx-text-fill: -fx-color-3;
+  -fx-border-color: derive(-fx-color-3, 80%);
+}
+
+.boton-1:hover {
+  -fx-background-color: derive(-fx-color-4, -20%);
+  -fx-cursor: hand;
+}
+
+.boton-2 {
+  -fx-background-color: -fx-color-1;
+  -fx-text-fill: -fx-color-3;
+  -fx-border-color: derive(-fx-color-3, 40%);
+}
+
+.boton-2:hover {
+  -fx-background-color: derive(-fx-color-1, -30%);
+  -fx-cursor: hand;
+}

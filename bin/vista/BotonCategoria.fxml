@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Text?>
+
+<Button mnemonicParsing="false" onAction="#abrir" styleClass="boton-categoria" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.BotonCategoriaController">
+   <stylesheets>
+      <URL value="@css/general.css" />
+      <URL value="@css/botonCategoria.css" />
+   </stylesheets>
+   <graphic>
+      <Text fx:id="txtTexto" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="bc-txt-titulo" text="Nombre de la categoría" />
+   </graphic>
+</Button>

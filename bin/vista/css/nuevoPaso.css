@@ -1,0 +1,15 @@
+.nuevo-paso {
+  -fx-pref-height: 100;
+  -fx-min-height: -fx-pref-height;
+  -fx-min-width: 350;
+  -fx-background-color: -fx-color-gris;
+  -fx-background-radius: 6;
+}
+
+.np-inp-descripcion {
+  -fx-wrap-text: true;
+}
+
+.np-btn-borrar {
+  -fx-font-weight: bold;
+}

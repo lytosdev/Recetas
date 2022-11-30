@@ -1,0 +1,12 @@
+.boton-categoria {
+  -fx-background-color: -fx-color-3;
+  -fx-padding: 6 20;
+}
+
+.boton-categoria:hover {
+  -fx-cursor: hand;
+}
+
+.bc-txt-titulo {
+  -fx-fill: -fx-color-blanco;
+}
