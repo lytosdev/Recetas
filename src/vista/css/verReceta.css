@@ -1,0 +1,60 @@
+.ver-receta {
+  -fx-font-size: 18px;
+}
+
+.vr-pnl-foto {
+  -fx-pref-height: 180;
+  -fx-min-height: -fx-pref-height;
+  -fx-pref-width: 250;
+  -fx-min-width: -fx-pref-width;
+  -fx-background-radius: 6;
+  -fx-background-color: -fx-color-fondo2;
+  -fx-effect: -fx-sombreado;
+}
+
+.vr-lbl-titulo {
+  -fx-pref-width: 500;
+  -fx-font-weight: bold;
+}
+
+.vr-lbl-descripcion {
+  -fx-pref-width: 500;
+  -fx-wrap-text: true;
+}
+
+.vr-lbl-dificultad {
+  -fx-background-color: -fx-color-fondo2;
+  -fx-border-color: -fx-color-fondo2;
+  -fx-border-width: 2;
+  -fx-background-radius: 30;
+  -fx-border-radius: 30;
+  -fx-padding: 2 10;
+}
+
+.vr-lbl-baja {
+  -fx-border-color: -fx-color-3;
+}
+
+.vr-lbl-media {
+  -fx-border-color: -fx-color-5;
+}
+
+.vr-lbl-alta {
+  -fx-border-color: -fx-color-4;
+}
+
+.vr-pnl-creciente {
+  -fx-pref-width: 800;
+  -fx-max-width: -fx-pref-width;
+}
+
+.vr-pnl-cabecera {
+  -fx-pref-height: 30;
+  -fx-min-height: -fx-pref-height;
+  -fx-background-color: -fx-color-fondo2;
+  -fx-background-radius: 4;
+}
+
+.vr-txt-cabecera {
+  -fx-fill: -fx-color-texto2;
+}

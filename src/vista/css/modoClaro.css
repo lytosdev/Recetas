@@ -1,0 +1,9 @@
+.root {
+  -fx-sombreado: dropshadow(three-pass-box, derive(gainsboro, -3%), 15, 0, 4, 4);
+  -fx-color-gris: #D8D8D8;
+
+  -fx-color-fondo1: -fx-color-blanco;
+  -fx-color-fondo2: -fx-color-gris;
+  -fx-color-texto1: -fx-color-negro;
+  -fx-color-texto2:  -fx-color-negro;
+}

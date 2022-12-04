@@ -6,10 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="800.0" prefWidth="1200.0" spacing="20.0" styleClass="principal" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PrincipalController">
+<VBox fx:id="principal" prefHeight="800.0" prefWidth="1200.0" spacing="20.0" styleClass="principal" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PrincipalController">
    <children>
       <BorderPane styleClass="menu">
          <right>
@@ -19,11 +20,19 @@
                   <Button mnemonicParsing="false" onAction="#abrirRecetas" styleClass="btn-menu" text="Recetas" />
                   <Button mnemonicParsing="false" onAction="#abrirSubirReceta" styleClass="btn-menu" text="Subir Receta" />
                   <Button mnemonicParsing="false" onAction="#abrirPanelAdmin" styleClass="btn-menu" text="Panel Admin" />
+                  <Button mnemonicParsing="false" onAction="#cambiarModo" styleClass="btn-modo" text="Button">
+                     <graphic>
+                        <Region fx:id="regModo" styleClass="icn-modo-oscuro" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Button>
                </children>
             </HBox>
          </right>
          <left>
-            <Text fx:id="txtCabecera" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-cabecera" text="Ventana" BorderPane.alignment="CENTER">
+            <Text fx:id="txtCabecera" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-menu" text="Ventana" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets left="100.0" />
                </BorderPane.margin></Text>

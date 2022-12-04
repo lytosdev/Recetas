@@ -4,7 +4,10 @@ import javafx.scene.image.Image;
 
 public class Receta {
 
-  private Image imagen;
+  public static int alturaFoto = 180;
+  public static int anchuraFoto = 250;
+
+  private Image foto;
   private String titulo;
   private String descripcion;
   private String categoria;
@@ -15,9 +18,9 @@ public class Receta {
   private String[] utensilios;
   private String[] pasos;
 
-  public Receta(Image imagen, String titulo, String descripcion, String categoria, String dificultad,
+  public Receta(Image foto, String titulo, String descripcion, String categoria, String dificultad,
       int duracion, int personas, Ingrediente[] ingredientes, String[] utensilios, String[] pasos) {
-    this.imagen = imagen;
+    this.foto = foto;
     this.titulo = titulo;
     this.descripcion = descripcion;
     this.categoria = categoria;
@@ -31,7 +34,7 @@ public class Receta {
   }
 
   public Image getImagen() {
-    return imagen;
+    return foto;
   }
 
   public String getTitulo() {

@@ -1,9 +1,16 @@
 .nuevo-ingrediente {
-  -fx-pref-height: 50;
+  -fx-pref-height: 53;
   -fx-min-height: -fx-pref-height;
-  -fx-min-width: 350;
-  -fx-background-color: -fx-color-gris;
+  -fx-background-color: -fx-color-fondo2;
   -fx-background-radius: 6;
+}
+
+.ni-inp-cantidad {
+  -fx-pref-width: 120;
+}
+
+.ni-cbx-udmedida {
+  -fx-pref-width: 90;
 }
 
 .ni-btn-borrar {

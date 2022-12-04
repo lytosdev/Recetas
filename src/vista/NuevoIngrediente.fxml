@@ -3,20 +3,33 @@
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane styleClass="nuevo-ingrediente" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoIngredienteController">
+<AnchorPane fx:id="nuevoIngrediente" styleClass="nuevo-ingrediente" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevoIngredienteController">
    <children>
-      <HBox layoutX="10.0" layoutY="11.0" spacing="5.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="11.0">
+      <HBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="10.0">
          <children>
-            <TextField prefWidth="50.0" promptText="Ud" />
-            <TextField prefWidth="90.0" promptText="Ud medida" />
-            <TextField promptText="Nombre" HBox.hgrow="ALWAYS" />
+            <VBox>
+               <children>
+                  <TextField fx:id="inpCantidad" promptText="Cant" styleClass="ni-inp-cantidad" />
+                  <Label fx:id="lblErrorCantidad" styleClass="msj-error" text="error" />
+               </children>
+            </VBox>
+            <ComboBox fx:id="cbxUdMedida" styleClass="ni-cbx-udmedida" />
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="inpNombre" promptText="Nombre" />
+                  <Label fx:id="lblErrorNombre" styleClass="msj-error" text="error" />
+               </children>
+            </VBox>
          </children>
       </HBox>
-      <Button mnemonicParsing="false" onAction="#borrar" text="X" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <Button mnemonicParsing="false" onAction="#borrar" text="X" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <styleClass>
             <String fx:value="boton-2" />
             <String fx:value="ni-btn-borrar" />

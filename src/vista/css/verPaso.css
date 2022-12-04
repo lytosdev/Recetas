@@ -1,7 +1,9 @@
-.nuevo-paso {
-  -fx-pref-height: 100;
-  -fx-min-height: -fx-pref-height;
-  -fx-min-width: 350;
-  -fx-background-color: -fx-color-gris;
+.ver-paso {
+  -fx-background-color: -fx-color-fondo2;
   -fx-background-radius: 6;
+  -fx-padding: 10;
+}
+
+.vp-txt-numpaso {
+  -fx-font-weight: bold;
 }

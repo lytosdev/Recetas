@@ -6,15 +6,26 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecetasController">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.RecetasController">
    <children>
-      <TextField promptText="Buscar una receta" styleClass="rs-inp-buscar">
+      <StackPane styleClass="rs-pnl-buscar">
          <VBox.margin>
             <Insets top="50.0" />
-         </VBox.margin></TextField>
+         </VBox.margin>
+         <children>
+            <TextField promptText="Buscar una receta" styleClass="rs-inp-buscar" />
+            <Region styleClass="rs-icn-lupa" StackPane.alignment="CENTER_LEFT">
+               <StackPane.margin>
+                  <Insets left="10.0" />
+               </StackPane.margin>
+            </Region>
+         </children>
+      </StackPane>
       <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="rs-pnl-categorias">
          <VBox.margin>
             <Insets top="50.0" />

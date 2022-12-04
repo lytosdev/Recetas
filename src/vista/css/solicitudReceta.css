@@ -1,0 +1,10 @@
+.solicitud-receta {
+  -fx-padding: 10;
+  -fx-background-color: -fx-color-fondo2;
+  -fx-background-radius: 6;
+}
+
+.solicitud-receta:hover {
+  -fx-cursor: hand;
+  -fx-background-color: derive(-fx-color-fondo2, -20%);
+}

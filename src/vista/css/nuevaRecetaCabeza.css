@@ -1,0 +1,39 @@
+.nr-pnl-foto {
+  -fx-pref-height: 180;
+  -fx-min-height: -fx-pref-height;
+  -fx-pref-width: 250;
+  -fx-min-width: -fx-pref-width;
+  -fx-background-radius: 6;
+  -fx-background-color: -fx-color-fondo2;
+  -fx-effect: -fx-sombreado;
+}
+
+.nr-inp-titulo {
+  -fx-pref-width: 400;
+}
+
+.nr-inp-descripcion {
+  -fx-pref-height: 50;
+  -fx-pref-width: 400;
+  -fx-wrap-text: true;
+}
+
+.nr-btn-dificultad {
+  -fx-background-color: -fx-color-fondo2;
+  -fx-border-color: -fx-color-fondo2;
+  -fx-border-width: 2;
+  -fx-background-radius: 30;
+  -fx-border-radius: 30;
+}
+
+.nr-btn-baja {
+  -fx-border-color: -fx-color-3;
+}
+
+.nr-btn-media {
+  -fx-border-color: -fx-color-5;
+}
+
+.nr-btn-alta {
+  -fx-border-color: -fx-color-4;
+}

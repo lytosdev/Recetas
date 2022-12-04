@@ -1,32 +1,30 @@
 package controlador;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.collections.ObservableList;
+import controlador.GestorErrores.TipoError;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import tools.Vista;
 
 public class SubirRecetaController implements Initializable {
 
     @FXML
-    private VBox pnlIngredientes;
+    private HBox pnlCabeza;
     @FXML
-    private VBox pnlUtensilios;
+    private VBox pnlCuerpo;
     @FXML
-    private VBox pnlPasos;
+    private TextField inpEmail;
     @FXML
-    private Button btnDificultadBaja;
-    @FXML
-    private Button btnDificultadMedia;
-    @FXML
-    private Button btnDificultadAlta;
+    private Label lblErrorEmail;
+
+    private GestorErrores gestorErrores = new GestorErrores();
 
     public SubirRecetaController() {
 
@@ -34,162 +32,35 @@ public class SubirRecetaController implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        lblErrorEmail.setText("");
 
-        btnDificultadBaja.setStyle("-fx-border-color: red;");
-        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
-        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
+        // Cargamos la cabeza de la nueva receta
+        Object[] arrCabeza = GestorVistas.cargarVista("/vista/NuevaRecetaCabeza.fxml");
+        Node nodeCabeza = (Node) arrCabeza[0];
+        NuevaRecetaCabezaController controllerCabeza = (NuevaRecetaCabezaController) arrCabeza[1];
+        pnlCabeza.getChildren().add(nodeCabeza);
+        controllerCabeza.suscribirErrores(gestorErrores);
 
-    }
+        // Cargamos el cuerpo de la nueva receta
+        Object[] arrCuerpo = GestorVistas.cargarVista("/vista/NuevaRecetaCuerpo.fxml");
+        Node nodeCuerpo = (Node) arrCuerpo[0];
+        NuevaRecetaCuerpoController controllerCuerpo = (NuevaRecetaCuerpoController) arrCuerpo[1];
+        pnlCuerpo.getChildren().add(nodeCuerpo);
+        controllerCuerpo.suscribirErrores(gestorErrores);
 
-    @FXML
-    private void nuevoPaso() {
-        int totPasos = pnlPasos.getChildren().size();
-        pnlPasos.getChildren().add(getPaso("Paso " + (totPasos + 1)));
-    }
-
-    @FXML
-    private void nuevoIngrediente() {
-        pnlIngredientes.getChildren().add(getIngrediente());
-    }
-
-    @FXML
-    private void nuevoUtensilio() {
-        pnlUtensilios.getChildren().add(getUtensilio());
-    }
-
-    private AnchorPane getPaso(String texto) {
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/NuevoPaso.fxml"));
-        fxmlLoader.setControllerFactory((Class<?> clazz) -> new NuevoPasoController(this::borrarPaso));
-
-        AnchorPane vista = null;
-
-        try {
-            vista = fxmlLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        NuevoPasoController paso = fxmlLoader.getController();
-        vista.setUserData(paso);
-        paso.txtNumPaso.setText(texto);
-
-        return vista;
-    }
-
-    private void borrarPaso(NuevoPasoController obj) {
-
-        ObservableList<Node> pasos = pnlPasos.getChildren();
-        Node pasoSelec = null;
-
-        for (Node paso : pasos) {
-            // Actualizamos el número de paso a partir del borrado
-            if (pasoSelec != null) {
-                int numPaso = pasos.indexOf(paso);
-                NuevoPasoController pasoController = (NuevoPasoController) paso.getUserData();
-                pasoController.txtNumPaso.setText("Paso " + numPaso);
-            }
-            // Guardamos el paso que queremos borrar
-            if (paso.getUserData().equals(obj)) {
-                pasoSelec = paso;
-            }
-        }
-
-        pnlPasos.getChildren().remove(pasoSelec);
-
-    }
-
-    private AnchorPane getIngrediente() {
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/NuevoIngrediente.fxml"));
-        fxmlLoader.setControllerFactory((Class<?> clazz) -> new NuevoIngredienteController(this::borrarIngrediente));
-
-        AnchorPane vista = null;
-
-        try {
-            vista = fxmlLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        NuevoIngredienteController ingrediente = fxmlLoader.getController();
-        vista.setUserData(ingrediente);
-
-        return vista;
-    }
-
-    private void borrarIngrediente(NuevoIngredienteController obj) {
-
-        ObservableList<Node> ingredientes = pnlIngredientes.getChildren();
-        Node ingredienteSelec = null;
-
-        for (Node ingrediente : ingredientes) {
-            // Guardamos el ingrediente que queremos borrar
-            if (ingrediente.getUserData().equals(obj)) {
-                ingredienteSelec = ingrediente;
-                break;
-            }
-        }
-
-        pnlIngredientes.getChildren().remove(ingredienteSelec);
-
-    }
-
-    private AnchorPane getUtensilio() {
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/NuevoUtensilio.fxml"));
-        fxmlLoader.setControllerFactory((Class<?> clazz) -> new NuevoUtensilioController(this::borrarUtensilio));
-
-        AnchorPane vista = null;
-
-        try {
-            vista = fxmlLoader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        NuevoUtensilioController utensilio = fxmlLoader.getController();
-        vista.setUserData(utensilio);
-
-        return vista;
-    }
-
-    private void borrarUtensilio(NuevoUtensilioController obj) {
-
-        ObservableList<Node> utensilios = pnlUtensilios.getChildren();
-        Node utensilioSelec = null;
-
-        for (Node utensilio : utensilios) {
-            // Guardamos el ingrediente que queremos borrar
-            if (utensilio.getUserData().equals(obj)) {
-                utensilioSelec = utensilio;
-                break;
-            }
-        }
-
-        pnlUtensilios.getChildren().remove(utensilioSelec);
+        gestorErrores.suscribir(inpEmail, lblErrorEmail, new TipoError[] { TipoError.NO_VACIO, TipoError.EMAIL });
 
     }
 
     @FXML
-    private void dificultadBaja() {
-        btnDificultadBaja.setStyle("-fx-border-color: red;");
-        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
-        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
-    }
+    private void enviar() {
 
-    @FXML
-    private void dificultadMedia() {
-        btnDificultadBaja.setStyle("-fx-border-color: transparent;");
-        btnDificultadMedia.setStyle("-fx-border-color: green;");
-        btnDificultadAlta.setStyle("-fx-border-color: transparent;");
-    }
+        if (gestorErrores.hayErrores()) {
+            Vista.alertError("No puede enviar la receta porque hay errores en el formulario");
+        } else {
 
-    @FXML
-    private void dificultadAlta() {
-        btnDificultadBaja.setStyle("-fx-border-color: transparent;");
-        btnDificultadMedia.setStyle("-fx-border-color: transparent;");
-        btnDificultadAlta.setStyle("-fx-border-color: blue;");
+        }
+
     }
 
 }

@@ -1,0 +1,38 @@
+.panel-admin {
+  -fx-background-color: null;
+}
+
+.panel-admin .split-pane-divider {
+  -fx-background-color: -fx-color-fondo2;
+}
+
+.pa-pnl-solicitudes {
+  -fx-padding: 20;
+}
+
+.pa-pnl-respuesta {
+  -fx-padding: 40;
+}
+
+.pa-subpaneles {
+  -fx-padding: 20;
+  -fx-background-color: -fx-color-fondo2;
+  -fx-background-radius: 10;
+  -fx-pref-width: 750;
+  -fx-max-width: -fx-pref-width;
+}
+
+.pa-cbx-categoria {
+  -fx-pref-width: 500;
+}
+
+.pa-txt-mensaje {
+  -fx-pref-width: 500;
+  -fx-pref-height: 100;
+  -fx-min-height: -fx-pref-height;
+  -fx-wrap-text: true;
+}
+
+.pa-botones {
+  -fx-pref-width: 150;
+}

@@ -1,0 +1,21 @@
+.dialog-pane {
+  -fx-background-color: -fx-color-fondo2;
+}
+
+.dialog-pane>.content.label {
+  -fx-text-fill: -fx-color-texto2;
+  /* -fx-wrap-text: true; */
+}
+
+.dialog-pane .button {
+  -fx-background-color: -fx-color-3;
+  -fx-text-fill: -fx-color-blanco;
+}
+
+.dialog-pane .button:hover {
+  -fx-background-color: derive(-fx-color-3, 20%);
+}
+
+/* .alert.error.dialog-pane {
+  -fx-graphic: null;
+} */

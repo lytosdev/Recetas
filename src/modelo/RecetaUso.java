@@ -17,7 +17,7 @@ public class RecetaUso {
 
     List<String> recetasJson = null;
     try {
-      recetasJson = Files.readAllLines(Paths.get("./prueba.json"), StandardCharsets.UTF_8);
+      recetasJson = Files.readAllLines(Paths.get("./tblRecetas.json"), StandardCharsets.UTF_8);
     } catch (Exception e) {
       // TODO: handle exception
     }
@@ -29,7 +29,7 @@ public class RecetaUso {
     for (int i = 0; i < arr.length(); i++) {
       JSONObject jsonObj = arr.getJSONObject(i);
 
-      String imagen = jsonObj.getString("imagen");
+      String urlFoto = jsonObj.getString("imagen");
       String titulo = jsonObj.getString("titulo");
       String descripcion = jsonObj.getString("descripcion");
       String categoria = jsonObj.getString("categoria");
@@ -62,9 +62,17 @@ public class RecetaUso {
 
       Ingrediente[] newArrIngredientes = new Ingrediente[ingredientes.size()];
       newArrIngredientes = ingredientes.toArray(newArrIngredientes);
-      Image img = new Image(imagen, 250*2, 180*2, true, true);
-      recetas.add(new Receta(img, titulo, descripcion, categoria, dificultad, duracion, personas, newArrIngredientes,
-          null, null));
+
+      String[] newArrUtensilios = new String[utensilios.size()];
+      newArrUtensilios = utensilios.toArray(newArrUtensilios);
+
+      String[] newArrPasos = new String[pasos.size()];
+      newArrPasos = pasos.toArray(newArrPasos);
+
+      Image foto = new Image(urlFoto, Receta.anchuraFoto * 1.25, Receta.alturaFoto * 1.25, true, true);
+
+      recetas.add(new Receta(foto, titulo, descripcion, categoria, dificultad, duracion, personas, newArrIngredientes,
+          newArrUtensilios, newArrPasos));
     }
 
     return recetas;

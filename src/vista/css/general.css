@@ -1,85 +1,137 @@
+@import "modoClaro.css";
+
 .root {
-  -fx-color-1: #F18F01;
-  -fx-color-2: #048BA8;
-  -fx-color-3: #2E4057;
-  -fx-color-4: #99C24D;
-  -fx-color-negro: #363636;
-  -fx-color-gris: #003152;
-  -fx-color-blanco: white;
+  -fx-color-1: #404B69;
+  -fx-color-2: #C96868;
+  -fx-color-3: #0B8457;
+  -fx-color-4: #CF0A0A;
+  -fx-color-5: #FF7315;
+  -fx-color-blanco: #F1F1F1;
+  -fx-color-negro: #202020;
 
   -fx-font-family: 'Calibri';
-  -fx-font-size: 15px;
-  -fx-background-color: derive(-fx-color-blanco, -1%);
+  -fx-font-size: 16;
+  -fx-background-color: -fx-color-fondo1;
 }
 
 /* Para todos los Label */
 Label {
-  -fx-text-fill: -fx-color-negro;
+  -fx-text-fill: -fx-color-texto2;
 }
 
 /* Para todos los Text */
 Text {
-  -fx-fill: -fx-color-negro;
+  -fx-fill: -fx-color-texto2;
 }
 
-/* Para todos los TextField */
-TextField {
+/* Para todos los TextField, PasswordField, TextArea y ComboBox */
+TextField,
+PasswordField,
+TextArea,
+ComboBox {
+  -fx-background-color: -fx-color-fondo2, -fx-color-fondo1;
+  -fx-background-insets: 0, 1;
   -fx-background-radius: 6;
-  -fx-text-fill: -fx-color-negro;
+  -fx-text-fill: -fx-color-texto1;
 }
 
-TextField:focused {
-  -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+/* Por las peculiaridades del TextArea */
+TextArea .content {
+  -fx-background-color: null;
 }
 
-/* Para todos los TextArea */
-TextArea {
-  -fx-background-radius: 6;
-  -fx-text-fill: -fx-color-negro;
+TextArea .scroll-bar:vertical {
+  -fx-border-color: -fx-color-fondo2;
 }
 
-TextArea:focused {
-  -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+/* Por las peculiaridades del ComboBox */
+ComboBox .list-cell {
+  /* Este estilo no sólo se refiere a la lista desplegable sino también al combo en sí */
+  -fx-text-fill: -fx-color-texto2;
+}
+
+ComboBox .list-view{
+  -fx-background-color: -fx-color-fondo1;
+}
+
+ComboBox .list-view .list-cell{
+  -fx-background-color: -fx-color-fondo1;
+  -fx-border-color: -fx-color-fondo1;
+}
+
+ComboBox .list-view .list-cell:hover,
+ComboBox .list-view .list-cell:selected:hover {
+  -fx-background-color: -fx-color-fondo2;
+  -fx-text-fill: -fx-color-texto2;
+}
+
+ComboBox .list-view .list-cell:selected {
+  -fx-background-color: -fx-color-fondo2;
+  -fx-text-fill: -fx-color-texto2;
 }
 
 /* Para todos los Button */
 Button {
-  -fx-background-radius: 4;
-  -fx-border-radius: 4;
-  -fx-text-fill: -fx-color-negro;
+  -fx-background-color: -fx-color-fondo2;
+  -fx-text-fill: -fx-color-texto2;
+  -fx-background-radius: 6;
+  -fx-border-radius: 6;
+}
+
+Button:hover {
+  -fx-cursor: hand;
+}
+
+/* Para todos los Scrollbar */
+ScrollBar:horizontal,
+ScrollBar:vertical {
+  -fx-background-color: -fx-color-fondo2;
+}
+
+ScrollBar:horizontal .thumb,
+ScrollBar:vertical .thumb {
+  /* Para la barra que se desplaza */
+  -fx-background-color: derive(-fx-color-fondo2, -20%);
 }
 
 /* Para todos los ScrollPane */
 ScrollPane {
-  -fx-background-color: transparent;
+  -fx-background-color: null;
 }
 
 ScrollPane .viewport {
-  -fx-background-color: transparent;
+  -fx-background-color: null;
 }
 
+/* Clases predeterminadas para controles */
 .cabecera-1 {
-  -fx-font-size: 18px;
+  -fx-font-size: 20;
 }
 
 .boton-1 {
-  -fx-background-color: -fx-color-4;
-  -fx-text-fill: -fx-color-3;
-  -fx-border-color: derive(-fx-color-3, 80%);
+  -fx-background-color: -fx-color-3;
+  -fx-text-fill: -fx-color-blanco;
 }
 
 .boton-1:hover {
-  -fx-background-color: derive(-fx-color-4, -20%);
-  -fx-cursor: hand;
+  -fx-background-color: derive(-fx-color-3, 20%);
 }
 
 .boton-2 {
-  -fx-background-color: -fx-color-1;
-  -fx-text-fill: -fx-color-3;
-  -fx-border-color: derive(-fx-color-3, 40%);
+  -fx-background-color: -fx-color-4;
+  -fx-text-fill: -fx-color-blanco;
 }
 
 .boton-2:hover {
-  -fx-background-color: derive(-fx-color-1, -30%);
-  -fx-cursor: hand;
+  -fx-background-color: derive(-fx-color-4, 20%);
+}
+
+.msj-error {
+  -fx-font-size: 12;
+  -fx-text-fill: -fx-color-4;
+  -fx-padding: 1 0 0 0;
+}
+
+.inp-error {
+  -fx-background-color: -fx-color-4, -fx-color-fondo1;
 }

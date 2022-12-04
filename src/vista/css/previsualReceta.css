@@ -4,8 +4,8 @@
   -fx-pref-width: 250;
   -fx-min-width: -fx-pref-width;
   -fx-background-radius: 30;
-  -fx-background-color: derive(gray, 90%);
-  -fx-effect: dropshadow(three-pass-box, derive(#D7DBDD, -3%), 15, 0, 4, 4);
+  -fx-background-color: -fx-color-fondo2;
+  -fx-effect: -fx-sombreado;
 }
 
 .pr-lbl-titulo {
@@ -20,11 +20,11 @@
 .pr-btn-ver {
   -fx-pref-height: 20;
   -fx-pref-width: 60;
-  -fx-background-color: #81D8D0;
+  -fx-background-color: -fx-color-2;
   -fx-background-radius: 30;
+  -fx-text-fill: -fx-color-blanco;
 }
 
 .pr-btn-ver:hover {
-  -fx-background-color: derive(-fx-color-3, 40%);
-  -fx-cursor: hand;
+  -fx-background-color: derive(-fx-color-2, 20%);
 }

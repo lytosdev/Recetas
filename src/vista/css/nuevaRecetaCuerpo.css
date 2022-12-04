@@ -1,0 +1,25 @@
+.nr-pnl-creciente {
+  -fx-pref-width: 1000;
+  -fx-max-width: -fx-pref-width;
+}
+
+  /* 1000 - 30 de spacing en HBox */
+.nr-pnl-ingredientes {
+  -fx-pref-width: 600; 
+  -fx-max-width: -fx-pref-width;
+}
+.nr-pnl-utensilios {
+  -fx-pref-width: 370; 
+  -fx-max-width: -fx-pref-width;
+}
+
+.nr-pnl-cabecera {
+  -fx-pref-height: 30;
+  -fx-min-height: -fx-pref-height;
+  -fx-background-color: -fx-color-fondo2;
+  -fx-background-radius: 4;
+}
+
+.nr-txt-cabecera {
+  -fx-fill: -fx-color-texto2;
+}

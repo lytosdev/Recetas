@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox styleClass="nr-pnl-creciente" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevaRecetaCuerpoController">
+    <children>
+      <HBox spacing="30.0">
+         <children>
+                <VBox spacing="10.0" styleClass="nr-pnl-ingredientes">
+                    <children>
+                        <StackPane alignment="CENTER_LEFT" styleClass="nr-pnl-cabecera">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredientes">
+                                    <styleClass>
+                                        <String fx:value="cabecera-1" />
+                                        <String fx:value="nr-txt-cabecera" />
+                                    </styleClass>
+                                    <StackPane.margin>
+                                        <Insets left="10.0" />
+                                    </StackPane.margin>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <VBox fx:id="pnlIngredientes" spacing="10.0" />
+                        <Button mnemonicParsing="false" onAction="#nuevoIngrediente" styleClass="boton-1" text="Añadir" />
+                    </children>
+                </VBox>
+                <VBox spacing="10.0" styleClass="nr-pnl-utensilios">
+                    <children>
+                        <StackPane alignment="CENTER_LEFT" styleClass="nr-pnl-cabecera">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Utensilios recomendados">
+                                    <styleClass>
+                                        <String fx:value="cabecera-1" />
+                                        <String fx:value="nr-txt-cabecera" />
+                                    </styleClass>
+                                    <StackPane.margin>
+                                        <Insets left="10.0" />
+                                    </StackPane.margin>
+                                </Text>
+                            </children>
+                        </StackPane>
+                        <VBox fx:id="pnlUtensilios" spacing="10.0" />
+                        <Button mnemonicParsing="false" onAction="#nuevoUtensilio" styleClass="boton-1" text="Añadir" />
+                    </children>
+                </VBox>
+         </children>
+      </HBox>
+        <VBox spacing="10.0">
+            <children>
+                <StackPane alignment="CENTER_LEFT" styleClass="nr-pnl-cabecera">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pasos">
+                            <styleClass>
+                                <String fx:value="cabecera-1" />
+                                <String fx:value="nr-txt-cabecera" />
+                            </styleClass>
+                            <StackPane.margin>
+                                <Insets left="10.0" />
+                            </StackPane.margin>
+                        </Text>
+                    </children>
+                </StackPane>
+                <VBox fx:id="pnlPasos" spacing="10.0" />
+                <Button mnemonicParsing="false" onAction="#nuevoPaso" styleClass="boton-1" text="Añadir" />
+            </children>
+            <VBox.margin>
+                <Insets top="30.0" />
+            </VBox.margin>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@css/general.css" />
+        <URL value="@css/nuevaRecetaCuerpo.css" />
+    </stylesheets>
+</VBox>

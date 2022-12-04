@@ -3,12 +3,12 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
 <AnchorPane styleClass="previsual-receta" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.PrevisualRecetaController">
    <children>
-      <ImageView fx:id="imgFoto" fitHeight="180.0" fitWidth="250.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane fx:id="pnlFoto" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Label fx:id="lblTitulo" alignment="TOP_LEFT" styleClass="pr-lbl-titulo" text="Título" AnchorPane.bottomAnchor="165.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="190.0" />
       <Label fx:id="lblDescripcion" alignment="TOP_LEFT" styleClass="pr-lbl-descripcion" text="Descripción" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="240.0" />
       <Button mnemonicParsing="false" onAction="#ver" styleClass="pr-btn-ver" text="Ver" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" />

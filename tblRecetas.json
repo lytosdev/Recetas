@@ -5,7 +5,7 @@
     "titulo": "Macarrones con chorizo y queso gratinado",
     "descripcion": "Recetas de macarrones con chorizo y sofrito de tomate. Todo ello gratinado al horno con queso rallado.",
     "categoria": "Pasta",
-    "dificultad": "Media",
+    "dificultad": "media",
     "duracion": 35,
     "personas": 3,
     "ingredientes": [
@@ -116,7 +116,7 @@
     "titulo": "Serranito original mix",
     "descripcion": "El serranito es un concepto metafísico,no es un bocata, es un serranito",
     "categoria": "bocadillos",
-    "dificultad": "fácil",
+    "dificultad": "baja",
     "duracion": 10,
     "personas": 1,
     "ingredientes": [
@@ -142,7 +142,7 @@
       },
       {
         "cantidad": 0,
-        "udMedida": "nd",
+        "udMedida": "",
         "nombre": "Aceite"
       },
       {
@@ -226,12 +226,7 @@
         "nombre": "Pimienta negra"
       }
     ],
-    "utensilios": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "utensilios": [],
     "pasos": [
       "Pon la harina y la sal en un bol. Vierte el agua templada y mezcla hasta que no queden grumos. ",
       "Pon un chorrito de aceite en una sartén. Coge porciones de masa, dales forma de bola y aplástalas.",
@@ -239,6 +234,13 @@
       "Cocina en una sartén un par de minutos el ajo picado, la cebolla, sal y pimienta. Añade el pollo troceado, salpimienta y saltea. ",
       "Pela y corta el aguacate en trozos pequeños y añádelo a un bol. Agrega también la mahonesa y el salteado de pollo. Mezcla. ",
       "Corta las arepas por la mitad e introduce el relleno caliente. ",
+      "Sirve las arepas.",
+      "Sirve las arepas.",
+      "Sirve las arepas.",
+      "Sirve las arepas.",
+      "Sirve las arepas.",
+      "Sirve las arepas.",
+      "Sirve las arepas.",
       "Sirve las arepas."
     ]
   }

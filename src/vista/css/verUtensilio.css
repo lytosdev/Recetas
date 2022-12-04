@@ -1,7 +1,7 @@
-.nuevo-utensilio {
+.ver-utensilio {
   -fx-pref-height: 50;
   -fx-min-height: -fx-pref-height;
   -fx-min-width: 350;
-  -fx-background-color: -fx-color-gris;
+  -fx-background-color: -fx-color-fondo2;
   -fx-background-radius: 6;
 }
