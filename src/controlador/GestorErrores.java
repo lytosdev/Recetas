@@ -86,8 +86,8 @@ public class GestorErrores {
             item.addError("Número inválido");
           }
           break;
-        case SOLO_TEXTO:
-          if (!validSoloTexto(text)) {
+        case NO_SOLO_NUMEROS:
+          if (!validNoSoloNumeros(text)) {
             item.addError("Texto inválido");
           }
           break;
@@ -145,9 +145,9 @@ public class GestorErrores {
     return true;
   }
 
-  private boolean validSoloTexto(String text) {
+  private boolean validNoSoloNumeros(String text) {
 
-    Pattern pattern = Pattern.compile("^[\\D]+$");
+    Pattern pattern = Pattern.compile("^[^A-Za-z]*[A-Za-z][ -~]*$");
     Matcher matcher = pattern.matcher(text);
     boolean matchFound = matcher.find();
 
@@ -201,7 +201,7 @@ public class GestorErrores {
   public enum TipoError {
     LONGITUD,
     SOLO_NUMEROS,
-    SOLO_TEXTO,
+    NO_SOLO_NUMEROS,
     EMAIL,
     NO_VACIO
   }

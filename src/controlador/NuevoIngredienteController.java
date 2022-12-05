@@ -73,7 +73,7 @@ public class NuevoIngredienteController implements Initializable {
         gestorErrores.suscribir(inpCantidad, lblErrorCantidad,
                 new TipoError[] { TipoError.NO_VACIO, TipoError.SOLO_NUMEROS, TipoError.LONGITUD });
         gestorErrores.suscribir(inpNombre, lblErrorNombre,
-                new TipoError[] { TipoError.NO_VACIO, TipoError.SOLO_TEXTO, TipoError.LONGITUD }, 100);
+                new TipoError[] { TipoError.NO_VACIO, TipoError.NO_SOLO_NUMEROS, TipoError.LONGITUD }, 100);
     }
 
     private void desuscribirErrores() {

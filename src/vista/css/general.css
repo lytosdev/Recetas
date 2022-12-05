@@ -4,7 +4,6 @@
   -fx-color-1: #404B69;
   -fx-color-2: #C96868;
   -fx-color-3: #0B8457;
-  -fx-color-4: #CF0A0A;
   -fx-color-5: #FF7315;
   -fx-color-blanco: #F1F1F1;
   -fx-color-negro: #202020;
@@ -106,6 +105,7 @@ ScrollPane .viewport {
 /* Clases predeterminadas para controles */
 .cabecera-1 {
   -fx-font-size: 20;
+  -fx-font-weight: bold;
 }
 
 .boton-1 {

@@ -64,7 +64,7 @@ public class NuevoPasoController implements Initializable {
         this.gestorErrores = gestorErrores;
 
         gestorErrores.suscribir(inpPaso, lblErrorPaso,
-                new TipoError[] { TipoError.NO_VACIO, TipoError.SOLO_TEXTO, TipoError.LONGITUD }, 300);
+                new TipoError[] { TipoError.NO_VACIO, TipoError.NO_SOLO_NUMEROS, TipoError.LONGITUD }, 300);
     }
 
     public void setPaso(int numPaso) {

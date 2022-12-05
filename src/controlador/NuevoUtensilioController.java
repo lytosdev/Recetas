@@ -53,7 +53,7 @@ public class NuevoUtensilioController implements Initializable {
         this.gestorErrores = gestorErrores;
 
         gestorErrores.suscribir(inpUtensilio, lblErrorUtensilio,
-                new TipoError[] { TipoError.NO_VACIO, TipoError.SOLO_TEXTO, TipoError.LONGITUD }, 100);
+                new TipoError[] { TipoError.NO_VACIO, TipoError.NO_SOLO_NUMEROS, TipoError.LONGITUD }, 100);
     }
 
     private void desuscribirErrores() {

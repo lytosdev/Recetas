@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" styleClass="ver-receta" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VerRecetaController">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" styleClass="ver-receta" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VerRecetaController">
    <children>
       <HBox spacing="30.0" styleClass="sr-panel-top">
          <children>
@@ -106,7 +106,7 @@
                            <children>
                               <VBox spacing="10.0">
                                  <children>
-                                    <StackPane alignment="CENTER_LEFT" styleClass="vr-pnl-cabecera">
+                                    <StackPane styleClass="vr-pnl-cabecera">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredientes">
                                              <StackPane.margin>
@@ -124,7 +124,7 @@
                               </VBox>
                               <VBox spacing="10.0" GridPane.columnIndex="1">
                                  <children>
-                                    <StackPane alignment="CENTER_LEFT" styleClass="vr-pnl-cabecera">
+                                    <StackPane styleClass="vr-pnl-cabecera">
                                        <children>
                                           <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Utensilios recomendados">
                                              <StackPane.margin>
@@ -144,7 +144,7 @@
                         </GridPane>
                         <VBox spacing="10.0">
                            <children>
-                              <StackPane alignment="CENTER_LEFT" styleClass="vr-pnl-cabecera">
+                              <StackPane styleClass="vr-pnl-cabecera">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pasos">
                                        <StackPane.margin>

@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox styleClass="nr-pnl-creciente" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevaRecetaCuerpoController">
+<VBox styleClass="nr-pnl-creciente" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.NuevaRecetaCuerpoController">
     <children>
       <HBox spacing="30.0">
          <children>
                 <VBox spacing="10.0" styleClass="nr-pnl-ingredientes">
                     <children>
-                        <StackPane alignment="CENTER_LEFT" styleClass="nr-pnl-cabecera">
+                        <StackPane styleClass="nr-pnl-cabecera">
                             <children>
                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredientes">
                                     <styleClass>
@@ -34,7 +34,7 @@
                 </VBox>
                 <VBox spacing="10.0" styleClass="nr-pnl-utensilios">
                     <children>
-                        <StackPane alignment="CENTER_LEFT" styleClass="nr-pnl-cabecera">
+                        <StackPane styleClass="nr-pnl-cabecera">
                             <children>
                                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Utensilios recomendados">
                                     <styleClass>
@@ -55,7 +55,7 @@
       </HBox>
         <VBox spacing="10.0">
             <children>
-                <StackPane alignment="CENTER_LEFT" styleClass="nr-pnl-cabecera">
+                <StackPane styleClass="nr-pnl-cabecera">
                     <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pasos">
                             <styleClass>

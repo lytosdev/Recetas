@@ -1,15 +1,14 @@
 package tools;
 
-import java.security.Principal;
 import java.util.Optional;
 
 import controlador.PrincipalController;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.DialogPane;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.DialogPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
@@ -164,7 +163,9 @@ public class Vista {
   }
 
   private static void setEstiloAlter(Alert alert) {
+
     DialogPane dialogPane = alert.getDialogPane();
+    
     dialogPane.getStylesheets().add("/vista/css/general.css");
     if (!PrincipalController.modo) {
       dialogPane.getStylesheets().add("/vista/css/modoClaro.css");
