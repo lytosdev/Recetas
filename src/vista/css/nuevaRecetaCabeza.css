@@ -1,8 +1,10 @@
 .nr-pnl-foto {
   -fx-pref-height: 180;
   -fx-min-height: -fx-pref-height;
+  -fx-max-height: -fx-pref-height;
   -fx-pref-width: 250;
   -fx-min-width: -fx-pref-width;
+  -fx-max-width: -fx-pref-width;
   -fx-background-radius: 6;
   -fx-background-color: -fx-color-fondo2;
   -fx-effect: -fx-sombreado;

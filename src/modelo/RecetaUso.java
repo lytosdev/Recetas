@@ -1,81 +1,105 @@
 package modelo;
 
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
+import java.sql.SQLException;
 import java.util.List;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import javafx.scene.image.Image;
 
 public class RecetaUso {
 
-  public static List<Receta> getRecetasJson() {
+	static String insertQuery() {
+		return "INSERT INTO Recetas "
+				+ "(Titulo, Descripcion, Imagen, Duracion, Personas, Dificultad, Fecha, Autor, Estado, IdCategoria) "
+				+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	}
 
-    List<String> recetasJson = null;
-    try {
-      recetasJson = Files.readAllLines(Paths.get("./tblRecetas.json"), StandardCharsets.UTF_8);
-    } catch (Exception e) {
-      // TODO: handle exception
-    }
-    String jsonString = recetasJson.stream().reduce((a, b) -> a + b).get();
-    JSONArray arr = new JSONArray(jsonString);
+	static String selectPorCategoriaQuery() {
+		return "SELECT Id, Titulo, Descripcion, Imagen, Duracion, Personas, Dificultad, Fecha, Autor, Estado, IdCategoria "
+				+ "FROM Recetas "
+				+ "WHERE IdCategoria=?";
+	}
 
-    List<Receta> recetas = new ArrayList<>();
+	static String selectPteValidarQuery() {
+		return "SELECT Id, Titulo, Descripcion, Imagen, Duracion, Personas, Dificultad, Fecha, Autor, Estado, IdCategoria "
+				+ "FROM Recetas "
+				+ "WHERE Estado='" + Receta.Estado.PTE_VALIDAR.ordinal() + "'";
+	}
 
-    for (int i = 0; i < arr.length(); i++) {
-      JSONObject jsonObj = arr.getJSONObject(i);
+	static String selectValidasQuery() {
+		return "SELECT Id, Titulo, Descripcion, Imagen, Duracion, Personas, Dificultad, Fecha, Autor, Estado, IdCategoria "
+				+ "FROM Recetas "
+				+ "WHERE Estado='" + Receta.Estado.VALIDA.ordinal() + "'";
+	}
 
-      String urlFoto = jsonObj.getString("imagen");
-      String titulo = jsonObj.getString("titulo");
-      String descripcion = jsonObj.getString("descripcion");
-      String categoria = jsonObj.getString("categoria");
-      String dificultad = jsonObj.getString("dificultad");
-      int duracion = jsonObj.getInt("duracion");
-      int personas = jsonObj.getInt("personas");
+	public static RespuestaUso<?> insertar(Receta receta) {
 
-      JSONArray arrIngredientes = jsonObj.getJSONArray("ingredientes");
-      List<Ingrediente> ingredientes = new ArrayList<>();
-      for (int j = 0; j < arrIngredientes.length(); j++) {
-        JSONObject jsonIngrediente = arrIngredientes.getJSONObject(j);
+		try (RepoGenerico rg = new RepoGenerico()) {
 
-        int cantidad = jsonIngrediente.getInt("cantidad");
-        String udMedida = jsonIngrediente.getString("udMedida");
-        String nombre = jsonIngrediente.getString("nombre");
-        ingredientes.add(new Ingrediente(cantidad, udMedida, nombre));
-      }
+			int[] resul = rg.insert(insertQuery(), new Object[] {
+					receta.getTitulo(),
+					receta.getDescripcion(),
+					receta.getImagen(),
+					receta.getDuracion(),
+					receta.getPersonas(),
+					receta.getDificultad(),
+					receta.getFecha(),
+					receta.getAutor(),
+					receta.getEstado(),
+					receta.getIdCategoria()
+			});
 
-      JSONArray arrUtensilios = jsonObj.getJSONArray("utensilios");
-      List<String> utensilios = new ArrayList<>();
-      for (int j = 0; j < arrUtensilios.length(); j++) {
-        utensilios.add(arrUtensilios.getString(j));
-      }
+			receta.setId(resul[1]);
 
-      JSONArray arrPasos = jsonObj.getJSONArray("pasos");
-      List<String> pasos = new ArrayList<>();
-      for (int j = 0; j < arrPasos.length(); j++) {
-        pasos.add(arrPasos.getString(j));
-      }
+			return new RespuestaUso<>("Receta insertada correctamente", RespuestaUso.EXITO);
 
-      Ingrediente[] newArrIngredientes = new Ingrediente[ingredientes.size()];
-      newArrIngredientes = ingredientes.toArray(newArrIngredientes);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return new RespuestaUso<>("Error al insertar la receta", RespuestaUso.ERROR);
+		}
 
-      String[] newArrUtensilios = new String[utensilios.size()];
-      newArrUtensilios = utensilios.toArray(newArrUtensilios);
+	}
 
-      String[] newArrPasos = new String[pasos.size()];
-      newArrPasos = pasos.toArray(newArrPasos);
+	public static RespuestaUso<List<Receta>> selectPorCategoria(int idCategoria) {
 
-      Image foto = new Image(urlFoto, Receta.anchuraFoto * 1.25, Receta.alturaFoto * 1.25, true, true);
+		try (RepoGenerico rg = new RepoGenerico()) {
 
-      recetas.add(new Receta(foto, titulo, descripcion, categoria, dificultad, duracion, personas, newArrIngredientes,
-          newArrUtensilios, newArrPasos));
-    }
+			List<Receta> resul = rg.getPor(selectPorCategoriaQuery(), new Object[] { idCategoria }, Receta.class);
 
-    return recetas;
-  }
+			return new RespuestaUso<>("Búsqueda exitosa", RespuestaUso.EXITO, resul);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return new RespuestaUso<>("Error al realizar la búsqueda", RespuestaUso.ERROR);
+		}
+
+	}
+
+	public static RespuestaUso<List<Receta>> selectPteValidar() {
+
+		try (RepoGenerico rg = new RepoGenerico()) {
+
+			List<Receta> resul = rg.getPor(selectPteValidarQuery(), null, Receta.class);
+
+			return new RespuestaUso<>("Búsqueda exitosa", RespuestaUso.EXITO, resul);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return new RespuestaUso<>("Error al realizar la búsqueda", RespuestaUso.ERROR);
+		}
+
+	}
+
+	public static RespuestaUso<List<Receta>> selectValidas() {
+
+		try (RepoGenerico rg = new RepoGenerico()) {
+
+			List<Receta> resul = rg.getPor(selectValidasQuery(), null, Receta.class);
+
+			return new RespuestaUso<>("Búsqueda exitosa", RespuestaUso.EXITO, resul);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return new RespuestaUso<>("Error al realizar la búsqueda", RespuestaUso.ERROR);
+		}
+
+	}
 
 }

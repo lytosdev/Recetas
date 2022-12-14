@@ -35,18 +35,18 @@ public class SubirRecetaController implements Initializable {
         lblErrorEmail.setText("");
 
         // Cargamos la cabeza de la nueva receta
-        Object[] arrCabeza = GestorVistas.cargarVista("/vista/NuevaRecetaCabeza.fxml");
-        Node nodeCabeza = (Node) arrCabeza[0];
-        NuevaRecetaCabezaController controllerCabeza = (NuevaRecetaCabezaController) arrCabeza[1];
+        Object[] compCabeza = GestorVistas.cargarVista("/vista/NuevaRecetaCabeza.fxml");
+        Node nodeCabeza = (Node) compCabeza[0];
+        NuevaRecetaCabezaController nuevaRecetaCabeza = (NuevaRecetaCabezaController) compCabeza[1];
         pnlCabeza.getChildren().add(nodeCabeza);
-        controllerCabeza.suscribirErrores(gestorErrores);
+        nuevaRecetaCabeza.suscribirErrores(gestorErrores);
 
         // Cargamos el cuerpo de la nueva receta
-        Object[] arrCuerpo = GestorVistas.cargarVista("/vista/NuevaRecetaCuerpo.fxml");
-        Node nodeCuerpo = (Node) arrCuerpo[0];
-        NuevaRecetaCuerpoController controllerCuerpo = (NuevaRecetaCuerpoController) arrCuerpo[1];
+        Object[] compCuerpo = GestorVistas.cargarVista("/vista/NuevaRecetaCuerpo.fxml");
+        Node nodeCuerpo = (Node) compCuerpo[0];
+        NuevaRecetaCuerpoController nuevaRecetaCuerpo = (NuevaRecetaCuerpoController) compCuerpo[1];
         pnlCuerpo.getChildren().add(nodeCuerpo);
-        controllerCuerpo.suscribirErrores(gestorErrores);
+        nuevaRecetaCuerpo.suscribirErrores(gestorErrores);
 
         gestorErrores.suscribir(inpEmail, lblErrorEmail, new TipoError[] { TipoError.NO_VACIO, TipoError.EMAIL });
 
@@ -55,6 +55,7 @@ public class SubirRecetaController implements Initializable {
     @FXML
     private void enviar() {
 
+        //Email.enviar();
         if (gestorErrores.hayErrores()) {
             Vista.alertError("No puede enviar la receta porque hay errores en el formulario");
         } else {

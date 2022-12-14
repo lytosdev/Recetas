@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import modelo.Receta;
 import tools.Vista;
@@ -22,20 +21,18 @@ public class PrevisualRecetaController implements Initializable {
 
     private Receta receta;
 
-    public PrevisualRecetaController() {
+    public PrevisualRecetaController(Receta receta) {
+        this.receta = receta;
 
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        // imageView = Vista.getImageView(Receta.alturaFoto, Receta.anchuraFoto, 0.1,
-        // 0.1, 0, 0);
-        // imageView.setImage(new Image("./vista/img/comida.jpg"));
-
-        Image foto = new Image("./vista/img/comida.jpg", Receta.anchuraFoto * 1.2, Receta.alturaFoto * 1.2, true, true);
-        Pane paneFoto = Vista.getPane(foto, Receta.alturaFoto, Receta.anchuraFoto, 0.1, 0.1, 0, 0);
-        pnlFoto.getChildren().add(paneFoto);
+        // Cargamos la receta
+        pnlFoto.getChildren().add(Vista.getPaneImageRoundTop(receta.getImagenJfx()));
+        lblTitulo.setText(receta.getTitulo());
+        lblDescripcion.setText(receta.getDescripcion());
 
     }
 
@@ -46,22 +43,10 @@ public class PrevisualRecetaController implements Initializable {
         String uri = "/vista/VerReceta.fxml";
 
         gestorVistas.cerrarVista(uri);
-
         PropsVista propsVista = gestorVistas.abrirVista(uri, "Detalle receta");
+
         VerRecetaController verReceta = (VerRecetaController) propsVista.getControlador();
-        verReceta.cargar(receta);
-
-    }
-
-    public void cargar(Receta receta) {
-        this.receta = receta;
-
-        Pane foto = Vista.getPane(receta.getImagen(), Receta.alturaFoto, Receta.anchuraFoto, 0.1, 0.1, 0, 0);
-
-        pnlFoto.getChildren().clear();
-        pnlFoto.getChildren().add(foto);
-        lblTitulo.setText(receta.getTitulo());
-        lblDescripcion.setText(receta.getDescripcion());
+        verReceta.setReceta(receta);
 
     }
 

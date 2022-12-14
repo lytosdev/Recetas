@@ -12,6 +12,8 @@ import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import modelo.Ingrediente;
+import modelo.UnidadMedida;
 import tools.Vista;
 
 public class NuevoIngredienteController implements Initializable {
@@ -21,41 +23,47 @@ public class NuevoIngredienteController implements Initializable {
     @FXML
     private Label lblErrorCantidad;
     @FXML
-    private ComboBox<KeyValuePair> cbxUdMedida;
+    private ComboBox<UnidadMedida> cbxUdMedida;
     @FXML
     private TextField inpNombre;
     @FXML
     private Label lblErrorNombre;
 
     private Consumer<Node> borrarIngrediente;
-    private int cantidad;
-    private String udMedida;
-    private String nombre;
+    private Ingrediente ingrediente;
     private GestorErrores gestorErrores;
 
     public NuevoIngredienteController(Consumer<Node> borrarIngrediente) {
         this.borrarIngrediente = borrarIngrediente;
+
     }
 
-    public NuevoIngredienteController(Consumer<Node> borrarIngrediente, int cantidad, String udMedida,
-            String nombre) {
+    public NuevoIngredienteController(Consumer<Node> borrarIngrediente, Ingrediente ingrediente) {
         this.borrarIngrediente = borrarIngrediente;
-        this.cantidad = cantidad;
-        this.udMedida = udMedida;
-        this.nombre = nombre;
+        this.ingrediente = ingrediente;
+
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        inpCantidad.setText(cantidad == 0 ? "" : Integer.toString(cantidad));
+
+        // Cargamos combobox con las unidades de medida
+        cbxUdMedida.getItems().addAll(PrincipalController.udsMedida);
+
         lblErrorCantidad.setText("");
-        // cbxUdMedida.setText(udMedida);
-        inpNombre.setText(nombre);
         lblErrorNombre.setText("");
 
-        cbxUdMedida.getItems().add(new KeyValuePair("1", "A"));
-        cbxUdMedida.getItems().add(new KeyValuePair("2", "B"));
-        cbxUdMedida.getItems().add(new KeyValuePair("3", "C"));
+        // Si tenemos un ingrediente para abrir lo cargamos
+        if (ingrediente != null) {
+            inpCantidad.setText(Integer.toString(ingrediente.getCantidad()));
+            UnidadMedida udMedida = PrincipalController.udsMedida.stream()
+                    .filter(x -> x.getId() == ingrediente.getIdUdMedida()).findFirst().get();
+            cbxUdMedida.getSelectionModel().select(udMedida);
+            inpNombre.setText(ingrediente.getNombre());
+        } else {
+            cbxUdMedida.getSelectionModel().selectFirst();
+        }
+
     }
 
     @FXML
@@ -65,6 +73,7 @@ public class NuevoIngredienteController implements Initializable {
 
         Node node = (Node) event.getSource();
         borrarIngrediente.accept(Vista.buscarPadre(node, "nuevoIngrediente"));
+
     }
 
     public void suscribirErrores(GestorErrores gestorErrores) {
@@ -74,30 +83,16 @@ public class NuevoIngredienteController implements Initializable {
                 new TipoError[] { TipoError.NO_VACIO, TipoError.SOLO_NUMEROS, TipoError.LONGITUD });
         gestorErrores.suscribir(inpNombre, lblErrorNombre,
                 new TipoError[] { TipoError.NO_VACIO, TipoError.NO_SOLO_NUMEROS, TipoError.LONGITUD }, 100);
+
     }
 
     private void desuscribirErrores() {
+
         if (gestorErrores != null) {
             gestorErrores.desuscribir(inpCantidad);
             gestorErrores.desuscribir(inpNombre);
         }
+
     }
 
-    public class KeyValuePair {
-        private final String key;
-        private final String value;
-
-        public KeyValuePair(String key, String value) {
-            this.key = key;
-            this.value = value;
-        }
-
-        public String getKey() {
-            return key;
-        }
-
-        public String toString() {
-            return value;
-        }
-    }
 }

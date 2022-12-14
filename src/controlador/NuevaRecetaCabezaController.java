@@ -16,7 +16,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
-import modelo.Receta;
 import tools.Vista;
 
 public class NuevaRecetaCabezaController implements Initializable {
@@ -56,9 +55,18 @@ public class NuevaRecetaCabezaController implements Initializable {
 
     @FXML
     private void subirFoto(ActionEvent event) {
+
         FileChooser fileChooser = new FileChooser();
+
         Node node = (Node) event.getSource();
-        File selectedFile = fileChooser.showOpenDialog(node.getScene().getWindow());
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Imágenes", "*.jpg", "*.png");
+        fileChooser.getExtensionFilters().add(extFilter);
+
+        File archivo = fileChooser.showOpenDialog(node.getScene().getWindow());
+        if (archivo != null) {
+            setImagen(Vista.getImage(archivo.getAbsolutePath()));
+        }
+
     }
 
     @FXML
@@ -76,10 +84,10 @@ public class NuevaRecetaCabezaController implements Initializable {
         setDificultad("alta");
     }
 
-    public void cargar(Image imagen, String titulo, String descripcion, String dificultad, int duracion, int personas) {
+    public void setRecetaCabeza(Image imagen, String titulo, String descripcion, String dificultad, int duracion,
+            int personas) {
 
-        Pane foto = Vista.getPane(imagen, Receta.alturaFoto, Receta.anchuraFoto, 0.1, 0.1, 0.1, 0.1);
-        pnlFoto.getChildren().add(foto);
+        setImagen(imagen);
 
         inpTitulo.setText(titulo);
         inpDescripcion.setText(descripcion);
@@ -115,6 +123,14 @@ public class NuevaRecetaCabezaController implements Initializable {
                 btnDificultadAlta.getStyleClass().add("nr-btn-alta");
                 break;
         }
+    }
+
+    private void setImagen(Image imagen) {
+
+        pnlFoto.getChildren().clear();
+        pnlFoto.setStyle("-fx-background-color: null");
+        pnlFoto.getChildren().add(Vista.getPaneImageRoundAll(imagen));
+
     }
 
 }

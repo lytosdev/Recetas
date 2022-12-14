@@ -1,10 +1,443 @@
 [
   {
-    "id": "1",
-    "imagen": "https://www.cocinatis.com/media/photologue/photos/cache/CTIS0043-Macarrones-con-chorizo-y-queso-gratinado-xlf_desktop_horizontal_full_width.jpg",
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/gw07337s-1f0e3-358291-cfcd2-eztasxya/5b375637-bb5e-4357-971f-98733a1837a9/medium/pure-de-verduras-y-pollo-a-partir-de-6-7-meses.jpg",
+    "titulo": "Puré de verduras y pollo",
+    "descripcion": "Puré de verduras y pollo (para bebés a partir de 6-7 meses)",
+    "categoria": "Alimentación infantil",
+    "dificultad": "Baja",
+    "duracion": 25,
+    "personas": 3,
+    "ingredientes": [
+      {
+        "cantidad": 1.5,
+        "udMedida": "sin ud",
+        "nombre": "pechuga de pollo en filetes"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "patata grande"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "zanahorias"
+      },
+      {
+        "cantidad": 1.5,
+        "udMedida": "sin ud",
+        "nombre": "calabacín"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "chorrito de aceite de oliva virgen extra"
+      }
+    ],
+    "utensilios": [
+      "batidora"
+    ],
+    "pasos": [
+      "Pelamos las patatas y la zanahoria. El calabacín lo lavamos bien, vamos a dejar la piel para dar más sabor, color y nutrientes a nuestro puré. Troceamos todo en dados o rodajas, no importa mucho el tamaño porque después trituraremos las verduras.",
+      "Añadimos la patata y zanahoria a una cazuela con agua, que previamente hemos puesto a hervir. Cuando lleven cociendo unos 15 minutos, añadiremos el calabacín. Cocemos hasta que estén tiernas (unos 10-15 minutos más).",
+      "Como la pechuga se cuece en muy poco tiempo bastará con añadir los filetes de pollo en el último momento para que cueza durante unos 5 minutos al final de la cocción de las verduras.",
+      "Cuando todos los ingredientes estén blanditos ponlos en el vaso de la batidora, tritúralos y ponlos en un plato.",
+      "Añadimos un chorrito de aceite de oliva virgen extra y removemos. Listo para que no deje ni gota en el plato. "
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/kwetf0kn-1f0e3-135027-cfcd2-uxt4knda/a46e5327-3574-421f-bf5e-40bd521cbc0e/medium/papillas-de-frutas.jpg",
+    "titulo": "Papilla de frutas casera",
+    "descripcion": "Papilla de frutas casera (para bebés a partir DE 6 meses)",
+    "categoria": "Alimentación infantil",
+    "dificultad": "Baja",
+    "duracion": 20,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 60,
+        "udMedida": "g",
+        "nombre": "manzana"
+      },
+      {
+        "cantidad": 60,
+        "udMedida": "g",
+        "nombre": "pera"
+      },
+      {
+        "cantidad": 30,
+        "udMedida": "g",
+        "nombre": "plátano"
+      }
+    ],
+    "utensilios": [
+      "batidora"
+    ],
+    "pasos": [
+      "Lava, pela, quita las semillas y corta la manzana, la pera y el plátano.",
+      "Pon la fruta en una cacerola y cúbrela con agua.",
+      "Cocina durante 15 minutos, luego escurre el agua.",
+      "Mézclalo todo machacando con un tenedor o con la batidora.",
+      "¡Deja que se enfríe y deja que el bebé lo disfrute!"
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/k5w35u8i-b1eec-406758-cfcd2-91wtgeqv/630b8b11-a340-433d-844a-b141af2f468e/medium/tortilla-de-calabacin.jpg",
+    "titulo": "Tortilla paisana",
+    "descripcion": "Prepara esta variante de la tradicional tortilla de patata añadiendo a la receta original verduras y sabrosos taquitos de jamón serrano.",
+    "categoria": "Aperitivos y tapas",
+    "dificultad": "Fácil",
+    "duracion": 40,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 4,
+        "udMedida": "sin ud",
+        "nombre": "huevos"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cebollas"
+      },
+      {
+        "cantidad": 1.5,
+        "udMedida": "sin ud",
+        "nombre": "pimiento verde"
+      },
+      {
+        "cantidad": 1.5,
+        "udMedida": "sin ud",
+        "nombre": "pimiento rojo"
+      },
+      {
+        "cantidad": 75,
+        "udMedida": "g",
+        "nombre": "guisantes"
+      },
+      {
+        "cantidad": 75,
+        "udMedida": "g",
+        "nombre": "jamón"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      }
+    ],
+    "utensilios": [
+      ""
+    ],
+    "pasos": [
+      "Corta el pimiento rojo y el verde en daditos. Pica cebolla. Corta el calabacín en cuartos de luna. Pela las patatas, córtalas por la mitad y después en medias lunas. ",
+      "Añade a una sartén con aceite caliente cebolla, pimiento verde, pimiento rojo, patata y sal. Remueve y rehoga todo.",
+      "Añade el calabacín, mezcla todo y deja cocinar unos 20 minutos.",
+      "Pon los huevos en un bol grande y bátelos. Incorpora el jamón en taquitos, los guisantes y las verduras pochadas escurridas. Mezcla.",
+      "Pon un poco de aceite en una sartén al fuego y cuando se caliente, vierte la mezcla. Remueve y deja que cuaje. Dale la vuelta.",
+      "Sirve la tortilla paisana."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/6syxh40e-1f0e3-790432-cfcd2-pd96wnnh/3aa08e54-25c5-4fc6-8eb2-ff557240372f/medium/croquetas-de-jamon-con-bechamel-rapida.jpg",
+    "titulo": "Croquetas de jamón caseras",
+    "descripcion": "Papilla de frutas casera (para bebés a partir DE 6 meses)",
+    "categoria": "Aperitivos y tapas",
+    "dificultad": "Baja",
+    "duracion": 360,
+    "personas": 6,
+    "ingredientes": [
+      {
+        "cantidad": 200,
+        "udMedida": "g",
+        "nombre": "jamón"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "huevos"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "harina"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pan rallado"
+      },
+      {
+        "cantidad": 1000,
+        "udMedida": "ml",
+        "nombre": "leche"
+      },
+      {
+        "cantidad": 110,
+        "udMedida": "g",
+        "nombre": "harina"
+      },
+      {
+        "cantidad": 110,
+        "udMedida": "g",
+        "nombre": "mantequilla"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de nuez moscada"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      }
+    ],
+    "utensilios": [
+      ""
+    ],
+    "pasos": [
+      "Pica el jamón en dados pequeños. Pon una cazuela baja al fuego y funde la mantequilla. Agrega el jamón. Deja cocinar 2 minutos e incorpora la harina. ",
+      "Vierte la leche. Cocina a fuego medio sin dejar de remover con las varillas hasta que empiece a espesar. Cambia a una cuchara de madera y baja el fuego a suave. Añade sal y ralladura de nuez moscada. Cocina 30 minutos sin dejar de remover..",
+      "Extiende la masa en un recipiente y tapa con papel film (que toque la masa). Deja enfriar a temperatura ambiente unas 6 horas y pasado ese tiempo, introduce en el frigorífico y deja reposar de un día para otro.",
+      "Retira el plástico, haz tiras con el cuchillo y desmolda con cuidado. Corta las tiras en trozos más pequeños para hacer la forma de las croquetas.",
+      "Espolvorea harina sobre la masa y las manos. Redondea cada porción de masa y dales forma de croqueta. Para rebozarlas, pásalas por huevo batido y pan rallado, en este orden.",
+      "Pon una sartén al fuego con abundante aceite y cuando esté caliente, fríe las croquetas. Cuando estén doradas, retira del fuego sobre papel absorbente.",
+      "Sirve las croquetas de jamón serrano."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/24cirw6a-1f0e3-201856-cfcd2-a3fuae1i/b9b28787-8031-4150-934b-544a686f199d/medium/salmorejo.jpg",
+    "titulo": "Salmorejo",
+    "descripcion": "Crema fría tradicional de la cocina andaluza con base de tomate y un resultado irresistible para disfrutar en verano",
+    "categoria": "Sopas y cremas",
+    "dificultad": "",
+    "duracion": 70,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 1000,
+        "udMedida": "g",
+        "nombre": "tomate de pera"
+      },
+      {
+        "cantidad": 100,
+        "udMedida": "ml",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "rebanadas de pan"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "huevo cocido"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "jamón"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      }
+    ],
+    "utensilios": [
+      "batidora",
+      "picadora de alimentos"
+    ],
+    "pasos": [
+      "Trocea el tomate.",
+      "Tritura el tomate troceado en la batidora.",
+      "Añade el diente de ajo y sigue triturando.",
+      "Incorpora el pan en trozos y continua triturando.",
+      "Añade el aceite de oliva y la sal. Mezcla bien y deja enfríar en la nevera.",
+      "Sirve en frío decorado con el huevo duro y los tacos de jamón serrano."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/wsg69cw9-1f0e3-701692-cfcd2-nwdlxzav/a6c77ad3-36b9-458f-bc52-f25f82c47dd6/medium/crema-de-calabacin.jpg",
+    "titulo": "Crema de calabacín con quesitos",
+    "descripcion": "Prepara una deliciosa crema de calabacín con quesitos, patata y sofrito de ajo y cebolla. Una receta fácil perfecta para cenar ligero.",
+    "categoria": "Sopas y cremas",
+    "dificultad": "Fácil",
+    "duracion": 30,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "calabacines"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "patata"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cebolla"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "diente de ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "puerro"
+      },
+      {
+        "cantidad": 6,
+        "udMedida": "sin ud",
+        "nombre": "quesitos en porciones"
+      },
+      {
+        "cantidad": 500,
+        "udMedida": "ml",
+        "nombre": "caldo de verduras"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "picatostes para acompañar"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cebollino para acompañar"
+      }
+    ],
+    "utensilios": [
+      ""
+    ],
+    "pasos": [
+      "Limpia los calabacines. Corta los extremos y pela los calabacines. Corta los calabacines en rodajas grandes.",
+      "Pela la patata y córtala en rodajas grandes. Lava y trocea el puerro. Pica la cebolla y el diente de ajo.",
+      "Pon una cazuela en el fuego y agrega un chorro de aceite de oliva, añade el ajo y la cebolla picada, el puerro, sal y remueve. Sofríe la verdura durante unos minutos.",
+      "Añade al sofrito el calabacín, el caldo de verduras y la patata. Remueve con la cuchara y añade agua hasta cubrir las verduras.",
+      "Tapa la cazuela y deja cocinar durante 20-25 minutos hasta que la patata esté cocida.",
+      "Apaga el fuego, añade los quesitos y tritura con la batidora hasta obtener una crema fina.",
+      "Sirve la crema de calabacín y ralla encima un poco de nuez moscada nada. Decora con unos picatostes y cebollino picado.",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/et4jfq8b-1f0e3-036581-cfcd2-s7nzsmxf/0875e028-a9c7-4aff-9a47-bb4354351c0e/medium/arroz-caldoso.jpg",
+    "titulo": "Arroz con carabineros",
+    "descripcion": "Disfruta de un plato muy especial y sabroso esta con este irresistible arroz con carabineros. ",
+    "categoria": "Arroces y pastas",
+    "dificultad": "Fácil",
+    "duracion": 60,
+    "personas": 6,
+    "ingredientes": [
+      {
+        "cantidad": 300,
+        "udMedida": "g",
+        "nombre": "arroz"
+      },
+      {
+        "cantidad": 1000,
+        "udMedida": "ml",
+        "nombre": "caldo de pescado y marisco"
+      },
+      {
+        "cantidad": 4,
+        "udMedida": "sin ud",
+        "nombre": "carabineros grandes"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pimiento verde"
+      },
+      {
+        "cantidad": 1.5,
+        "udMedida": "sin ud",
+        "nombre": "cebolla"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "azafrán"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "diente de ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de pimiento choricero"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "tomate"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "perejil fresco picado"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      }
+    ],
+    "utensilios": [
+      ""
+    ],
+    "pasos": [
+      "Pica finamente la cebolla. Trocea el pimiento. Escalda el tomate, pela y rállalo. Pica el perejil fresco.",
+      "En n mortero, machaca el ajo y el azafrán con una pizca de sal. Agrega la carne de los choriceros, el perejil y un poco de aceite. Machaca.",
+      "Dora los carabineros en una paella con aceite. Retira y agrega el pimiento y la cebolla. Deja pochar. Añade el arroz especial caldosos y melosos y sella.",
+      "Incorpora la mezcla de azafrán y rehoga. Agrega el tomate, remueve y cubre con el caldo caliente. Baja a fuego medio-bajo, rectifica la sal y cocina 15-17 minutos.",
+      "Tres minutos antes de acabar la cocción reparte los carabineros sobre el arroz y espolvorea el perejil picado. Cuando esté hecho, apaga el fuego y deja reposar 5 minutos sin tapar.",
+      "Sirve el arroz con carabineros ¡y a disfrutar!"
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://www.vvsupremo.com/wp-content/uploads/2016/09/Cheesy-Chorizo-Taco-Pasta-900x570.jpg",
     "titulo": "Macarrones con chorizo y queso gratinado",
     "descripcion": "Recetas de macarrones con chorizo y sofrito de tomate. Todo ello gratinado al horno con queso rallado.",
-    "categoria": "Pasta",
+    "categoria": "Arroces y pastas",
     "dificultad": "media",
     "duracion": 35,
     "personas": 3,
@@ -12,93 +445,93 @@
       {
         "cantidad": 400,
         "udMedida": "g",
-        "nombre": "Macarrones"
+        "nombre": "macarrones"
       },
       {
         "cantidad": 2,
-        "udMedida": "ud",
-        "nombre": "Chorizos frescos"
+        "udMedida": "sin ud",
+        "nombre": "chorizos frescos"
       },
       {
         "cantidad": 400,
         "udMedida": "g",
-        "nombre": "Salsa de tomate"
+        "nombre": "salsa de tomate"
       },
       {
         "cantidad": 2,
-        "udMedida": "ud",
-        "nombre": "Tomates deshidratados"
+        "udMedida": "sin ud",
+        "nombre": "tomates deshidratados"
       },
       {
         "cantidad": 1,
-        "udMedida": "ud",
-        "nombre": "Cebolla"
+        "udMedida": "sin ud",
+        "nombre": "cebolla"
       },
       {
         "cantidad": 1,
-        "udMedida": "ud",
-        "nombre": "Pimiento verde"
+        "udMedida": "sin ud",
+        "nombre": "pimiento verde"
       },
       {
         "cantidad": 1,
-        "udMedida": "ud",
-        "nombre": "Puerro"
+        "udMedida": "sin ud",
+        "nombre": "puerro"
       },
       {
         "cantidad": 1,
-        "udMedida": "ud",
-        "nombre": "Guindilla"
+        "udMedida": "sin ud",
+        "nombre": "guindilla"
       },
       {
         "cantidad": 2,
-        "udMedida": "ud",
-        "nombre": "Ajo"
+        "udMedida": "sin ud",
+        "nombre": "ajo"
       },
       {
         "cantidad": 100,
         "udMedida": "ml",
-        "nombre": "Vino blanco"
+        "nombre": "vino blanco"
       },
       {
         "cantidad": 1,
-        "udMedida": "hoja",
-        "nombre": "Laurel"
+        "udMedida": "sin ud",
+        "nombre": "hoja de Laurel"
       },
       {
         "cantidad": 1,
-        "udMedida": "chorreoncito",
-        "nombre": "Aceite de oliva"
+        "udMedida": "sin ud",
+        "nombre": "chorreoncito de aceite de oliva"
       },
       {
         "cantidad": 1,
-        "udMedida": "cucharadita",
-        "nombre": "Sal"
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
       },
       {
         "cantidad": 1,
-        "udMedida": "al gusto",
-        "nombre": "Pimienta negra"
+        "udMedida": "sin ud",
+        "nombre": "un poco pimienta negra"
       },
       {
         "cantidad": 1,
-        "udMedida": "cucharadita",
-        "nombre": "Azúcar"
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de azúcar"
       },
       {
         "cantidad": 1,
-        "udMedida": "pizca",
-        "nombre": "Orégano"
+        "udMedida": "sin ud",
+        "nombre": "pizca de orégano"
       },
       {
         "cantidad": 150,
         "udMedida": "g",
-        "nombre": "Queso parmesano rallado"
+        "nombre": "queso parmesano rallado"
       }
     ],
     "utensilios": [
-      "Horno",
-      "Sartenes",
-      "Cacerola"
+      "horno",
+      "sartenes",
+      "cacerola"
     ],
     "pasos": [
       "Pon al fuego una cazuela con agua y cuando rompa a hervir, añade sal y los macarrones. Cuece el tiempo indicado en el envase.",
@@ -111,48 +544,357 @@
     ]
   },
   {
-    "id": "2",
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/gcbnwuj1-1f0e3-027538-cfcd2-g5cseedg/6971692b-6d39-4938-b1c5-83c710379cfd/medium/patatas-guisadas-con-costillas-adobadas.jpg",
+    "titulo": "Carne guisada con patatas",
+    "descripcion": "Aprende a hacer un guiso de ternera con patatas y caldo de carne, perfecto para entrar en calor los días más fríos de invierno.",
+    "categoria": "Potajes y platos de cuchara",
+    "dificultad": "Fácil",
+    "duracion": 90,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 600,
+        "udMedida": "g",
+        "nombre": "carne de aguja de ternera en dados"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "patatas grandes"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "dientes de ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cebolla grande"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "zanahorias grandes"
+      },
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "judías verdes"
+      },
+      {
+        "cantidad": 30,
+        "udMedida": "g",
+        "nombre": "salsa de tomate"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "hoja de Laurel"
+      },
+      {
+        "cantidad": 200,
+        "udMedida": "ml",
+        "nombre": "csldo de carne"
+      },
+      {
+        "cantidad": 75,
+        "udMedida": "ml",
+        "nombre": "brandy"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pimienta negra molida"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "perejil"
+      }
+    ],
+    "utensilios": [
+      ""
+    ],
+    "pasos": [
+      "Pela y trocea la cebolla, la zanahoria y los ajos. Lava y trocea las judías verdes. Pela las patatas y cáscalas.",
+      "Pon una cazuela al fuego con aceite de oliva. Añade la carne limpia, sal y pimieta negra. Deja rehogar a fuego fuerte mientras remueves. Retira de la cazuela y reserva.",
+      "Echa un poco más de aceite y añade el ajo, la cebolla, la zanahoria, las judías verdes, sal y pimienta. Remueve. Agrega la salsa de tomate y remueve.",
+      "Incorpora la carne, la hoja de laurel, las patatas y el brandy. Remueve y deja reducir unos minutos para que se evapore el alcohol.",
+      "Vierte el caldo, remueve y deja que se cocine a fuego suave durante 30 minutos. Si es necesario, añade un poco de agua y caldo.",
+      "Sirve la carne guisada con patatas y decora con unas ramitas de romero."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/6htzytzh-1f0e3-905738-cfcd2-tuygjpys/8a5bc7b3-1fd9-41ce-ad48-78218e485530/medium/lentejas-estofadas.jpg",
+    "titulo": "Lentejas estofadas con chorizo",
+    "descripcion": "Receta tradicional para hacer lentejas con ternera estofada, verduras y chorizo a la cazuela. ¡Un plato de legumbres muy nutritivo!",
+    "categoria": "Potajes y platos de cuchara",
+    "dificultad": "Media",
+    "duracion": 140,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 500,
+        "udMedida": "g",
+        "nombre": "lentejas pardinas"
+      },
+      {
+        "cantidad": 500,
+        "udMedida": "g",
+        "nombre": "ternera"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cebolla"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "zanahorias"
+      },
+      {
+        "cantidad": 6,
+        "udMedida": "sin ud",
+        "nombre": "rodajas de chorizo"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "hojas de Laurel"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "aceite de oliva"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      }
+    ],
+    "utensilios": [
+      "batidora"
+    ],
+    "pasos": [
+      "Pon en una cazuela el chorizo, los ajos, la cebolla y la zanahoria.",
+      "Añade la ternera y las lentejas.",
+      "Cubre todo con agua. Pon a fuego fuerte y cuando empiece a hervir, baja a fuego lento, casi al mínimo. Deja cocer unas 2 horas.",
+      "Coge unas lentejas y verduras y añádelas al vaso de la batidora. Tritura.",
+      "Sirve las lentejas estofadas."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/g3pf5vvf-1f0e3-591267-cfcd2-v0tgixr0/5b9621b5-f7d1-4eea-882f-d15402e9044b/medium/pisto.jpg",
+    "titulo": "Pisto manchego",
+    "descripcion": "Aprende a preparar el pisto en su versión manchega, presentando la mezcla de verduras y tomate bajo un huevo frito.",
+    "categoria": "Verduras y hortalizas",
+    "dificultad": "Fácil",
+    "duracion": 30,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cebolla grande"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "dientes de ajo"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "pimientos verde"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "calabacín"
+      },
+      {
+        "cantidad": 400,
+        "udMedida": "g",
+        "nombre": "tomate triturado al natural"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de azúcar"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de comino"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pimienta negra"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 4,
+        "udMedida": "sin ud",
+        "nombre": "huevos"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "perejil fresco picado"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      }
+    ],
+    "utensilios": [
+      ""
+    ],
+    "pasos": [
+      "Corta la cebolla en juliana. Limpia y corta los pimientos en tiras finas. Corta los dientes de ajo en láminas finas. Corta el calabacín en medias lunas.",
+      "Pon una cazuela con aceite. Cuando esté caliente, añade la cebolla, el ajo, sal y pimienta. Remueve y deja pochar. Añade el pimiento, remueve y sofríe. Agrega el calabacín y remueve.",
+      "Añade el comino, la salsa de tomate y el azúcar. Mezcla todo, tapa la cazuela y deja que se cocine a fuego lento unos 15 minutos.",
+      "Pon aceite en una sartén y cuando esté caliente, fríe los huevos de uno en uno.",
+      "Sirve el pisto manchego y coloca un huevo frito encima por persona. Espolvorea perejil picado."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/1bwk359n-a2b58-976104-cfcd2-nxc5vuvg/2bc65ba7-c2c8-43e3-b8e3-2ed0096687ca/medium/ensalada-campera.jpg",
+    "titulo": "Ensalada campera",
+    "descripcion": "Prepara, paso a paso, una ensalada campera con patata, huevo, tomate, pimientos y cebolleta.",
+    "categoria": "Verduras y hortalizas",
+    "dificultad": "Fácil",
+    "duracion": 50,
+    "personas": 2,
+    "ingredientes": [
+      {
+        "cantidad": 500,
+        "udMedida": "g",
+        "nombre": "patata"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pimiento verde"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pimiento rojo"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "tomate"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cebolleta"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "huevos"
+      },
+      {
+        "cantidad": 160,
+        "udMedida": "g",
+        "nombre": "atún en conserva"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "sal"
+      }
+    ],
+    "utensilios": [
+      ""
+    ],
+    "pasos": [
+      "Deja cocer las patatas con una pizca de sal hasta que estén tiernas, durante 20-30 minutos. Escurre y deja enfriar. Pela y corta en rodajas.",
+      "Deja cocer los huevos 10 minutos desde que rompa a hervir. Después, saca los huevos, déjalos enfriar, pélalos y trocéalos.",
+      "Lava y trocea los tomates. Lava los pimientos y córtalos en tiras. Trocea la cebolleta.",
+      "Para emplatar, coloca las rodajas de patata en el fondo de una fuente. Añade encima el tomate, el pimiento, la cebolleta, el huevo cocido y el atún.",
+      "Sazona al gusto y riega con un chorrito de aceite de oliva. Sirve la ensalada campera."
+    ]
+  },
+  {
+    "id": "",
     "imagen": "https://i.blogs.es/dbd52a/serranito-20bocadillo-20del-20sur/1366_521.jpg",
     "titulo": "Serranito original mix",
     "descripcion": "El serranito es un concepto metafísico,no es un bocata, es un serranito",
-    "categoria": "bocadillos",
+    "categoria": "Carnes y aves",
     "dificultad": "baja",
     "duracion": 10,
     "personas": 1,
     "ingredientes": [
       {
         "cantidad": 1,
-        "udMedida": "ud",
-        "nombre": "Pan de chapata"
+        "udMedida": "sin ud",
+        "nombre": "pan de chapata"
       },
       {
         "cantidad": 2,
-        "udMedida": "ud",
-        "nombre": "Filetes de pollo"
+        "udMedida": "sin ud",
+        "nombre": "filetes de pollo"
       },
       {
         "cantidad": 15,
         "udMedida": "g",
-        "nombre": "Jamón"
+        "nombre": "jamón"
       },
       {
         "cantidad": 1,
-        "udMedida": "ud",
-        "nombre": "Pimiento"
+        "udMedida": "sin ud",
+        "nombre": "pimiento"
       },
       {
-        "cantidad": 0,
-        "udMedida": "",
-        "nombre": "Aceite"
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "chorreoncito de aceite de oliva"
       },
       {
         "cantidad": 1,
         "udMedida": "g",
-        "nombre": "Sal"
+        "nombre": "sal"
       }
     ],
     "utensilios": [
-      "Sartén"
+      "sartén"
     ],
     "pasos": [
       "Empezamos por freír el pimiento bien limpio de cabo y semillas. Puedes hacerlo en una sartén con solo un fondo de aceite, y en esa misma grasa, incluso al mismo tiempo, freír los filetes",
@@ -161,11 +903,11 @@
     ]
   },
   {
-    "id": "3",
-    "imagen": "https://www.cocinatis.com/media/photologue/photos/cache/CTIS0234-receta-arepas-venezolanas-rellenas-de-pollo_desktop_horizontal_full_width.jpg",
+    "id": "",
+    "imagen": "https://t2.uc.ltmcdn.com/es/posts/7/5/1/como_hacer_reina_pepiada_28157_orig.jpg",
     "titulo": "Arepas venezolanas rellenas de pollo",
     "descripcion": "Arepas caseras desde la masa al relleno",
-    "categoria": "Venezolana",
+    "categoria": "Carnes y aves",
     "dificultad": "Media",
     "duracion": 30,
     "personas": 3,
@@ -173,57 +915,57 @@
       {
         "cantidad": 150,
         "udMedida": "g",
-        "nombre": "Harina de maíz precocida"
+        "nombre": "harina de maíz precocida"
       },
       {
         "cantidad": 250,
         "udMedida": "g",
-        "nombre": "Agua"
+        "nombre": "agua"
       },
       {
         "cantidad": 1,
-        "udMedida": "cucharadita",
-        "nombre": "Sal"
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
       },
       {
         "cantidad": 400,
         "udMedida": "g",
-        "nombre": "Pechuga de pollo"
+        "nombre": "pechuga de pollo"
       },
       {
         "cantidad": 2,
-        "udMedida": "dientes",
-        "nombre": "Ajo"
+        "udMedida": "sin ud",
+        "nombre": "dientes de ajo"
       },
       {
         "cantidad": 1,
-        "udMedida": "ud",
-        "nombre": "Cebolla"
+        "udMedida": "sin ud",
+        "nombre": "cebolla"
       },
       {
         "cantidad": 1,
-        "udMedida": "ud",
-        "nombre": "Aguacate"
+        "udMedida": "sin ud",
+        "nombre": "aguacate"
       },
       {
         "cantidad": 3,
-        "udMedida": "cucharadas",
-        "nombre": "Mayonesa"
+        "udMedida": "sin ud",
+        "nombre": "cucharadas de mayonesa"
       },
       {
         "cantidad": 25,
         "udMedida": "ml",
-        "nombre": "Aceite de oliva virgen extra"
+        "nombre": "aceite de oliva virgen extra"
       },
       {
         "cantidad": 1,
-        "udMedida": "cucharadita",
-        "nombre": "Sal"
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
       },
       {
         "cantidad": 1,
-        "udMedida": "cucharadita",
-        "nombre": "Pimienta negra"
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de pimienta negra"
       }
     ],
     "utensilios": [],
@@ -234,14 +976,815 @@
       "Cocina en una sartén un par de minutos el ajo picado, la cebolla, sal y pimienta. Añade el pollo troceado, salpimienta y saltea. ",
       "Pela y corta el aguacate en trozos pequeños y añádelo a un bol. Agrega también la mahonesa y el salteado de pollo. Mezcla. ",
       "Corta las arepas por la mitad e introduce el relleno caliente. ",
-      "Sirve las arepas.",
-      "Sirve las arepas.",
-      "Sirve las arepas.",
-      "Sirve las arepas.",
-      "Sirve las arepas.",
-      "Sirve las arepas.",
-      "Sirve las arepas.",
       "Sirve las arepas."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/y7savagq-87549-850467-cfcd2-1na13z2m/8ce2a168-9f39-49e0-b2dc-16d559716be5/medium/bacalao-a-la-vizcaina.jpg",
+    "titulo": "Bacalao a la vizcaína",
+    "descripcion": "Bacalao a la vizcaína ¡la auténtica receta tradicional de la cocina vasca!",
+    "categoria": "Pescados y mariscos",
+    "dificultad": "Fácil",
+    "duracion": 50,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 4,
+        "udMedida": "sin ud",
+        "nombre": "lomos de bacalao desalado"
+      },
+      {
+        "cantidad": 10,
+        "udMedida": "sin ud",
+        "nombre": "pimientos choricero"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "cebollas rojas"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "cebollas blancas"
+      },
+      {
+        "cantidad": 6,
+        "udMedida": "sin ud",
+        "nombre": "dientes de ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "perejil fresco"
+      }
+    ],
+    "utensilios": [
+      ""
+    ],
+    "pasos": [
+      "Retira los rabos y las pepitas de los pimientos y cuécelos en agua 10 minutos. Retira la carne con ayuda de un cuchillo y reserva.",
+      "Pela los dientes de ajo y rehógalos en una sartén con abundante aceite. Incorpora los lomos de bacalao con la piel hacia abajo y confítalos 2 minutos por cada lado. Retira el bacalao de la sartén y reserva.",
+      "Pica las cebollas y rehógalas en el mismo aceite a fuego medio. Agrega la carne de los pimientos choriceros y cocina 8-10 minutos.",
+      "Pasa la salsa de pimientos por un pasapurés.",
+      "Devuelve la salsa a la sartén y agrega los lomos de bacalao con la piel hacia abajo. Deja cocinar 5-6 minutos.",
+      "Sirve el bacalao a la vizcaína y disfruta del sabor tradicional de la cocina vasca con una de sus recetas estrella. ¡Os encantará!"
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/v6lxge8n-50f3f-132584-cfcd2-0j3s0y1z/0840f9e3-c53d-465f-8fbc-039250d1c413/main/sorbete-de-mojito.jpg",
+    "titulo": "SORBETE DE MOJITO",
+    "descripcion": "Sorbete de mojito con limón y hierbabuena.",
+    "categoria": "Bebidas y refrescos",
+    "dificultad": "Baja",
+    "duracion": 5,
+    "personas": 8,
+    "ingredientes": [
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "lima"
+      },
+      {
+        "cantidad": 330,
+        "udMedida": "g",
+        "nombre": "agua"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "lata gaseosa limon"
+      },
+      {
+        "cantidad": 130,
+        "udMedida": "g",
+        "nombre": "azucar"
+      },
+      {
+        "cantidad": 100,
+        "udMedida": "g",
+        "nombre": "ron blanco"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "lima"
+      },
+      {
+        "cantidad": 10,
+        "udMedida": "sin ud",
+        "nombre": "hojas de hierbabuena"
+      },
+      {
+        "cantidad": 800,
+        "udMedida": "g",
+        "nombre": "hielo"
+      }
+    ],
+    "utensilios": [
+      "colador",
+      "batidora"
+    ],
+    "pasos": [
+      "Ponga las limas y el agua en el vaso y pique todo. Cuele el líquido a otro recipiente y reserve.",
+      "Aclare el vaso con agua fría y vierta el líquido reservado, la gaseosa, el azúcar, el ron, la hierbabuena y el hielo. Triture hasta conseguir la textura deseada.",
+      "Vierta en 6 u 8 vasos, coloque una pajita en cada uno y sirva inmediatamente."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/sxv20nbk-1f0e3-874612-cfcd2-iybqrkyd/d5dc7767-6b79-42d5-9b25-fe218f43876f/main/chocolate-a-la-taza.jpg",
+    "titulo": "CHOCOLATE A LA TAZA",
+    "descripcion": "Chocolate a la taza. Perfecto para acompañar con churros.",
+    "categoria": "Bebidas y refrescos",
+    "dificultad": "Baja",
+    "duracion": 20,
+    "personas": 8,
+    "ingredientes": [
+      {
+        "cantidad": 400,
+        "udMedida": "g",
+        "nombre": "chocolate para fundir"
+      },
+      {
+        "cantidad": 1500,
+        "udMedida": "g",
+        "nombre": "leche entera"
+      },
+      {
+        "cantidad": 60,
+        "udMedida": "g",
+        "nombre": "maicena"
+      },
+      {
+        "cantidad": 80,
+        "udMedida": "g",
+        "nombre": "azúcar"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pellizco sal"
+      }
+    ],
+    "utensilios": [
+      "recipiente metalico",
+      "olla"
+    ],
+    "pasos": [
+      "Ponga el chocolate en el recipiente en trozos grandes y calientelo al baño maria durante 15 minutos o hasta conseguir la textura deseada.",
+      "Añada la leche, la maicena, el azúcar y la sal. Remueva 5 minutos mas."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/5r3egef2-a2b58-839014-cfcd2-qzy3w90a/47de4477-b4f7-4fd3-ac35-2cb2606e16e3/main/trenza-de-pan-de-leche.jpg",
+    "titulo": "TRENZA DE PAN DE LECHE",
+    "descripcion": "Receta para hacer una trenza de pan de leche.",
+    "categoria": "Masas y repostería",
+    "dificultad": "Alta",
+    "duracion": 50,
+    "personas": 30,
+    "ingredientes": [
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "mantequilla"
+      },
+      {
+        "cantidad": 300,
+        "udMedida": "g",
+        "nombre": "leche"
+      },
+      {
+        "cantidad": 25,
+        "udMedida": "g",
+        "nombre": "levadura prensada fresca de panadería"
+      },
+      {
+        "cantidad": 60,
+        "udMedida": "g",
+        "nombre": "azúcar"
+      },
+      {
+        "cantidad": 550,
+        "udMedida": "g",
+        "nombre": "harina de fuerza"
+      },
+      {
+        "cantidad": 0.25,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "huevo batido"
+      }
+    ],
+    "utensilios": [
+      "batidor de mano",
+      "horno",
+      "recipiente",
+      "papel de horno"
+    ],
+    "pasos": [
+      "Ponga en un vaso la mantequilla, la leche, la levadura y el azúcar. Mezcle todo con un batidor o globo.",
+      "Añada la harina y la sal y amase la mezcla en una superficie enharinada. Deje reposar hasta que haya doblado su volumen (1 hora aprox.).",
+      "Precaliente el horno a 180°.",
+      "Pinte la trenza con el huevo batido y hornee de 25 a 30 minutos. Deje enfriar."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/5bb0mclg-1f0e3-375186-cfcd2-ezsrf0ah/19acff39-6ff2-44b7-a901-f9e862b5c8f2/main/masa-para-pizzas.jpg",
+    "titulo": "MASA PARA PIZZAS",
+    "descripcion": "Receta para hacer masa de pizza.",
+    "categoria": "Masas y repostería",
+    "dificultad": "Baja",
+    "duracion": 20,
+    "personas": 3,
+    "ingredientes": [
+      {
+        "cantidad": 200,
+        "udMedida": "g",
+        "nombre": "agua"
+      },
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 20,
+        "udMedida": "g",
+        "nombre": "levadura prensada fresca de panadería"
+      },
+      {
+        "cantidad": 400,
+        "udMedida": "g",
+        "nombre": "harina"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
+      }
+    ],
+    "utensilios": [
+      "rodillo",
+      "horno",
+      "recipiente",
+      "papel de horno"
+    ],
+    "pasos": [
+      "Vierta en un recipiente el agua y el aceite.Remueva bien.",
+      "Añada la levadura y mezcle. A continuación, incorpore la harina y la sal y vuelva a mezclar.",
+      "Retire la masa del recipiente, introdúzcala en una bolsa de plástico y déjela reposar hasta que doble su volumen (un mínimo de 30 minutos).",
+      "Precaliente el horno a 250.",
+      "Coloque la masa en una bandeja de horno engrasada con aceite y extiéndala con las manos aceitadas o con un rodillo, hasta obtener el tamaño deseado. Ponga los ingredientes elegidos (salsa de tomate, mozarella, etc...) e introdúzcala en el horno, bajando la temperatura a 225º. Hornee durante 20 minutos aproximadamente."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/lgum3qz5-1f0e3-793640-cfcd2-yqakz711/b1c2d408-822d-4805-b25c-0a553572ae28/main/salsa-pesto.jpg",
+    "titulo": "SALSA PESTO",
+    "descripcion": "Salsa pesto con piñones.",
+    "categoria": "Salsas",
+    "dificultad": "Baja",
+    "duracion": 5,
+    "personas": 6,
+    "ingredientes": [
+      {
+        "cantidad": 80,
+        "udMedida": "g",
+        "nombre": "hojas de albahca"
+      },
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "queso parmesano"
+      },
+      {
+        "cantidad": 30,
+        "udMedida": "g",
+        "nombre": "queso de oveja"
+      },
+      {
+        "cantidad": 30,
+        "udMedida": "g",
+        "nombre": "piñones"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "diente de ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
+      },
+      {
+        "cantidad": 150,
+        "udMedida": "g",
+        "nombre": "aceite de oliva virgen extra"
+      }
+    ],
+    "utensilios": [
+      "procesadora de aliementos",
+      "mortero",
+      "espatula"
+    ],
+    "pasos": [
+      "Lave las hojas de albahaca y escúrralas muy bien. Introdúzcalas en la procesadora de alimentos o batidora junto con los quesos, los piñones y el diente de ajo. Triture todo. Con la espátula, baje los restos de verduras de la tapa y del interior del vaso hacia las cuchillas.",
+      "Añada el aceite de oliva y la sal y emulsione hasta conseguir la textura deseada.",
+      "Sirva esta salsa con pasta, con ensaladas, etc."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/f7ktnijy-a2b58-260148-cfcd2-9i9bnzhj/22d4b9a0-86f2-483b-a249-0c4ed79f5630/main/confitura-de-pimientos-del-piquillo.jpg",
+    "titulo": "CONFITURA DE PIMIENTOS DEL PIQUILLO",
+    "descripcion": "Ideal para tostas o canapés",
+    "categoria": "Salsas",
+    "dificultad": "Baja",
+    "duracion": 30,
+    "personas": 6,
+    "ingredientes": [
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "lata pimientos del piquillo"
+      },
+      {
+        "cantidad": 200,
+        "udMedida": "g",
+        "nombre": "azúcar"
+      },
+      {
+        "cantidad": 100,
+        "udMedida": "g",
+        "nombre": "vinagre de vino tinto"
+      },
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "agua"
+      }
+    ],
+    "utensilios": [
+      "procesadora de aliementos",
+      "mortero",
+      "espatula"
+    ],
+    "pasos": [
+      "Escurra en un recipiente los pimientos, póngalos dentro del vaso y triture. Con la espátula baje los restos de pimiento de la tapa y del interior del vaso hacia las cuchillas.",
+      "Incorpore el azúcar, el vinagre y el agua. Pase la confitura a un recipiente y conserve en el frigorífico.",
+      "Es ideal para acompañar quesos y carnes o simplemente sobre pan tostado"
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/xkn1hbiu-a2b58-094216-cfcd2-anwrumlu/c47e6e59-3f2d-4dae-b87d-dcbb274b7920/main/arroz-basmati-al-azafran.jpg",
+    "titulo": "ARROZ BASMATI AL AZAFRÁN",
+    "descripcion": "Arroz basmati para acompañar",
+    "categoria": "Guarniciones y acompañamiento",
+    "dificultad": "Baja",
+    "duracion": 23,
+    "personas": 4,
+    "ingredientes": [
+      {
+        "cantidad": 40,
+        "udMedida": "g",
+        "nombre": "mantequilla"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "hebra de azafran"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "vainas de cardamomo"
+      },
+      {
+        "cantidad": 3,
+        "udMedida": "sin ud",
+        "nombre": "clavos"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pellizco de pimienta"
+      },
+      {
+        "cantidad": 1000,
+        "udMedida": "g",
+        "nombre": "caldo de ave"
+      },
+      {
+        "cantidad": 350,
+        "udMedida": "g",
+        "nombre": "arroz basmati"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "palo de canela"
+      }
+    ],
+    "utensilios": [
+      "olla"
+    ],
+    "pasos": [
+      "Ponga en una olla la mantequilla, el azafrán, el cardamomo, el clavo, la sal de hierbas y la pimienta y tuestelo todo",
+      "Añada el caldo, el arroz y el palo de canela, y cuezalo todo a fuego fuerte, removiendo el arroz dos o tres veces a lo largo de la cocción."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/ei5sqbep-50f3f-610475-cfcd2-q3ab1km7/2c5a4419-6605-4798-b568-43eb543f583f/main/guacamole-receta-mexicana.jpg",
+    "titulo": "GUACAMOLE (RECETA MEXICANA)",
+    "descripcion": "Guacamole al estilo mexicano",
+    "categoria": "Guarniciones y acompañamiento",
+    "dificultad": "Baja",
+    "duracion": 5,
+    "personas": 10,
+    "ingredientes": [
+      {
+        "cantidad": 5,
+        "udMedida": "sin ud",
+        "nombre": "ramitas de cilantro fresco"
+      },
+      {
+        "cantidad": 100,
+        "udMedida": "g",
+        "nombre": "cebolla"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "chiles frescos"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "diente de ajo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "tomate"
+      },
+      {
+        "cantidad": 450,
+        "udMedida": "g",
+        "nombre": "aguacates"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharada de zumo de limón"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
+      }
+    ],
+    "utensilios": [
+      "procesadora de aliementos",
+      "mortero"
+    ],
+    "pasos": [
+      "Trocee el cilantro, la cebolla, el tomate y el ajo",
+      "Limpie los chiles quitandole las semillas, troceelo y añadalo a la mezcla",
+      "Trocee el aguacate añadalo a la mezcla. Mezclelo todo en un mortero y sasone al gusto junto al zumo de limón."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/73xv22np-1f0e3-618729-cfcd2-dwb8av9n/f047dba7-5a29-4d1c-9e30-ac4a3d953588/main/pure-de-patata.jpg",
+    "titulo": "PURÉ DE PATATA",
+    "descripcion": "Pure de patatas clasico",
+    "categoria": "Básicas",
+    "dificultad": "Baja",
+    "duracion": 5,
+    "personas": 6,
+    "ingredientes": [
+      {
+        "cantidad": 800,
+        "udMedida": "g",
+        "nombre": "patatas"
+      },
+      {
+        "cantidad": 400,
+        "udMedida": "g",
+        "nombre": "leche"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
+      },
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "mantequilla"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "poco de pimienta"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "poco de nuez moscada"
+      }
+    ],
+    "utensilios": [
+      "olla",
+      "machacador"
+    ],
+    "pasos": [
+      "Cocer las patata en una olla a temperatura máxima.",
+      "Machacar las patatas cocidas con ayuda de un machacador o un tenedor.",
+      "Mesclar las patatas junto a la leche y la mantequilla. Sazonar al gusto con la pimienta y la nuez moscada."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/f4srekx5-1f0e3-407965-cfcd2-hvm8nquj/ea06d451-70b0-474b-b0bb-521daabf6f27/main/masa-para-crepes.jpg",
+    "titulo": "MASA PARA CREPES",
+    "descripcion": "Masa para crepes casera.",
+    "categoria": "Básicas",
+    "dificultad": "Baja",
+    "duracion": 5,
+    "personas": 6,
+    "ingredientes": [
+      {
+        "cantidad": 250,
+        "udMedida": "g",
+        "nombre": "harina"
+      },
+      {
+        "cantidad": 500,
+        "udMedida": "g",
+        "nombre": "leche"
+      },
+      {
+        "cantidad": 2,
+        "udMedida": "sin ud",
+        "nombre": "huevos"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharada de aceite de oliva"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "pellizco de azúcar glass"
+      }
+    ],
+    "utensilios": [
+      "batidora"
+    ],
+    "pasos": [
+      "Vierta todos los ingredientes en la batidora y mezcle a máxima velocidad. Déjela reposar un mínimo de 1/2 hora antes de utilizarla."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/4b1xvlxd-1f0e3-432908-cfcd2-th6wymcn/fcac5270-d290-4cf6-b510-9887afe7f6e1/main/papilla-de-desayuno-con-nueces.jpg",
+    "titulo": "PAPILLA DE DESAYUNO CON NUECES",
+    "descripcion": "Papilla con nueces para desayuno.",
+    "categoria": "Dietas trituradas",
+    "dificultad": "Baja",
+    "duracion": 5,
+    "personas": 2,
+    "ingredientes": [
+      {
+        "cantidad": 45,
+        "udMedida": "g",
+        "nombre": "copos de avena"
+      },
+      {
+        "cantidad": 20,
+        "udMedida": "g",
+        "nombre": "nueces"
+      },
+      {
+        "cantidad": 10,
+        "udMedida": "g",
+        "nombre": "germen de trigo"
+      },
+      {
+        "cantidad": 15,
+        "udMedida": "g",
+        "nombre": "azúcar"
+      },
+      {
+        "cantidad": 300,
+        "udMedida": "g",
+        "nombre": "leche de soja"
+      }
+    ],
+    "utensilios": [
+      "batidora"
+    ],
+    "pasos": [
+      "Vierta todos los ingredientes en la batidora y mezcle a máxima velocidad. Para una textura mas fina, añada mas leche."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/pbl97h3v-1f0e3-765304-cfcd2-9ktzegdr/18b0651f-710c-48be-ad40-4886f832f0b0/main/pure-de-verduras-con-pez-espada.jpg",
+    "titulo": "PURÉ DE VERDURAS CON PEZ ESPADA",
+    "descripcion": "Puré de verduras con pez espada.",
+    "categoria": "Dietas trituradas",
+    "dificultad": "Baja",
+    "duracion": 10,
+    "personas": 2,
+    "ingredientes": [
+      {
+        "cantidad": 200,
+        "udMedida": "g",
+        "nombre": "pez espada"
+      },
+      {
+        "cantidad": 85,
+        "udMedida": "g",
+        "nombre": "patatas"
+      },
+      {
+        "cantidad": 70,
+        "udMedida": "g",
+        "nombre": "calabazas"
+      },
+      {
+        "cantidad": 40,
+        "udMedida": "g",
+        "nombre": "acelgas"
+      },
+      {
+        "cantidad": 55,
+        "udMedida": "g",
+        "nombre": "judías verdes"
+      },
+      {
+        "cantidad": 30,
+        "udMedida": "g",
+        "nombre": "aceite de oliva virgen extra"
+      },
+      {
+        "cantidad": 0.5,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de sal"
+      },
+      {
+        "cantidad": 250,
+        "udMedida": "g",
+        "nombre": "agua"
+      }
+    ],
+    "utensilios": [
+      "batidora",
+      "procesadora de aliementos"
+    ],
+    "pasos": [
+      "Engrase y sale el filete. Envuélvalo en film transparente o papel de aluminio y reserve.",
+      "Ponga en un recipiente las verduras y trocee. Con ayuda de la espátula baje los restos de las paredes. Incorpore el aceite, la sal y el agua y triture todo.",
+      "Ddesenvuelva el filete e incorporelo en trozos al recipiente."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/wjp1gdn9-1f0e3-247869-cfcd2-l64ma2z4/beb815fa-8486-40fb-92de-4c39fd147535/main/turron-a-la-piedra.jpg",
+    "titulo": "TURRÓN A LA PIEDRA",
+    "descripcion": "Receta de turron clasico.",
+    "categoria": "Festividades",
+    "dificultad": "Baja",
+    "duracion": 2,
+    "personas": 5,
+    "ingredientes": [
+      {
+        "cantidad": 250,
+        "udMedida": "g",
+        "nombre": "azúcar"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "cucharadita de canela en polvo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "piel de limón"
+      },
+      {
+        "cantidad": 300,
+        "udMedida": "g",
+        "nombre": "almendras"
+      }
+    ],
+    "utensilios": [
+      "molde",
+      "procesadora de aliementos"
+    ],
+    "pasos": [
+      "Ponga en el vaso el azúcar y pulverice con la procesadora de alimentos. Añada la piel de limón y continue.",
+      "Incorpore las almendras y la canela. Con la espátula baje los restos de pasta de la tapa y del interior del vaso hacia las cuchillas.",
+      "Vuelva a triturar máxima velocidad hasta que se haya desprendido el aceite de la almendra y quede una textura un poco aceitosa (como de serrín).",
+      "Forre una molde con folios blancos, dejando que sobresalga por los laterales para poder envolverlo.",
+      "Espolvoree el papel del interior de la caja con canela, vierta la pasta presionando bien y alise con la ayuda de una cuchara. Cubra el turrón con el papel, y cierre la caja."
+    ]
+  },
+  {
+    "id": "",
+    "imagen": "https://es.rc-cdn.community.thermomix.com/recipeimage/1f4xtteg-1f0e3-196327-cfcd2-hc09gaex/966d5dba-0f38-455d-8bcb-551100f9ac0c/main/pate-de-quesos.jpg",
+    "titulo": "PATÉ DE QUESOS",
+    "descripcion": "Paté de mezcla de distintos quesos.",
+    "categoria": "Festividades",
+    "dificultad": "Baja",
+    "duracion": 15,
+    "personas": 6,
+    "ingredientes": [
+      {
+        "cantidad": 100,
+        "udMedida": "g",
+        "nombre": "queso de bola"
+      },
+      {
+        "cantidad": 100,
+        "udMedida": "g",
+        "nombre": "queso gruyère"
+      },
+      {
+        "cantidad": 20,
+        "udMedida": "g",
+        "nombre": "mantequilla"
+      },
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "nata"
+      },
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "leche"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "huevo"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "yema de huevo"
+      },
+      {
+        "cantidad": 150,
+        "udMedida": "g",
+        "nombre": "queso roquefort"
+      },
+      {
+        "cantidad": 50,
+        "udMedida": "g",
+        "nombre": "mayonesa"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "poco de pimienta"
+      },
+      {
+        "cantidad": 1,
+        "udMedida": "sin ud",
+        "nombre": "poco de azúcar glas"
+      }
+    ],
+    "utensilios": [
+      "batidora",
+      "procesadora de aliementos"
+    ],
+    "pasos": [
+      "Ponga todos los ingredientes en un recipiente (los quesos en trozos), excepto la mayonesa y el roquefort y triture.",
+      "Incorpore la mayonesa y el queso Roquefort. Mezcle poco a poco (asegúrese de que ha quedado homogéneo). Vierta en un recipiente y deje enfriar."
     ]
   }
 ]

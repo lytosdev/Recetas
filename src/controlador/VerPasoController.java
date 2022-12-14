@@ -20,12 +20,14 @@ public class VerPasoController implements Initializable {
     public VerPasoController(int numPaso, String paso) {
         this.numPaso = numPaso;
         this.paso = paso;
+
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         txtNumPaso.setText("Paso " + numPaso);
         txtPaso.setText(paso);
+
     }
 
 }

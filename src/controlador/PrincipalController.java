@@ -1,6 +1,9 @@
 package controlador;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -9,6 +12,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+import modelo.Categoria;
+import modelo.CategoriaUso;
+import modelo.RespuestaUso;
+import modelo.UnidadMedida;
+import modelo.UnidadMedidaUso;
+import tools.Migracion;
 
 public class PrincipalController implements Initializable {
 
@@ -23,14 +32,26 @@ public class PrincipalController implements Initializable {
 
     public static GestorVistas gestorVistas;
     public static boolean modo = false; // false = modo claro
+    public static List<Categoria> categorias;
+    public static List<UnidadMedida> udsMedida;
 
-    public PrincipalController() {
-        
+    public PrincipalController() throws SQLException, IOException {
+
+        // Migracion migracion = new Migracion();
+        // migracion.migrar();
+        // System.out.println("Migración realizada correctamente");
+
+        RespuestaUso<List<Categoria>> categoriaUso = CategoriaUso.select();
+        categorias = categoriaUso.getObjeto();
+        RespuestaUso<List<UnidadMedida>> udMedidaUso = UnidadMedidaUso.select();
+        udsMedida = udMedidaUso.getObjeto();
+
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         gestorVistas = new GestorVistas(pnlVistas, txtCabecera);
+
     }
 
     @FXML
@@ -55,7 +76,7 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private void cambiarModo() {
-      
+
         if (!modo) {
             regModo.getStyleClass().clear();
             regModo.getStyleClass().add("icn-modo-claro");

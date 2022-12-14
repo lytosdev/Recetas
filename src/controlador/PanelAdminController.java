@@ -1,11 +1,9 @@
 package controlador;
 
 import java.net.URL;
-import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -13,8 +11,15 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
+import modelo.Categoria;
+import modelo.Ingrediente;
+import modelo.IngredienteUso;
+import modelo.Paso;
+import modelo.PasoUso;
 import modelo.Receta;
 import modelo.RecetaUso;
+import modelo.Utensilio;
+import modelo.UtensilioUso;
 
 public class PanelAdminController implements Initializable {
 
@@ -25,7 +30,7 @@ public class PanelAdminController implements Initializable {
     @FXML
     private VBox pnlCuerpo;
     @FXML
-    private ComboBox<String> cbxCategorias;
+    private ComboBox<Categoria> cbxCategorias;
 
     private GestorErrores gestorErrores = new GestorErrores();
     private NuevaRecetaCabezaController controllerCabeza;
@@ -38,48 +43,55 @@ public class PanelAdminController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        // Cargamos ComboBox
-        ObservableList<String> options = FXCollections.observableArrayList(
-                "Option 1",
-                "Option 2",
-                "Option 3");
-        cbxCategorias.getItems().addAll(options);
+        // Cargamos combobox con las categoríaas
+        cbxCategorias.getItems().addAll(PrincipalController.categorias);
+
+        // Recetas pendiente de validar
+        List<Receta> recetas = RecetaUso.selectPteValidar().getObjeto();
 
         // Cargamos las solicitudes
-        for (int i = 0; i < 10; i++) {
-            Callback<Class<?>, Object> factory = (Class<?> clazz) -> new SolicitudRecetaController(
-                    this::abrirReceta, LocalDate.now(), "micorreo@gmail.com");
-            Object[] arr = GestorVistas.cargarVista("/vista/SolicitudReceta.fxml", factory);
-            pnlSolicitudes.getChildren().add((Node) arr[0]);
+        for (Receta item : recetas) {
+            Callback<Class<?>, Object> factory = (Class<?> clazz) -> new SolicitudRecetaController(this::abrirReceta,
+                    item);
+            Object[] comp = GestorVistas.cargarVista("/vista/SolicitudReceta.fxml", factory);
+            pnlSolicitudes.getChildren().add((Node) comp[0]);
         }
 
         // Cargamos la cabeza de la nueva receta
-        Object[] arrCabeza = GestorVistas.cargarVista("/vista/NuevaRecetaCabeza.fxml");
-        Node nodeCabeza = (Node) arrCabeza[0];
-        NuevaRecetaCabezaController controllerCabeza = (NuevaRecetaCabezaController) arrCabeza[1];
+        Object[] compCabeza = GestorVistas.cargarVista("/vista/NuevaRecetaCabeza.fxml");
+        Node nodeCabeza = (Node) compCabeza[0];
+        NuevaRecetaCabezaController nuevaRecetaCabeza = (NuevaRecetaCabezaController) compCabeza[1];
         pnlCabeza.getChildren().add(nodeCabeza);
-        controllerCabeza.suscribirErrores(gestorErrores);
+        nuevaRecetaCabeza.suscribirErrores(gestorErrores);
 
         // Cargamos el cuerpo de la nueva receta
-        Object[] arrCuerpo = GestorVistas.cargarVista("/vista/NuevaRecetaCuerpo.fxml");
-        Node nodeCuerpo = (Node) arrCuerpo[0];
-        NuevaRecetaCuerpoController controllerCuerpo = (NuevaRecetaCuerpoController) arrCuerpo[1];
+        Object[] compCuerpo = GestorVistas.cargarVista("/vista/NuevaRecetaCuerpo.fxml");
+        Node nodeCuerpo = (Node) compCuerpo[0];
+        NuevaRecetaCuerpoController nuevaRecetaCuerpo = (NuevaRecetaCuerpoController) compCuerpo[1];
         pnlCuerpo.getChildren().add(nodeCuerpo);
-        controllerCuerpo.suscribirErrores(gestorErrores);
+        nuevaRecetaCuerpo.suscribirErrores(gestorErrores);
 
-        this.controllerCabeza = controllerCabeza;
-        this.controllerCuerpo = controllerCuerpo;
+        this.controllerCabeza = nuevaRecetaCabeza;
+        this.controllerCuerpo = nuevaRecetaCuerpo;
 
     }
 
-    private void abrirReceta(SolicitudRecetaController solicitudRecetaController) {
+    private void abrirReceta(Receta receta) {
+
+        Receta r = receta;
+        List<Ingrediente> ingredientes = IngredienteUso.selectPorReceta(r.getId()).getObjeto();
+        List<Utensilio> utensilios = UtensilioUso.selectPorReceta(r.getId()).getObjeto();
+        List<Paso> pasos = PasoUso.selectPorReceta(r.getId()).getObjeto();
 
         // Cargamos la receta
-        Receta r = RecetaUso.getRecetasJson().get(0);
-        controllerCabeza.cargar(r.getImagen(), r.getTitulo(), r.getDescripcion(), r.getDificultad(), r.getDuracion(), r.getPersonas());
-        controllerCuerpo.cargar(r.getIngredientes(), r.getUtensilios(), r.getPasos());
+        controllerCabeza.setRecetaCabeza(r.getImagenJfx(), r.getTitulo(), r.getDescripcion(), r.getDificultad(), r.getDuracion(),
+                r.getPersonas());
+        controllerCuerpo.setRecetaCuerpo(ingredientes, utensilios, pasos);
 
         // Cargamos la categoría
+        Categoria categoria = PrincipalController.categorias.stream()
+                .filter(x -> x.getId() == r.getIdCategoria()).findFirst().get();
+        cbxCategorias.getSelectionModel().select(categoria);
 
     }
 

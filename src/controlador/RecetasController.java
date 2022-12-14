@@ -12,6 +12,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
+import modelo.Categoria;
 import modelo.Receta;
 import modelo.RecetaUso;
 
@@ -24,14 +25,6 @@ public class RecetasController implements Initializable {
     @FXML
     private Text txtResultados;
 
-    private int minRnd = 1, maxRnd = 100;
-
-    private String[] nombresCat = { "Carnes", "Pescados", "Postres", "Guisos", "Fritos", "Comida rápida", "Pizza",
-            "Italiana", "Española", "Turca" };
-
-    private int[] resultCat = { getRnd(), getRnd(), getRnd(), getRnd(), getRnd(), getRnd(), getRnd(), getRnd(),
-            getRnd(), getRnd() };
-
     public RecetasController() {
 
     }
@@ -40,53 +33,33 @@ public class RecetasController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
 
         // Cargamos los botones correspondientes a las categorías
-        for (String texto : nombresCat) {
-            Callback<Class<?>, Object> factoryController = (Class<?> clazz) -> new BotonCategoriaController(this::abrir);
-            Object[] arr = GestorVistas.cargarVista("/vista/BotonCategoria.fxml", factoryController);
-            Object btnCat = arr[0];
-            BotonCategoriaController botonController = (BotonCategoriaController) arr[1];
-            botonController.txtTexto.setText(texto);
-            pnlCategorias.getChildren().add((Button) btnCat);
+        for (Categoria item : PrincipalController.categorias) {
+
+            Callback<Class<?>, Object> factoryController = (Class<?> clazz) -> new BotonCategoriaController(item,
+                    this::abrir);
+            Object[] comp = GestorVistas.cargarVista("/vista/BotonCategoria.fxml", factoryController);
+            Object compVista = comp[0];
+
+            pnlCategorias.getChildren().add((Button) compVista);
         }
-
-        abrirJson();
-
+        
     }
 
-    private void abrir(String texto) {
+    private void abrir(Categoria categoria) {
 
-        for (int i = 0; i < nombresCat.length; i++) {
-            if (nombresCat[i].equals(texto)) {
-                txtResultados.setText(resultCat[i] + " recetas encontradas para la categoría " + texto);
-                pnlResultados.getChildren().clear();
-                for (int j = 0; j < resultCat[i]; j++) {
-                    Object recetaNode = GestorVistas.cargarVista("/vista/PrevisualReceta.fxml")[0];
-                    pnlResultados.getChildren().add((Node) recetaNode);
-                }
-            }
-        }
+        List<Receta> recetas = RecetaUso.selectPorCategoria(categoria.getId()).getObjeto();
 
-    }
+        txtResultados.setText(recetas.size() + " recetas encontradas para la categoría " + categoria.getNombre());
 
-    private void abrirJson() {
-
-        List<Receta> recetas = RecetaUso.getRecetasJson();
-
-        txtResultados.setText(recetas.size() + " recetas encontradas");
         pnlResultados.getChildren().clear();
+        for (Receta item : recetas) {
 
-        for (Receta receta : recetas) {
-            Object[] arr = GestorVistas.cargarVista("/vista/PrevisualReceta.fxml");
-            Object recetaNode = arr[0];
-            PrevisualRecetaController recetaController = (PrevisualRecetaController) arr[1];
-            recetaController.cargar(receta);
-            pnlResultados.getChildren().add((Node) recetaNode);
+            Callback<Class<?>, Object> factoryController = (Class<?> clazz) -> new PrevisualRecetaController(item);
+            Object[] comp = GestorVistas.cargarVista("/vista/PrevisualReceta.fxml", factoryController);
+
+            pnlResultados.getChildren().add((Node) comp[0]);
         }
 
-    }
-
-    public int getRnd() {
-        return (int) Math.floor(Math.random() * (maxRnd - minRnd + 1)) + minRnd;
     }
 
 }

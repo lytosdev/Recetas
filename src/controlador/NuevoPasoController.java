@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
+import modelo.Paso;
 import tools.Vista;
 
 public class NuevoPasoController implements Initializable {
@@ -25,29 +26,32 @@ public class NuevoPasoController implements Initializable {
 
     private Consumer<Node> borrarPaso;
     private int numPaso;
-    private String paso;
+    private Paso paso;
     private GestorErrores gestorErrores;
-
-    public NuevoPasoController(Consumer<Node> borrarPaso) {
-        this.borrarPaso = borrarPaso;
-    }
 
     public NuevoPasoController(Consumer<Node> borrarPaso, int numPaso) {
         this.borrarPaso = borrarPaso;
         this.numPaso = numPaso;
+
     }
 
-    public NuevoPasoController(Consumer<Node> borrarPaso, int numPaso, String paso) {
+    public NuevoPasoController(Consumer<Node> borrarPaso, int numPaso, Paso paso) {
         this.borrarPaso = borrarPaso;
         this.numPaso = numPaso;
         this.paso = paso;
+
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+
         txtNumPaso.setText("Paso " + numPaso);
-        inpPaso.setText(paso);
         lblErrorPaso.setText("");
+
+        // Si tenemos un utensilio para abrir lo cargamos
+        if (paso != null) {
+            inpPaso.setText(paso.getNombre());
+        }
 
     }
 
@@ -55,9 +59,10 @@ public class NuevoPasoController implements Initializable {
     private void borrar(ActionEvent event) {
 
         desuscribirErrores();
-        
+
         Node node = (Node) event.getSource();
         borrarPaso.accept(Vista.buscarPadre(node, "nuevoPaso"));
+
     }
 
     public void suscribirErrores(GestorErrores gestorErrores) {
@@ -65,6 +70,7 @@ public class NuevoPasoController implements Initializable {
 
         gestorErrores.suscribir(inpPaso, lblErrorPaso,
                 new TipoError[] { TipoError.NO_VACIO, TipoError.NO_SOLO_NUMEROS, TipoError.LONGITUD }, 300);
+
     }
 
     public void setPaso(int numPaso) {
@@ -72,9 +78,11 @@ public class NuevoPasoController implements Initializable {
     }
 
     private void desuscribirErrores() {
+
         if (gestorErrores != null) {
             gestorErrores.desuscribir(inpPaso);
         }
+
     }
 
 }

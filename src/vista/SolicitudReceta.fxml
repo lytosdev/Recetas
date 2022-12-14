@@ -2,6 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox onMouseClicked="#solicitudRecetaClick" styleClass="solicitud-receta" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.SolicitudRecetaController">
@@ -10,7 +11,14 @@
       <URL value="@css/solicitudReceta.css" />
    </stylesheets>
    <children>
-      <Label fx:id="lblFecha" text="Fecha de la solicitud de la receta" />
+      <HBox spacing="10.0">
+         <children>
+            <Label fx:id="lblFecha" text="Fecha" />
+            <Label text="-" />
+            <Label fx:id="lblEstado" text="Estado" />
+         </children>
+      </HBox>
+      <Label fx:id="lblTitulo" text="Título" />
       <Label fx:id="lblEmail" text="Correo electrónico de la persona que solicita subir la receta" />
    </children>
 </VBox>

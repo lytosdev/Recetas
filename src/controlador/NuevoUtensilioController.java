@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import modelo.Utensilio;
 import tools.Vista;
 
 public class NuevoUtensilioController implements Initializable {
@@ -21,23 +22,28 @@ public class NuevoUtensilioController implements Initializable {
     private Label lblErrorUtensilio;
 
     private Consumer<Node> borrarUtensilio;
-    private String utensilio;
+    private Utensilio utensilio;
     private GestorErrores gestorErrores;
 
     public NuevoUtensilioController(Consumer<Node> borrarUtensilio) {
         this.borrarUtensilio = borrarUtensilio;
     }
 
-    public NuevoUtensilioController(Consumer<Node> borrarUtensilio, String utensilio) {
+    public NuevoUtensilioController(Consumer<Node> borrarUtensilio, Utensilio utensilio) {
         this.borrarUtensilio = borrarUtensilio;
         this.utensilio = utensilio;
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        inpUtensilio.setText(utensilio);
+
         lblErrorUtensilio.setText("");
-        
+
+        // Si tenemos un utensilio para abrir lo cargamos
+        if (utensilio != null) {
+            inpUtensilio.setText(utensilio.getNombre());
+        }
+
     }
 
     @FXML
@@ -47,6 +53,7 @@ public class NuevoUtensilioController implements Initializable {
 
         Node node = (Node) event.getSource();
         borrarUtensilio.accept(Vista.buscarPadre(node, "nuevoUtensilio"));
+
     }
 
     public void suscribirErrores(GestorErrores gestorErrores) {
@@ -54,12 +61,15 @@ public class NuevoUtensilioController implements Initializable {
 
         gestorErrores.suscribir(inpUtensilio, lblErrorUtensilio,
                 new TipoError[] { TipoError.NO_VACIO, TipoError.NO_SOLO_NUMEROS, TipoError.LONGITUD }, 100);
+
     }
 
     private void desuscribirErrores() {
+
         if (gestorErrores != null) {
             gestorErrores.desuscribir(inpUtensilio);
         }
+
     }
 
 }

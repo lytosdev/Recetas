@@ -1,6 +1,7 @@
 package controlador;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -11,134 +12,150 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.util.Callback;
+import modelo.Categoria;
 import modelo.Ingrediente;
+import modelo.IngredienteUso;
+import modelo.Paso;
+import modelo.PasoUso;
 import modelo.Receta;
+import modelo.UnidadMedida;
+import modelo.Utensilio;
+import modelo.UtensilioUso;
 import tools.Vista;
 
 public class VerRecetaController implements Initializable {
 
-    @FXML
-    private Pane pnlFoto;
-    @FXML
-    private Label lblTitulo;
-    @FXML
-    private Label lblDescripcion;
-    @FXML
-    private Text txtCategoria;
-    @FXML
-    private Label lblDificultadBaja;
-    @FXML
-    private Label lblDificultadMedia;
-    @FXML
-    private Label lblDificultadAlta;
-    @FXML
-    private Text txtDuracion;
-    @FXML
-    private Text txtPersonas;
-    @FXML
-    private VBox pnlIngredientes;
-    @FXML
-    private VBox pnlUtensilios;
-    @FXML
-    private VBox pnlPasos;
+	@FXML
+	private Pane pnlFoto;
+	@FXML
+	private Label lblTitulo;
+	@FXML
+	private Label lblDescripcion;
+	@FXML
+	private Text txtCategoria;
+	@FXML
+	private Label lblDificultadBaja;
+	@FXML
+	private Label lblDificultadMedia;
+	@FXML
+	private Label lblDificultadAlta;
+	@FXML
+	private Text txtDuracion;
+	@FXML
+	private Text txtPersonas;
+	@FXML
+	private VBox pnlIngredientes;
+	@FXML
+	private VBox pnlUtensilios;
+	@FXML
+	private VBox pnlPasos;
 
-    public VerRecetaController() {
+	public VerRecetaController() {
 
-    }
+	}
 
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
 
-    }
+	}
 
-    // private AnchorPane getPaso(String texto) {
+	public void setReceta(Receta receta) {
 
-    // }
+		// Reseteamos
+		pnlFoto.getChildren().clear();
+		pnlIngredientes.getChildren().clear();
+		pnlUtensilios.getChildren().clear();
+		pnlPasos.getChildren().clear();
 
-    // private AnchorPane getIngrediente() {
+		Receta r = receta;
 
-    // }
+		List<Ingrediente> ingredientes = IngredienteUso.selectPorReceta(r.getId()).getObjeto();
+		List<Utensilio> utensilios = UtensilioUso.selectPorReceta(r.getId()).getObjeto();
+		List<Paso> pasos = PasoUso.selectPorReceta(r.getId()).getObjeto();
 
-    // private AnchorPane getUtensilio() {
+		// Cargamos la cabecera
+		pnlFoto.getChildren().add(Vista.getPaneImageRoundAll(r.getImagenJfx()));
+		lblTitulo.setText(r.getTitulo());
+		lblDescripcion.setText(r.getDescripcion());
+		Categoria categoria = PrincipalController.categorias.stream().filter(x -> x.getId() == r.getIdCategoria())
+				.findFirst()
+				.get();
+		txtCategoria.setText(categoria.getNombre());
+		setDificultad(r.getDificultad());
+		txtDuracion.setText(r.getDuracion() + (r.getDuracion() == 1 ? " minuto" : " minutos"));
+		txtPersonas.setText(Integer.toString(r.getPersonas()));
 
-    // }
+		// Cargamos ingredientes
+		for (Ingrediente item : ingredientes) {
 
-    public void cargar(Receta receta) {
+			UnidadMedida udMedida = PrincipalController.udsMedida.stream()
+					.filter(x -> x.getId() == item.getIdUdMedida())
+					.findFirst().get();
+			String udMedidaNombre = udMedida.getNombre();
+			int cantidad = item.getCantidad();
 
-        Pane foto = Vista.getPane(receta.getImagen(), Receta.alturaFoto, Receta.anchuraFoto, 0.1, 0.1, 0.1, 0.1);
-        pnlFoto.getChildren().add(foto);
+			String uri = "/vista/VerIngrediente.fxml";
+			Callback<Class<?>, Object> factory = (Class<?> clazz) -> {
+				String txtIngrediente = "";
+				if (udMedidaNombre.equalsIgnoreCase("sin ud")) {
+					txtIngrediente = cantidad + " " + item.getNombre();
+				} else if (cantidad == 0) {
+					txtIngrediente = item.getNombre();
+				} else {
+					txtIngrediente = cantidad + " " + udMedidaNombre + " " + item.getNombre();
+				}
+				return new VerIngredienteController(txtIngrediente);
+			};
+			Object[] comp = GestorVistas.cargarVista(uri, factory);
 
-        lblTitulo.setText(receta.getTitulo());
-        lblDescripcion.setText(receta.getDescripcion());
+			pnlIngredientes.getChildren().add((Node) comp[0]);
+		}
 
-        txtCategoria.setText(receta.getCategoria());
-        setDificultad(receta.getDificultad());
-        txtDuracion.setText(receta.getDuracion() + (receta.getDuracion() == 1 ? " minuto" : " minutos"));
-        txtPersonas.setText(Integer.toString(receta.getPersonas()));
+		// Cargamos utensilios
+		for (Utensilio item : utensilios) {
 
-        // Cargamos ingredientes
-        Ingrediente[] ingredientes = receta.getIngredientes();
-        for (int i = 0; i < ingredientes.length; i++) {
-            Ingrediente ing = ingredientes[i];
-            String udMedida = ing.getUdMedida();
-            int cantidad = ing.getCantidad();
-            String uri = "/vista/VerIngrediente.fxml";
-            Callback<Class<?>, Object> factory = (Class<?> clazz) -> {
-                String txtIngrediente = "";
-                if (udMedida.equalsIgnoreCase("ud")) {
-                    txtIngrediente = cantidad + " " + ing.getNombre();
-                } else if (cantidad == 0) {
-                    txtIngrediente = ing.getNombre();
-                } else {
-                    txtIngrediente = cantidad + " " + udMedida + " " + ing.getNombre();
-                }
-                return new VerIngredienteController(txtIngrediente);
-            };
-            Object[] arrIngrediente = GestorVistas.cargarVista(uri, factory);
-            pnlIngredientes.getChildren().add((Node) arrIngrediente[0]);
-        }
+			String txtUtensilio = item.getNombre();
 
-        // Cargamos utensilios
-        String[] utensilios = receta.getUtensilios();
-        for (int i = 0; i < utensilios.length; i++) {
-            String txtUtensilio = utensilios[i];
-            String uri = "/vista/VerUtensilio.fxml";
-            Callback<Class<?>, Object> factory = (Class<?> clazz) -> new VerUtensilioController(txtUtensilio);
-            Object[] arrUtensilio = GestorVistas.cargarVista(uri, factory);
-            pnlUtensilios.getChildren().add((Node) arrUtensilio[0]);
-        }
+			String uri = "/vista/VerUtensilio.fxml";
+			Callback<Class<?>, Object> factory = (Class<?> clazz) -> new VerUtensilioController(txtUtensilio);
+			Object[] comp = GestorVistas.cargarVista(uri, factory);
 
-        // Cargamos pasos
-        String[] pasos = receta.getPasos();
-        for (int i = 0; i < pasos.length; i++) {
-            int numPaso = i + 1;
-            String txtPaso = pasos[i];
-            String uri = "/vista/VerPaso.fxml";
-            Callback<Class<?>, Object> factory = (Class<?> clazz) -> new VerPasoController(numPaso, txtPaso);
-            Object[] arrPaso = GestorVistas.cargarVista(uri, factory);
-            pnlPasos.getChildren().add((Node) arrPaso[0]);
-        }
+			pnlUtensilios.getChildren().add((Node) comp[0]);
+		}
 
-    }
+		// Cargamos pasos
+		for (Paso item : pasos) {
 
-    private void setDificultad(String dificultad) {
+			int numPaso = pasos.indexOf(item) + 1;
+			String txtPaso = item.getNombre();
 
-        lblDificultadBaja.getStyleClass().removeAll("vr-lbl-baja");
-        lblDificultadMedia.getStyleClass().removeAll("vr-lbl-media");
-        lblDificultadAlta.getStyleClass().removeAll("vr-lbl-alta");
+			String uri = "/vista/VerPaso.fxml";
+			Callback<Class<?>, Object> factory = (Class<?> clazz) -> new VerPasoController(numPaso, txtPaso);
+			Object[] comp = GestorVistas.cargarVista(uri, factory);
 
-        switch (dificultad.toLowerCase()) {
-            case "baja":
-                lblDificultadBaja.getStyleClass().add("vr-lbl-baja");
-                break;
-            case "media":
-                lblDificultadMedia.getStyleClass().add("vr-lbl-media");
-                break;
-            default:
-                lblDificultadAlta.getStyleClass().add("vr-lbl-alta");
-                break;
-        }
+			pnlPasos.getChildren().add((Node) comp[0]);
+		}
 
-    }
+	}
+
+	private void setDificultad(String dificultad) {
+
+		lblDificultadBaja.getStyleClass().removeAll("vr-lbl-baja");
+		lblDificultadMedia.getStyleClass().removeAll("vr-lbl-media");
+		lblDificultadAlta.getStyleClass().removeAll("vr-lbl-alta");
+
+		switch (dificultad.toLowerCase()) {
+			case "baja":
+				lblDificultadBaja.getStyleClass().add("vr-lbl-baja");
+				break;
+			case "media":
+				lblDificultadMedia.getStyleClass().add("vr-lbl-media");
+				break;
+			default:
+				lblDificultadAlta.getStyleClass().add("vr-lbl-alta");
+				break;
+		}
+
+	}
 
 }

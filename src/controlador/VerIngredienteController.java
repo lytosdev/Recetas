@@ -16,11 +16,13 @@ public class VerIngredienteController implements Initializable {
 
     public VerIngredienteController(String ingrediente) {
         this.ingrediente = ingrediente;
+
     }
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         txtIngrediente.setText(ingrediente);
+
     }
 
 }

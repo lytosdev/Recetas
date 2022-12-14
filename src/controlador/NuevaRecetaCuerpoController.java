@@ -1,6 +1,7 @@
 package controlador;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.collections.ObservableList;
@@ -10,6 +11,8 @@ import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 import modelo.Ingrediente;
+import modelo.Paso;
+import modelo.Utensilio;
 
 public class NuevaRecetaCuerpoController implements Initializable {
 
@@ -38,14 +41,14 @@ public class NuevaRecetaCuerpoController implements Initializable {
 
         Callback<Class<?>, Object> factory = (Class<?> clazz) -> new NuevoPasoController(this::borrarPaso,
                 totPasos + 1);
-        Object[] arr = GestorVistas.cargarVista("/vista/NuevoPaso.fxml", factory);
+        Object[] comp = GestorVistas.cargarVista("/vista/NuevoPaso.fxml", factory);
 
-        Node node = (Node) arr[0];
-        NuevoPasoController pasoController = (NuevoPasoController) arr[1];
-
-        node.setUserData(pasoController);
+        Node node = (Node) comp[0];
+        NuevoPasoController nuevoPaso = (NuevoPasoController) comp[1];
+        node.setUserData(nuevoPaso);
+        
         if (gestorErrores != null) {
-            pasoController.suscribirErrores(gestorErrores);
+            nuevoPaso.suscribirErrores(gestorErrores);
         }
 
         pnlPasos.getChildren().add(node);
@@ -56,13 +59,13 @@ public class NuevaRecetaCuerpoController implements Initializable {
 
         Callback<Class<?>, Object> factory = (Class<?> clazz) -> new NuevoIngredienteController(
                 this::borrarIngrediente);
-        Object[] arr = GestorVistas.cargarVista("/vista/NuevoIngrediente.fxml", factory);
+        Object[] comp = GestorVistas.cargarVista("/vista/NuevoIngrediente.fxml", factory);
 
-        Node node = (Node) arr[0];
-        NuevoIngredienteController ingredienteController = (NuevoIngredienteController) arr[1];
+        Node node = (Node) comp[0];
+        NuevoIngredienteController nuevoIngrediente = (NuevoIngredienteController) comp[1];
 
         if (gestorErrores != null) {
-            ingredienteController.suscribirErrores(gestorErrores);
+            nuevoIngrediente.suscribirErrores(gestorErrores);
         }
 
         pnlIngredientes.getChildren().add(node);
@@ -72,13 +75,13 @@ public class NuevaRecetaCuerpoController implements Initializable {
     private void nuevoUtensilio() {
 
         Callback<Class<?>, Object> factory = (Class<?> clazz) -> new NuevoUtensilioController(this::borrarUtensilio);
-        Object[] arr = GestorVistas.cargarVista("/vista/NuevoUtensilio.fxml", factory);
+        Object[] comp = GestorVistas.cargarVista("/vista/NuevoUtensilio.fxml", factory);
 
-        Node node = (Node) arr[0];
-        NuevoUtensilioController utensilioController = (NuevoUtensilioController) arr[1];
+        Node node = (Node) comp[0];
+        NuevoUtensilioController nuevoUtensilio = (NuevoUtensilioController) comp[1];
 
         if (gestorErrores != null) {
-            utensilioController.suscribirErrores(gestorErrores);
+            nuevoUtensilio.suscribirErrores(gestorErrores);
         }
 
         pnlUtensilios.getChildren().add(node);
@@ -88,49 +91,48 @@ public class NuevaRecetaCuerpoController implements Initializable {
         this.gestorErrores = gestorErrores;
     }
 
-    public void cargar(Ingrediente[] ingredientes, String[] utensilios, String[] pasos) {
+    public void setRecetaCuerpo(List<Ingrediente> ingredientes, List<Utensilio> utensilios, List<Paso> pasos) {
+
+        // Reseteamos
+        pnlIngredientes.getChildren().clear();
+        pnlUtensilios.getChildren().clear();
+        pnlPasos.getChildren().clear();
 
         // Cargamos ingredientes
-        for (int i = 0; i < ingredientes.length; i++) {
-            Ingrediente ing = ingredientes[i];
-
-            int cantidad = ing.getCantidad();
-            String udMedida = ing.getUdMedida();
-            String nombre = ing.getNombre();
+        for (Ingrediente item : ingredientes) {
 
             Callback<Class<?>, Object> factory = (Class<?> clazz) -> new NuevoIngredienteController(
-                    this::borrarIngrediente, cantidad, udMedida, nombre);
+                    this::borrarIngrediente, item);
             String uri = "/vista/NuevoIngrediente.fxml";
-            Object[] arrIngrediente = GestorVistas.cargarVista(uri, factory);
+            Object[] comp = GestorVistas.cargarVista(uri, factory);
 
-            pnlIngredientes.getChildren().add((Node) arrIngrediente[0]);
+            pnlIngredientes.getChildren().add((Node) comp[0]);
         }
 
         // Cargamos utensilios
-        for (int i = 0; i < utensilios.length; i++) {
+        for (Utensilio item : utensilios) {
 
-            String txtUtensilio = utensilios[i];
             String uri = "/vista/NuevoUtensilio.fxml";
             Callback<Class<?>, Object> factory = (Class<?> clazz) -> new NuevoUtensilioController(this::borrarUtensilio,
-                    txtUtensilio);
-            Object[] arrUtensilio = GestorVistas.cargarVista(uri, factory);
+                    item);
+            Object[] comp = GestorVistas.cargarVista(uri, factory);
 
-            pnlUtensilios.getChildren().add((Node) arrUtensilio[0]);
+            pnlUtensilios.getChildren().add((Node) comp[0]);
         }
 
         // Cargamos pasos
-        for (int i = 0; i < pasos.length; i++) {
+        for (Paso item : pasos) {
 
-            int numPaso = i + 1;
-            String txtPaso = pasos[i];
+            int numPaso = pasos.indexOf(item) + 1;
+
             String uri = "/vista/NuevoPaso.fxml";
             Callback<Class<?>, Object> factory = (Class<?> clazz) -> new NuevoPasoController(this::borrarPaso, numPaso,
-                    txtPaso);
-            Object[] arrPaso = GestorVistas.cargarVista(uri, factory);
+                    item);
+            Object[] comp = GestorVistas.cargarVista(uri, factory);
 
-            NuevoPasoController pasoController = (NuevoPasoController) arrPaso[1];
-            Node node = (Node) arrPaso[0];
-            node.setUserData(pasoController);
+            NuevoPasoController nuevoPaso = (NuevoPasoController) comp[1];
+            Node node = (Node) comp[0];
+            node.setUserData(nuevoPaso);
 
             pnlPasos.getChildren().add(node);
         }

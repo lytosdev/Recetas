@@ -9,18 +9,20 @@ import javafx.scene.text.Text;
 
 public class VerUtensilioController implements Initializable {
 
-    @FXML 
-    private Text txtUtensilio;
+	@FXML
+	private Text txtUtensilio;
 
-    private String utensilio;
+	private String utensilio;
 
-    public VerUtensilioController(String utensilio) {
-      this.utensilio = utensilio;
-    }
+	public VerUtensilioController(String utensilio) {
+		this.utensilio = utensilio;
 
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        txtUtensilio.setText(utensilio);
-    }
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		txtUtensilio.setText(utensilio);
+
+	}
 
 }

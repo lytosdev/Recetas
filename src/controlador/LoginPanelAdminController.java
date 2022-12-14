@@ -23,6 +23,7 @@ public class LoginPanelAdminController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         inpContrasenia.setText("");
         txtError.setText("");
+
     }
 
     @FXML
@@ -36,6 +37,7 @@ public class LoginPanelAdminController implements Initializable {
         } else {
             txtError.setText("La contraseña es incorrecta");
         }
+
     }
 
     @FXML
