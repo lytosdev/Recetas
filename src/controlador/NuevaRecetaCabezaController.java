@@ -23,9 +23,9 @@ public class NuevaRecetaCabezaController implements Initializable {
     @FXML
     private Pane pnlFoto;
     @FXML
-    private TextField inpTitulo;
+    public TextField inpTitulo;
     @FXML
-    private TextArea inpDescripcion;
+    public TextArea inpDescripcion;
     @FXML
     private Button btnDificultadBaja;
     @FXML
@@ -33,13 +33,16 @@ public class NuevaRecetaCabezaController implements Initializable {
     @FXML
     private Button btnDificultadAlta;
     @FXML
-    private TextField inpDuracion;
+    public TextField inpDuracion;
     @FXML
     private Label lblErrorDuracion;
     @FXML
-    private TextField inpPersonas;
+    public TextField inpPersonas;
     @FXML
     private Label lblErrorPersonas;
+
+    public Image imagen;
+    public String dificultad;
 
     public NuevaRecetaCabezaController() {
 
@@ -123,6 +126,8 @@ public class NuevaRecetaCabezaController implements Initializable {
                 btnDificultadAlta.getStyleClass().add("nr-btn-alta");
                 break;
         }
+
+        this.dificultad = dificultad;
     }
 
     private void setImagen(Image imagen) {

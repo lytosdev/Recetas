@@ -1,6 +1,7 @@
 package controlador;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 import controlador.GestorErrores.TipoError;
@@ -11,6 +12,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import modelo.Receta;
+import modelo.RecetaUso;
 import tools.Vista;
 
 public class SubirRecetaController implements Initializable {
@@ -25,6 +28,7 @@ public class SubirRecetaController implements Initializable {
     private Label lblErrorEmail;
 
     private GestorErrores gestorErrores = new GestorErrores();
+    private NuevaRecetaCabezaController nuevaRecetaCabeza;
 
     public SubirRecetaController() {
 
@@ -40,6 +44,7 @@ public class SubirRecetaController implements Initializable {
         NuevaRecetaCabezaController nuevaRecetaCabeza = (NuevaRecetaCabezaController) compCabeza[1];
         pnlCabeza.getChildren().add(nodeCabeza);
         nuevaRecetaCabeza.suscribirErrores(gestorErrores);
+        this.nuevaRecetaCabeza = nuevaRecetaCabeza;
 
         // Cargamos el cuerpo de la nueva receta
         Object[] compCuerpo = GestorVistas.cargarVista("/vista/NuevaRecetaCuerpo.fxml");
@@ -60,6 +65,27 @@ public class SubirRecetaController implements Initializable {
             Vista.alertError("No puede enviar la receta porque hay errores en el formulario");
         } else {
 
+            // Insertamos cabecera de receta
+            Receta receta = new Receta(
+                nuevaRecetaCabeza.inpTitulo.getText(),
+                nuevaRecetaCabeza.inpDescripcion.getText(),
+                nuevaRecetaCabeza.imagen,
+                Integer.valueOf(nuevaRecetaCabeza.inpDuracion.getText()),
+                Integer.valueOf(nuevaRecetaCabeza.inpPersonas.getText()),
+                2,
+                nuevaRecetaCabeza.dificultad,
+                LocalDate.now(),
+                inpEmail.getText(),
+                0
+            );
+            RecetaUso.insertar(receta);
+
+            // Insertamos ingredientes
+
+            
+            // Insertamos utensilios
+
+            // Insertamos pasos
         }
 
     }
